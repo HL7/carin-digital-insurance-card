@@ -86,14 +86,38 @@ Description: "Iimages found on insurance cards"
 * extension[backgroundColor] ^short = "Insurance card background color"
 * extension[backgroundColor].value[x] 1..1
 * extension[backgroundColor].value[x] only CodeableConcept
-// TODO add slice for code system. Need to have at least one from this system
-* extension[backgroundColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
+
+
+
+* extension[backgroundColor].valueCodeableConcept.coding ^slicing.discriminator.path = "system"
+* extension[backgroundColor].valueCodeableConcept.coding ^slicing.rules = #open
+* extension[backgroundColor].valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
+* extension[backgroundColor].valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
+* extension[backgroundColor].valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
+
+* extension[backgroundColor].valueCodeableConcept.coding contains
+	isoColor 1..1
+
+* extension[backgroundColor].valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+* extension[backgroundColor].valueCodeableConcept.coding[isoColor].code 1..1
 
 * extension[highlightColor] ^short = "Insurance card highlight color"
 * extension[highlightColor].value[x] 1..1
 * extension[highlightColor].value[x] only CodeableConcept
-// TODO add slice for code system. Need to have at least one from this system
-* extension[highlightColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
+
+
+* extension[highlightColor].valueCodeableConcept.coding ^slicing.discriminator.path = "system"
+* extension[highlightColor].valueCodeableConcept.coding ^slicing.rules = #open
+* extension[highlightColor].valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
+* extension[highlightColor].valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
+* extension[highlightColor].valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
+
+* extension[highlightColor].valueCodeableConcept.coding contains
+	isoColor 1..1
+
+* extension[highlightColor].valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+* extension[highlightColor].valueCodeableConcept.coding[isoColor].code 1..1
+//* extension[highlightColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
 
 * extension[logo] ^short = "Insurance card highlight color"
 * extension[logo].value[x] 1..1

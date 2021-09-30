@@ -15,7 +15,6 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 
 * identifier.type from C4DICCoverageIdentifierType (extensible)
-//* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #pattern 
