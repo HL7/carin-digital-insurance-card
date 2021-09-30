@@ -1,0 +1,2 @@
+== Suppressed Messages ==
+# The following code systems are external and not supported by terminology server 

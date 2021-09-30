@@ -1,0 +1,16 @@
+{
+    "package-id": "hl7.fhir.us.insurance-card",
+    "title": "CARIN Digital Insurance Card",
+    "canonical": "http://hl7.org/fhir/us/insurance-card",
+    "introduction": "This implementation guide describes the CARIN Digital Insurance Card Framework.",
+    "list": [
+      {
+        "version": "current",
+        "desc": "CARIN Digital Insurance Card CI Build",
+        "path": "http://build.fhir.org/ig/HL7/insurance-card",
+        "status": "ci-build",
+        "current": true
+      }
+    ],
+    "category": "Financial"
+  }

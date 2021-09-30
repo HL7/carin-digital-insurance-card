@@ -1,0 +1,102 @@
+
+Extension: PlanBeneficiaries
+Id: C4DIC-PlanBeneficiaries-extension
+Title: "Plan Beneficiaries"
+Description: "All beneficiaries on the plan with corresponding Names and MemberIDs"
+* extension contains
+	subscriber 1..1 MS and
+    beneficiary 1..* MS
+
+* extension[subscriber].extension contains
+	memberId 1..1 MS and
+    name 1..1 MS
+
+* extension[subscriber] ^short = "Subscriber Information"
+* extension[subscriber].extension[memberId] ^short = "Subscriber Member Id"
+* extension[subscriber].extension[memberId].value[x] 1..1
+* extension[subscriber].extension[memberId].value[x] only string
+
+* extension[subscriber].extension[name] ^short = "Subscriber Name"
+* extension[subscriber].extension[name].value[x] 1..1
+* extension[subscriber].extension[name].value[x] only HumanName
+* extension[subscriber].extension[name].valueHumanName.family 1..1 MS
+* extension[subscriber].extension[name].valueHumanName.given 1..* MS
+
+* extension[beneficiary].extension contains
+	memberId 1..1 MS and
+    name 1..1 MS
+
+* extension[beneficiary] ^short = "Beneficiary Information"
+* extension[beneficiary].extension[memberId] ^short = "Beneficiary Member Id"
+* extension[beneficiary].extension[memberId].value[x] 1..1
+* extension[beneficiary].extension[memberId].value[x] only string
+
+* extension[beneficiary].extension[name] ^short = "Beneficiary Name"
+* extension[beneficiary].extension[name].value[x] 1..1
+* extension[beneficiary].extension[name].value[x] only HumanName
+* extension[beneficiary].extension[name].valueHumanName.family 1..1 MS
+* extension[beneficiary].extension[name].valueHumanName.given 1..* MS
+
+
+
+
+Extension: BeneficiaryCosts
+Id: C4DIC-BeneficiaryCosts-extension
+Title: "Beneficiary Costs"
+Description: "Cost to beneficiary allowing for strings"
+* extension contains
+	costToBeneficiary 0..* MS
+
+* extension[costToBeneficiary].extension contains
+	type 1..1 MS and
+    cost 1..1 MS
+
+* extension[costToBeneficiary] ^short = "Cost to beneficiary"
+
+* extension[costToBeneficiary].extension[type] ^short = "Type of cost"
+* extension[costToBeneficiary].extension[type].value[x] 1..1
+* extension[costToBeneficiary].extension[type].value[x] only CodeableConcept
+* extension[costToBeneficiary].extension[type].valueCodeableConcept from C4DICCopayTypeVS (required)
+
+* extension[costToBeneficiary].extension[cost] ^short = "Cost description"
+* extension[costToBeneficiary].extension[cost].value[x] 1..1
+* extension[costToBeneficiary].extension[cost].value[x] only string
+
+
+
+Extension: AdditionalCardInformation
+Id: C4DIC-AdditionalCardInformation-extension
+Title: "Additional Insurance Card Information"
+Description: "Aadditional free text items often found on insurance cards"
+* value[x] 1..1
+* value[x] only Annotation
+
+
+
+
+Extension: CardImages
+Id: C4DIC-CardImages-extension
+Title: "Card Images"
+Description: "Iimages found on insurance cards"
+* extension contains
+	backgroundColor 0..1 and
+	highlightColor 0..1 and 
+	logo 0..1 
+
+* extension[backgroundColor] ^short = "Insurance card background color"
+* extension[backgroundColor].value[x] 1..1
+* extension[backgroundColor].value[x] only CodeableConcept
+// TODO add slice for code system. Need to have at least one from this system
+* extension[backgroundColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
+
+* extension[highlightColor] ^short = "Insurance card highlight color"
+* extension[highlightColor].value[x] 1..1
+* extension[highlightColor].value[x] only CodeableConcept
+// TODO add slice for code system. Need to have at least one from this system
+* extension[highlightColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
+
+* extension[logo] ^short = "Insurance card highlight color"
+* extension[logo].value[x] 1..1
+* extension[logo].value[x] only Attachment
+* extension[logo].valueAttachment.contentType 1..1
+* extension[logo].valueAttachment.data 1..1
