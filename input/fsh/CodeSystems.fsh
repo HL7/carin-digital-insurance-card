@@ -41,3 +41,12 @@ Description: "This code system includes an extended set of Copay T codes."
 * #spvisit "Specialist Practitioner Visit"
 * #gpvisit "General Practitioner Visit"
 * ^copyright = "This CodeSystem is not copyrighted."
+
+CodeSystem: C4DICExtendedContactTypeCS
+Title: "C4DIC Extended Contact Type"
+Description: "This code system includes an extended set of Contact Type codes."
+* #pharma "Pharmacists"
+* #rxmailorder "Mail Order Pharmacy"
+* #provider "Provider Service"
+* #virtual "Virtual Care Services"
+* ^copyright = "This CodeSystem is not copyrighted."
