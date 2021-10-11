@@ -23,3 +23,10 @@ Description: "This value set includes an extended set of copay type codes."
 * codes from valueset $HL7CopayTypeVS
 * codes from system C4DICExtendedCopayTypeCS
 * ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4DICContactTypeVS
+Title: "C4DIC Extended Contact Type"
+Description: "This value set includes an extended set of contact type codes."
+* codes from valueset $HL7ContactTypeVS
+* codes from system C4DICExtendedContactTypeCS
+* ^copyright = "This Valueset is not copyrighted."
