@@ -144,3 +144,10 @@ Description: "Images found on insurance cards"
 * extension[other].value[x] only Attachment
 * extension[other].valueAttachment.contentType 1..1
 * extension[other].valueAttachment.data 1..1
+
+Extension: CardIssueDate
+Id: C4DIC-CardIssueDate-extension
+Title: "Card Issue Date"
+Description: "Date at which the insurance card was issued by the payer"
+* value[x] 1..1
+* value[x] only date
