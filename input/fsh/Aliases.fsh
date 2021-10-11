@@ -9,7 +9,8 @@ Alias:   $OrganizationIdentifierType   =  http://terminology.hl7.org/CodeSystem/
 Alias:   $IdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $HL7CopayTypeCS = http://terminology.hl7.org/CodeSystem/coverage-copay-type
 Alias:   $HL7CopayTypeVS = http://hl7.org/fhir/ValueSet/coverage-copay-type
-
+Alias:   $HL7ContactTypeCS = http://terminology.hl7.org/CodeSystem/contactentity-type
+Alias:   $HL7ContactTypeVS = http://hl7.org/fhir/ValueSet/contactentity-type
 
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 

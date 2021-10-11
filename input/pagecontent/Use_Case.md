@@ -35,10 +35,6 @@
 <td>Per the HIPAA privacy regulations at 45 CFR 164.502(g), a <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/personal-representatives/index.html">personal-representative</a> is someone authorized under state or other applicable law to act on behalf of the individual in making health care related decisions (such as a parent, guardian, or person with a medical power of attorney)</td>
 </tr>
 <tr>
-<td>Coordination of Benefits</td>
-<td>The process of determining which of two or more insurance policies will have the primary responsibility of processing/paying a claim and the extent to which the other policies will contribute</td>
-</tr>
-<tr>
 <td>Payer</td>
 <td>
 <p>Public or private party which offers and/or administers health insurance plan(s) or coverage and/or pays claims directly or indirectly. Examples include:</p>
@@ -52,25 +48,16 @@
 </td>
 </tr>
 <tr>
-<td>Encounter data vs Claims</td>
-<td>Encounter data means the information or data relating to the receipt of any item(s) or service(s) by an enrollee under a contract between a State and a managed care plan. Encounter data are conceptually equivalent to the paid claims records that state Medicaid agencies create when they pay providers on a FFS basis</td>
-</tr>
-<tr>
-<td>EOB.careteam</td>
-<td>The members of the team or organization who contributed to the service to the patient submitted on the claim by the billing provider to the payer</td>
-</tr>
-<tr>
-<td>CareTeam Resource</td>
-<td>The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient</td>
-</tr>
 </tbody>
 </table>
 <a name="use-cases"></a>
-### Use Case - Consumer Access to their Claims Data
+### Use Case - Consumer Access to their Insurance Card Data
 <h4>Background</h4>
+<p>This implementation guide is designed to standardize the way that health insurance companies provide data found on the physical insurance card in a FHIR-based API exchange. The primary use case is to support insurance members (or their personal representatives) who wish to retrieve their proof of insurance coverage digitally via a consumer-facing application.<p>
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
 <p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>
 <h4>Technical Workflow</h4>
+<p>Precondition: App registers with a payer endpoint and receives a client ID and client secret<p>
 <p><img style="width: 100%; float: none; align: middle;" src="CARINSequence.png" /> Actors:</p>
 <ul>
 <li>Consumer (aka Subscriber, Beneficiary, Patient, or Personal Representative)</li>
@@ -81,13 +68,13 @@
 <p>Flow:</p>
 <ol>
 <li>Consumer App presents a list of potential Payers / Health Plans that can be accessed by the Consumer.</li>
-<li>Consumer selects the Payer / Health Plan.</li>
-<li>Consumer App opens the link to the Health Plan's Identity and Access Authorization server.</li>
-<li>Consumer enters the credentials.</li>
+<li>Consumer selects the Payer / Health Plan to initiate the login and consent flow.</li>
+<li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server.</li>
+<li>Consumer enters the credentials and consents to data sharing.</li>
 <li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with Consumer and authorized patient/beneficiary identities encoded.</li>
 <li>Consumer App successfully links the user to the Payer / Health Plan and notifies the Consumer.</li>
-<li>Consumer requests the Consumer App to fetch Explanation Of Benefit records.</li>
-<li>Consumer App generates and sends to the Health Plan's CARIN IG for Blue Button&reg; enabled FHIR API a request (which includes Patient ID, and token from the step #5) to fetch the Explanation Of Benefit (EOB) and supporting reference FHIR resources.</li>
-<li>Health Plan's CARIN IG for Blue Button&reg; enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
-<li>Consumer App presents the EOB and supporting reference FHIR resources to the Consumer.</li>
+<li>Consumer App requests the Coverage resource and associated resources as desired (i.e. Organization and/or Patient) along with the token and PatientID from step #5.</li>
+<li>Health Plan’s Authorization server validates the access token.</li>
+<li>Health Plan's FHIR API responds to the Consumer App with a bundle of the requested FHIR resources.</li>
+<li>Consumer App receives the FHIR data and presents the information to the consumer.</li>
 </ol>

@@ -77,17 +77,19 @@ Description: "Aadditional free text items often found on insurance cards"
 Extension: CardImages
 Id: C4DIC-CardImages-extension
 Title: "Card Images"
-Description: "Iimages found on insurance cards"
+Description: "Images found on insurance cards"
 * extension contains
 	backgroundColor 0..1 and
 	highlightColor 0..1 and 
-	logo 0..1 
+	logo 0..* and
+	qrCode 0..* and
+	barcode 0..* and
+	other 0..*
+
 
 * extension[backgroundColor] ^short = "Insurance card background color"
 * extension[backgroundColor].value[x] 1..1
 * extension[backgroundColor].value[x] only CodeableConcept
-
-
 
 * extension[backgroundColor].valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * extension[backgroundColor].valueCodeableConcept.coding ^slicing.rules = #open
@@ -119,8 +121,33 @@ Description: "Iimages found on insurance cards"
 * extension[highlightColor].valueCodeableConcept.coding[isoColor].code 1..1
 //* extension[highlightColor].valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1" 
 
-* extension[logo] ^short = "Insurance card highlight color"
+* extension[logo] ^short = "Logo for the health insurance provider"
 * extension[logo].value[x] 1..1
 * extension[logo].value[x] only Attachment
 * extension[logo].valueAttachment.contentType 1..1
 * extension[logo].valueAttachment.data 1..1
+
+* extension[qrCode] ^short = "QR code found on the insurance card"
+* extension[qrCode].value[x] 1..1
+* extension[qrCode].value[x] only Attachment
+* extension[qrCode].valueAttachment.contentType 1..1
+* extension[qrCode].valueAttachment.data 1..1
+
+* extension[barcode] ^short = "Barcode found on the insurance card"
+* extension[barcode].value[x] 1..1
+* extension[barcode].value[x] only Attachment
+* extension[barcode].valueAttachment.contentType 1..1
+* extension[barcode].valueAttachment.data 1..1
+
+* extension[other] ^short = "Other supporting images found on the insurance card"
+* extension[other].value[x] 1..1
+* extension[other].value[x] only Attachment
+* extension[other].valueAttachment.contentType 1..1
+* extension[other].valueAttachment.data 1..1
+
+Extension: CardIssueDate
+Id: C4DIC-CardIssueDate-extension
+Title: "Card Issue Date"
+Description: "Date at which the insurance card was issued by the payer"
+* value[x] 1..1
+* value[x] only date
