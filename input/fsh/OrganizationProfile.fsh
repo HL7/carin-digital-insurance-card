@@ -68,7 +68,7 @@ naiccode 0..* MS
 
 * contact ^slicing.discriminator.type = #pattern
 
-* contact ^slicing.discriminator.path = "type"
+* contact ^slicing.discriminator.path = "purpose"
 
 * contact ^slicing.rules = #open
 
