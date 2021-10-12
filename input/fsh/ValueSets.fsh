@@ -27,6 +27,7 @@ Description: "This value set includes an extended set of copay type codes."
 ValueSet: C4DICContactTypeVS
 Title: "C4DIC Extended Contact Type"
 Description: "This value set includes an extended set of contact type codes."
-* codes from valueset $HL7ContactTypeVS
+* $HL7ContactTypeCS#PATINF
+* $HL7ContactTypeCS#PAYOR
 * codes from system C4DICExtendedContactTypeCS
 * ^copyright = "This Valueset is not copyrighted."

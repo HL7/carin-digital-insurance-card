@@ -63,9 +63,9 @@ naiccode 0..* MS
 
 
 * contact MS
-
+/*
 * contact.purpose from C4DICContactTypeVS /*(required)*/
-
+/*
 * contact ^slicing.discriminator.type = #pattern
 
 * contact ^slicing.discriminator.path = "type"
@@ -96,8 +96,10 @@ virtual 0..* MS
 
 manually define them one by one?
 
+CAS: Yes, just define your valueSet with the codes of interest. See "C4DICContactTypeVS" in ValueSets.fsh. 
+    If you want to allow other codes where needed make it (extensible) - See below
 */
-
+/*
 * contact[PATINF].purpose = $HL7ContactTypeCS#PATINF
 
 * contact[PAYOR].purpose = $HL7ContactTypeCS#PAYOR
@@ -110,6 +112,9 @@ manually define them one by one?
 
 * contact[virtual].purpose = C4DICExtendedContactTypeCS#virtual
 
+*/
+
+* contact.purpose from C4DICContactTypeVS (extensible)
 
 
 * contact.telecom MS
