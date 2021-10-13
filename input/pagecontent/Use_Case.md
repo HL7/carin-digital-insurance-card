@@ -47,13 +47,15 @@
 </ul>
 </td>
 </tr>
-<tr>
 </tbody>
 </table>
 <a name="use-cases"></a>
 ### Use Case - Consumer Access to their Insurance Card Data
 <h4>Background</h4>
-<p>This implementation guide is designed to standardize the way that health insurance companies provide data found on the physical insurance card in a FHIR-based API exchange. The primary use case is to support insurance members (or their personal representatives) who wish to retrieve their proof of insurance coverage digitally via a consumer-facing application.<p>
+<p>This implementation guide is designed to standardize the way that health insurance companies provide the data elements found on the physical insurance card in a FHIR-based API exchange. The primary use case is to support insurance members (or their personal representatives) who wish to retrieve their proof of insurance coverage digitally via a consumer-facing application. This will provide an alternative to using the physical insurance card as proof of insurance. </p>
+<h6>Scenario</h6>
+<p>When an individual visits a healthcare provider, they may be asked to provide proof of insurance prior to receiving care. Instead of relying on their physical insurance card, the individual may pull out their phone and open a digital application to display their insurance card information. This will assist in cases of a lost or forgotten physical insurance card. The provider can capture the necessary information for proof of insurance based on the information displayed in the consumer-facing application. </p>
+<h4>Consumer-Directed Exchange</h4>
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
 <p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>
 <h4>Technical Workflow</h4>
