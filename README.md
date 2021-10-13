@@ -5,7 +5,7 @@ This implementation guide describes the CARIN for Digital Insurance Card Framewo
 
 **To Do List**
 
-1. Update given name to 0..1 on beneficiaries extension
+1. Reorder pages to be more logical... start with more background information, then use case, then general guidance, then data elements, then authorization, then search parameters, ...
 1. Diagram of relationships of the resources and how they relate to one another with additional context text
 2. Add more background information generally speaking....
 3. Just point to Patient from US Core instead of creating a new profile
