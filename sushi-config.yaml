@@ -32,19 +32,39 @@ parameters:
 copyrightYear: 2021+
 releaseLabel: Draft STU1
 jurisdiction: urn:iso:std:iso:3166#US
+pages:
+  index.md:
+    title: Home
+  Background.md:
+    title: Background
+  Use_Case.md:
+    title: Use Case
+  General_Guidance.md:
+    title: General Guidance
+    Authorization_Authentication_and_Registration.md:
+      title: Authorization, Authentication and Registration
+    Search_Parameters.md:
+      title: Search Parameters
+  Physical_Insurance_Card_Data_Elements.md:
+    title: Physical Insurance Card Data Elements
+  Terminology_Licensure.md:
+    title: Terminology Licensure
+  Downloads.md:
+    title: Downloads
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Background: Background.html
   Use Cases:
     Terms and Concepts: Use_Case.html#terms-and-concepts
     Use Cases: Use_Case.html#use-cases
   Guidance:
     General Guidance: General_Guidance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
-    Terminology Licensure: Terminology_Licensure.html 
+    Terminology Licensure: Terminology_Licensure.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Search Parameters: Search_Parameters.html
