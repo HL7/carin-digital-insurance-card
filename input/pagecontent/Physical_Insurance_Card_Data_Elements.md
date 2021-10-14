@@ -1,5 +1,13 @@
 ### Physical Insurance Card Data Elements
-<table border="1"><tr><td><b>Data Element</b></td><td><b>Description</b></td>
+<p>This table outlines the necessary data elements found on physicial insurance cards. This list of data elements was compiled through collaboration with numerous subject-matter experts across major insurance companies in the US. The authors of this IG also consulted the following resources for additional guidance:</p>
+
+*	WEDI Health Identification Card Implementation Guide
+*	WEDI Virtual Clipboard
+*	NYS DFS Title 11, section 52.69
+*	CCA/No Surprises Act, section 107 
+*	SMART Health Card IG (related to QR codes)
+
+<table border="1"><tr><td><b>Data Element</b></td><td><b>Description</b></td></tr>
 <tr><td>Member Name</td><td>Member's first and last name and may include middle name or initial</td></tr>
   <tr><td>Member ID</td><td>The unique identifier for the organization's membership</td></tr>
   <tr><td>Dependent code</td><td>Identifies the unique dependent under the plan</td></tr>
