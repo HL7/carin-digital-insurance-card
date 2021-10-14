@@ -13,6 +13,7 @@
 
 ### Additional Information
 
-<p>For additional information please visit these pages</p>
+<p>For additional information please visit these pages:</p>
+
 * Use Case
 * Physical Insurance Card Data Elements
