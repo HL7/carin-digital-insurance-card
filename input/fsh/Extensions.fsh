@@ -20,7 +20,7 @@ Description: "All beneficiaries on the plan with corresponding Names and MemberI
 * extension[subscriber].extension[name].value[x] 1..1
 * extension[subscriber].extension[name].value[x] only HumanName
 * extension[subscriber].extension[name].valueHumanName.family 1..1 MS
-* extension[subscriber].extension[name].valueHumanName.given 1..* MS
+* extension[subscriber].extension[name].valueHumanName.given 0..* MS
 
 * extension[beneficiary].extension contains
 	memberId 1..1 MS and
@@ -35,7 +35,7 @@ Description: "All beneficiaries on the plan with corresponding Names and MemberI
 * extension[beneficiary].extension[name].value[x] 1..1
 * extension[beneficiary].extension[name].value[x] only HumanName
 * extension[beneficiary].extension[name].valueHumanName.family 1..1 MS
-* extension[beneficiary].extension[name].valueHumanName.given 1..* MS
+* extension[beneficiary].extension[name].valueHumanName.given 0..* MS
 
 
 
@@ -43,7 +43,7 @@ Description: "All beneficiaries on the plan with corresponding Names and MemberI
 Extension: BeneficiaryCosts
 Id: C4DIC-BeneficiaryCosts-extension
 Title: "Beneficiary Costs"
-Description: "Cost to beneficiary allowing for strings"
+Description: "Cost to beneficiary allowing for copay representation as strings"
 * extension contains
 	costToBeneficiary 0..* MS
 
@@ -67,7 +67,7 @@ Description: "Cost to beneficiary allowing for strings"
 Extension: AdditionalCardInformation
 Id: C4DIC-AdditionalCardInformation-extension
 Title: "Additional Insurance Card Information"
-Description: "Aadditional free text items often found on insurance cards"
+Description: "Additional free text items often found on insurance cards"
 * value[x] 1..1
 * value[x] only Annotation
 
