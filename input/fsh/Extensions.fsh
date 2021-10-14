@@ -2,7 +2,7 @@
 Extension: PlanBeneficiaries
 Id: C4DIC-PlanBeneficiaries-extension
 Title: "Plan Beneficiaries"
-Description: "All beneficiaries on the plan with corresponding Names and MemberIDs"
+Description: "This extension allows for the representation of all of the beneficiaries on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
 * extension contains
 	subscriber 1..1 MS and
     beneficiary 1..* MS
@@ -43,7 +43,7 @@ Description: "All beneficiaries on the plan with corresponding Names and MemberI
 Extension: BeneficiaryCosts
 Id: C4DIC-BeneficiaryCosts-extension
 Title: "Beneficiary Costs"
-Description: "Cost to beneficiary allowing for copay representation as strings"
+Description: "This extension allows for the representation of copay details as strings. This can be passed as part of the Coverage resource where payors need to communicate costToBeneficiary details that cannot be expressed as SimpleQuantity or Money data types."
 * extension contains
 	costToBeneficiary 0..* MS
 
@@ -67,7 +67,7 @@ Description: "Cost to beneficiary allowing for copay representation as strings"
 Extension: AdditionalCardInformation
 Id: C4DIC-AdditionalCardInformation-extension
 Title: "Additional Insurance Card Information"
-Description: "Additional free text items often found on insurance cards"
+Description: "This extension enables the passing of free text items often found on insurance cards. Health plans may provide this extension as part of the Coverage resource to communicate concepts such as TTY, disclaimers about eligibility or limits to coverage, notice of dental or vision coverage, etc."
 * value[x] 1..1
 * value[x] only Annotation
 
@@ -77,7 +77,7 @@ Description: "Additional free text items often found on insurance cards"
 Extension: CardImages
 Id: C4DIC-CardImages-extension
 Title: "Card Images"
-Description: "Images found on insurance cards"
+Description: "This extension allows for the expression of images found on insurance cards, including Health Plan logos, barcodes or QR codes, as well as supporting images such as partner logos, employer logos, icons indicating the type of coverage provided, etc. This also allows for a highlight color and/or background color for design purposes. This extension may be passed as part of the Coverage resource to assist in the rendering of visual concepts found on the insurance card."
 * extension contains
 	backgroundColor 0..1 and
 	highlightColor 0..1 and 
@@ -148,6 +148,6 @@ Description: "Images found on insurance cards"
 Extension: CardIssueDate
 Id: C4DIC-CardIssueDate-extension
 Title: "Card Issue Date"
-Description: "Date at which the insurance card was issued by the payer"
+Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force."
 * value[x] 1..1
 * value[x] only date
