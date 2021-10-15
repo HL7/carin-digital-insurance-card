@@ -4,6 +4,13 @@ Id: C4DIC-Coverage
 Title: "C4DIC Coverage"
 Description: "Data that reflect a payer’s coverage of the member."
 
+* extension contains
+   PlanBeneficiaries named C4DIC-PlanBeneficiaries-extension 0..1 and
+   BeneficiaryCosts named C4DIC-BeneficiaryCosts-extension 0..1 and
+   AdditionalCardInformation named C4DIC-AdditionalCardInformation-extension 0..* and
+   CardImages named C4DIC-CardImages-extension 0..1 and
+   CardIssueDate named C4DIC-CardIssueDate-extension 0..1
+
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..*
