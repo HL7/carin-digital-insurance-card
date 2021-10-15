@@ -38,7 +38,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * beneficiary 1..1 MS
 * beneficiary.reference 1..1 MS
-* beneficiary only Reference(C4DICPatient) 
+* beneficiary only Reference($USCorePatient) 
 
 * dependent MS
 

@@ -97,8 +97,8 @@ resources:
   Patient/Example-Patient1:
     name: Patient Example 1
     description: Patient Example 1 (subscriber)
-    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   Patient/Example-Patient2:
     name: Patient Example 2
     description: Patient Example 2 (beneficiary)
-    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
