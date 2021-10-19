@@ -2,25 +2,9 @@
 Extension: PlanBeneficiaries
 Id: C4DIC-PlanBeneficiaries-extension
 Title: "Plan Beneficiaries"
-Description: "This extension allows for the representation of all of the beneficiaries on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
+Description: "This extension allows for the representation of all of the members on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
 * extension contains
-	subscriber 1..1 MS and
     beneficiary 1..* MS
-
-* extension[subscriber].extension contains
-	memberId 1..1 MS and
-    name 1..1 MS
-
-* extension[subscriber] ^short = "Subscriber Information"
-* extension[subscriber].extension[memberId] ^short = "Subscriber Member Id"
-* extension[subscriber].extension[memberId].value[x] 1..1
-* extension[subscriber].extension[memberId].value[x] only string
-
-* extension[subscriber].extension[name] ^short = "Subscriber Name"
-* extension[subscriber].extension[name].value[x] 1..1
-* extension[subscriber].extension[name].value[x] only HumanName
-* extension[subscriber].extension[name].valueHumanName.family 1..1 MS
-* extension[subscriber].extension[name].valueHumanName.given 0..* MS
 
 * extension[beneficiary].extension contains
 	memberId 1..1 MS and
