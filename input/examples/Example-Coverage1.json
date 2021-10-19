@@ -16,9 +16,6 @@
     {
       "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-PlanBeneficiaries-extension",
       "extension": [
-        {
-          "url": "subscriber",
-          "extension": [
             {
               "url": "memberId",
               "valueId": "102345672-01"
@@ -30,13 +27,13 @@
                 "given": ["John"]
               }
             }
-          ]
-        },
-        {
-          "url": "beneficiary",
-          "extension": [
-            {
-              "url": "memberId",
+        ]
+    },
+    {
+        "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-PlanBeneficiaries-extension",
+        "extension": [
+              {
+                "url": "memberId",
               "valueId": "102345672-02"
             },
             {
@@ -46,13 +43,13 @@
                 "given": ["Jane"]
               }
             }
-          ]
-        },
-        {
-          "url": "beneficiary",
-          "extension": [
+        ]
+    },
+    {
+        "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-PlanBeneficiaries-extension",
+        "extension": [
             {
-              "url": "memberId",
+                "url": "memberId",
               "valueId": "102345672-03"
             },
             {
@@ -62,13 +59,13 @@
                 "given": ["Jimmy"]
               }
             }
-          ]
-        },
-        {
-          "url": "beneficiary",
-          "extension": [
-            {
-              "url": "memberId",
+        ]
+    },
+    {
+        "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-PlanBeneficiaries-extension",
+        "extension": [
+              {
+                "url": "memberId",
               "valueId": "102345672-04"
             },
             {
@@ -78,9 +75,7 @@
                 "given": ["Ginny"]
               }
             }
-          ]
-        }
-      ]
+        ]
     },
     {
       "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCosts-extension",
