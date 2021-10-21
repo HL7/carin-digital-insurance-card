@@ -61,8 +61,8 @@ Description: "This extension allows for the expression of images found on insura
 * extension contains
 	backgroundColor 0..1 and
 	highlightColor 0..1 and 
-	logo 0..* and
-	qrCode 0..* and
+	logo 0..1 and
+	QRcode 0..* and
 	barcode 0..* and
 	other 0..*
 
