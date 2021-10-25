@@ -53,5 +53,4 @@
   <tr><td>--Other supporting images</td><td>Partner logos, images indicating the type of coverage provided, etc.</td></tr>
   <tr><td>Card issuance date</td><td>Date when the insurance company issued the insurance card</td></tr>
   <tr><td>Date of Birth</td><td>Date of Birth of the beneficiary</td></tr>
-</td></tr>
 </table>
