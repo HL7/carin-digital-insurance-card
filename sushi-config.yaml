@@ -18,7 +18,7 @@ title: CARIN Digital Insurance Card
 status: active
 publisher:
   name: HL7 Payer/Provider Information Exchange Working Group (PIE WG)
-  url: http://www.hl7.org/Special/Committees/claims
+  url: http://www.hl7.org/Special/committees/claims
   email: pie@lists.HL7.org
 description: CARIN Digital Insurance Card
 license: CC0-1.0
