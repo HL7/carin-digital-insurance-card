@@ -1,31 +1,34 @@
 Profile: C4DICPatient
-Parent: $USCorePatient
+Parent: Patient
 Id: C4DIC-Patient
 Title: "C4DIC Patient"
-Description: "This profile builds upon the US Core Patient profile. It is used to convey information about the member who has health insurance coverage."
+Description: "The goal of this profile is to describe a data-minimized version of Patient used to convey information about the Member who has health insurance coverage. Information that would normally not appear on an health insurance card is not required. This profile makes minimization suggestions."
+
+// Inherited short and definition include animals
+* . ^short = "Information about an individual who has health insurance coverage"
+* . ^definition = "Demographics and other administrative information about an individual with insurance coverage provided by a health plan."
+
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS
+* meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last.  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last."
 * meta.profile 1..*
+* meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest."
 * insert Metaprofile-supportedProfile-slice
-
 * meta.profile[supportedProfile] = Canonical(C4DICPatient)
 
-* birthDate MS
-* gender MS
+* birthDate 0..1
+* birthDate ^short = "MAY be excluded."
+* birthDate ^comment = "This data element is printed on some physical insurance cards, but not all."
 
-* name MS
+* gender 0..1
+* gender ^short = "MAY be excluded"
+* gender ^comment = "Gender is not a data element typically found on physical insurance cards. Furthermore, self-identified gender may change over time. Including this element could create a situation where the gender element in the provided resource does not match that in another form of identification or does not match the member's self-identified gender."
+
 * address.district MS
+* address.district ^comment = "The county for the member's primary address" 
 * address.country MS 
-
-* birthDate ^comment = "Date of birth of the member"
-* gender ^comment = "Gender of the member"
-* name ^comment = "The name of the patient"
-
-* meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last.  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last."
-* meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest."
 * address.line ^comment = "Member's street name, number, direction & P.O. Box etc."
 * address.city ^comment = "The city for the member's primary address" 
-* address.district ^comment = "The county for the member's primary address" 
 * address.state ^comment = "The state for the member's primary address" 
 * address.postalCode ^comment = "This represents the member's 5 digit zip code" 
 * address.country ^comment = "The country for the member's primary address"
