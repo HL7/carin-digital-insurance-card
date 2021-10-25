@@ -16,6 +16,13 @@ Description: "The goal of this profile is to describe a data minimized version o
 * insert Metaprofile-supportedProfile-slice
 * meta.profile[supportedProfile] = Canonical(C4DICPatient)
 
+* name 1..1
+* name and name.given and name.family MS
+* name obeys c4dic-name-invariant
+* name ^short = "Official name (i.e., legal name) of the member"
+* name ^definition = "Official name (i.e., legal name) of the member, corresponding to `official` in [this value set](https://www.hl7.org/fhir/valueset-name-use.html). Issuers SHALL provide a single `name` element UNLESS they believe providing multiple `name` elements is critical for verification of the credential. If providing only a single `name` element, Issuers SHALL NOT populate `name.use`, and Verifiers SHALL assume that the provided name is `official`."
+* name.text ^short = "Use instead of `family` and `given` if the member's name cannot be easily split these elements"
+
 * birthDate MS
 * birthDate ^comment = "If exact date of birth is partially or completely unknown, Payers SHALL populate this element with the date of birth information listed on the member's government-issued identification. This MAY include a partial date of birth like `1999` or `1999-01`, or \"filler\" for unknown portions. (E.g., if a member was born in 1950 but does not know the month or day, their government-issued identification may fill the month and day with `-01-01`. In this case, it is acceptable to populate this element with `1950-01-01` even if it is known the member was not actually born on January 1.) If date of birth is completely unknown and no government-issued identification is available, Payers MAY omit this element."
 
