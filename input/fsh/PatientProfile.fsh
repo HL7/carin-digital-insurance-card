@@ -25,12 +25,3 @@ Description: "The goal of this profile is to describe a data-minimized version o
 
 * gender 0..1
 * gender ^comment = "MAY be excluded. Gender is not a data element typically found on physical insurance cards. Furthermore, self-identified gender may change over time. Including this element could create a situation where the gender element in the provided resource does not match that in another form of identification or does not match the member's self-identified gender."
-
-* address.district MS
-* address.district ^comment = "The county for the member's primary address" 
-* address.country MS 
-* address.line ^comment = "Member's street name, number, direction & P.O. Box etc."
-* address.city ^comment = "The city for the member's primary address" 
-* address.state ^comment = "The state for the member's primary address" 
-* address.postalCode ^comment = "This represents the member's 5 digit zip code" 
-* address.country ^comment = "The country for the member's primary address"
