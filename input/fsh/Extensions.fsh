@@ -3,6 +3,8 @@ Extension: PlanBeneficiaries
 Id: C4DIC-PlanBeneficiaries-extension
 Title: "Plan Beneficiaries"
 Description: "This extension allows for the representation of all of the members on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	memberId 1..1 MS and
     name 1..1 MS
@@ -19,6 +21,8 @@ Extension: BeneficiaryCosts
 Id: C4DIC-BeneficiaryCosts-extension
 Title: "Beneficiary Costs"
 Description: "This extension allows for the representation of copay details as strings. This can be passed as part of the Coverage resource where payors need to communicate costToBeneficiary details that cannot be expressed as SimpleQuantity or Money data types."
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	costToBeneficiary 0..* MS
 * extension[costToBeneficiary].extension contains
@@ -39,11 +43,15 @@ Title: "Additional Insurance Card Information"
 Description: "This extension enables the passing of free text items often found on insurance cards. Health plans may provide this extension as part of the Coverage resource to communicate concepts such as TTY, disclaimers about eligibility or limits to coverage, notice of dental or vision coverage, etc."
 * value[x] 1..1
 * value[x] only Annotation
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 
 Extension: CardIssueDate
 Id: C4DIC-CardIssueDate-extension
 Title: "Card Issue Date"
 Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force."
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * value[x] 1..1
 * value[x] only date
 
@@ -51,6 +59,8 @@ Extension: BackgroundColor
 Id: C4DIC-BackgroundColor-extension
 Title: "Background Color"
 Description: "Background color"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
@@ -66,6 +76,8 @@ Extension: HighlightColor
 Id: C4DIC-HighlightColor-extension
 Title: "Highlight Color"
 Description: "Highlight color"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
@@ -82,6 +94,8 @@ Extension: Logo
 Id: C4DIC-Logo-extension
 Title: "Logo"
 Description: "Logo"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	description 1..1 and
 	image 1..1 and
@@ -96,6 +110,8 @@ Extension: QRCode
 Id: C4DIC-QRCode-extension
 Title: "QR Code"
 Description: "QR code"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	description 1..1 and
 	image 1..1 and
@@ -110,6 +126,8 @@ Extension: Barcode
 Id: C4DIC-Barcode-extension
 Title: "Barcode"
 Description: "Barcode"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	description 1..1 and
 	image 1..1 and
@@ -124,6 +142,8 @@ Extension: SupportingImage
 Id: C4DIC-SupportingImage-extension
 Title: "Supporting image"
 Description: "Supporting image"
+* ^context[0].type = #element
+* ^context[0].expression = "C4DICCoverage"
 * extension contains
 	description 1..1 and
 	image 1..1 and
