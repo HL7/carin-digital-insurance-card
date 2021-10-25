@@ -1,12 +1,8 @@
 
 CodeSystem: C4DICIdentifierType
 Title: "C4DIC Identifier Type"
-Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients"
-// * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
-* #npi "National Provider Identifier" "National Provider Identifier"
-//* #clia "CLIA" "CLIA"
+Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to insurers and patients"
 * #payerid "Payer ID" "Payer ID"
-* #naiccode "NAIC Code" "NAIC Code"
 //* #mb "Member ID" "Member ID" - not needed - defined in HL7
 // * #mr "Medical Record Number" "Medical Record Number" - use the MR code from the base codesystem
 * #pat "Patient Account Number" "Patient Account Number"
@@ -36,10 +32,6 @@ Description: "This code system includes an extended set of Copay T codes."
 * #FamRxOutMax "Family Pharmacy Out of Network Out of Pocket Maximum"
 * #FamRxInMax "Family Pharmacy In Network Out of Pocket Maximum"
 * #rx "Prescription"
-* #urgentcare "Urgent Care"
-* #emergency "Emergency"
-* #spvisit "Specialist Practitioner Visit"
-* #gpvisit "General Practitioner Visit"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4DICExtendedContactTypeCS
