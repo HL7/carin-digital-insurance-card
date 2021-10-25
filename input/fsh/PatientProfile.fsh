@@ -17,7 +17,8 @@ Description: "The goal of this profile is to describe a data-minimized version o
 * meta.profile[supportedProfile] = Canonical(C4DICPatient)
 
 * birthDate 0..1
-* birthDate ^comment = "If exact date of birth is partially or completely unknown, Payers SHALL populate this element with the date of birth information listed on the member's government-issued identification. This MAY include a partial date of birth like `1999` or `1999-01`, or \"filler\" for unknown portions. (E.g., if a member was born in 1950 but does not know the month or day, their government-issued identification may fill the month and day with `-01-01`. In this case, it is acceptable to populate this element with `1950-01-01` even if it is known the member was not actually born on January 1.) If date of birth is completely unknown and no government-issued identification is available, Payers MAY omit this element."
+* birthDate ^short = "MAY be excluded."
+* birthDate ^comment = "This data element is printed on some physical insurance cards, but not all."
 
 * gender 0..1
 * gender ^short = "MAY be excluded"
