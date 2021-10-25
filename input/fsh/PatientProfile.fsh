@@ -22,7 +22,7 @@ Description: "The goal of this profile is to describe a data-minimized version o
 
 * gender 0..1
 * gender ^short = "MAY be excluded"
-* gender ^comment = "Self-identified gender may change over time, and it may not be possible to re-issue a credential updating the value of this element. Including this element could therefore create a situation where the gender element in the credential does not match that in another form of identification, or does not match the member's self-identified gender at the time they present their credential."
+* gender ^comment = "Gender is not a data element typically found on physical insurance cards. Furthermore, self-identified gender may change over time. Including this element could create a situation where the gender element in the provided resource does not match that in another form of identification or does not match the member's self-identified gender."
 
 * address.district MS
 * address.district ^comment = "The county for the member's primary address" 
