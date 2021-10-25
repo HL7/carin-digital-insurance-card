@@ -6,7 +6,7 @@ Description: "The goal of this profile is to describe a data minimized version o
 
 // Inherited short and definition include animals
 * . ^short = "Information about an individual receiving an individual receiving a vaccination or infectious disease-related laboratory test"
-* . ^definition = "Demographics and other administrative information about an individual receiving a vaccination or infectious disease-related laboratory test."
+* . ^definition = "Demographics and other administrative information about an individual with insurance coverage provided by a health plan."
 
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS
