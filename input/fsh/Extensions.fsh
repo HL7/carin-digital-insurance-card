@@ -58,7 +58,7 @@ Description: "This extension allows for the expression of the date at which the 
 Extension: BackgroundColor
 Id: C4DIC-BackgroundColor-extension
 Title: "Background Color"
-Description: "Background color"
+Description: "This extension enables an insurance company to provide a background color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member."
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * value[x] only CodeableConcept
@@ -75,7 +75,7 @@ Description: "Background color"
 Extension: HighlightColor
 Id: C4DIC-HighlightColor-extension
 Title: "Highlight Color"
-Description: "Highlight color"
+Description: "This extension enables an insurance company to provide a highlight color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member"
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * value[x] only CodeableConcept
@@ -93,7 +93,7 @@ Description: "Highlight color"
 Extension: Logo
 Id: C4DIC-Logo-extension
 Title: "Logo"
-Description: "Logo"
+Description: "This extension enables payers to provide an image of their company or organization logo for use by consuming applications when rendering the coverage information for use by the health plan member. This may assist in making the information provided feel more relevant or recongizable by the member. The extension also allows for the health plan to provide a Label for the image which can be displayed in the consuming application as well as a Description of the content in the image file. Detailed descriptions are encouraged to assist with accessibility."
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * extension contains
@@ -109,7 +109,7 @@ Description: "Logo"
 Extension: QRCode
 Id: C4DIC-QRCode-extension
 Title: "QR Code"
-Description: "QR code"
+Description: "This extension enables payers to provide an image of the QR code found on a member's physicial insurance card. This image may be displayed by consuming applications when rendering the coverage information for use by the health plan member. Often there are data elements relevant to the health plan coverage encoded in the QR code. The extension also allows for the health plan to provide a Label for the image which can be displayed in the consuming application as well as a Description of the content in the image file. Detailed descriptions are encouraged to assist with accessibility."
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * extension contains
@@ -125,7 +125,7 @@ Description: "QR code"
 Extension: Barcode
 Id: C4DIC-Barcode-extension
 Title: "Barcode"
-Description: "Barcode"
+Description: "This extension enables payers to provide an image of the barcode found on a member's physicial insurance card. This image may be displayed by consuming applications when rendering the coverage information for use by the health plan member. Often there are data elements relevant to the health plan coverage encoded in the barcode. The extension also allows for the health plan to provide a Label for the image which can be displayed in the consuming application as well as a Description of the content in the image file. Detailed descriptions are encouraged to assist with accessibility."
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * extension contains
@@ -141,7 +141,7 @@ Description: "Barcode"
 Extension: SupportingImage
 Id: C4DIC-SupportingImage-extension
 Title: "Supporting image"
-Description: "Supporting image"
+Description: "This extension enables payers to provide other supporting images found on a member's physicial insurance card. A supporting image may be displayed by consuming applications when rendering the coverage information for use by the health plan member. These images may communicate additional information to the member such as the type of coverage provided or partner logos. The extension also allows for the health plan to provide a Label for the image which can be displayed in the consuming application as well as a Description of the content in the image file. Detailed descriptions are encouraged to assist with accessibility."
 * ^context[0].type = #element
 * ^context[0].expression = "C4DICCoverage"
 * extension contains
