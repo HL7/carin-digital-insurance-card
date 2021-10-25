@@ -2,7 +2,7 @@ Profile: C4DICPatient
 Parent: Patient
 Id: C4DIC-Patient
 Title: "C4DIC Patient"
-Description: "Slight modification of Patient with limited MS. This profile is used to convey information about the member who has health insurance coverage. Information that would normally not appear on an health insurance card should not be used. This profile makes minimization suggestions."
+Description: "The goal of this profile is to describe a data minimized version of Patient used to convey information about the Member who has health insurance coverage. Information that would normally not appear on an health insurance card should not be used. This profile makes minimization suggestions."
 
 // Inherited short and definition include animals
 * . ^short = "Information about an individual receiving an individual receiving a vaccination or infectious disease-related laboratory test"
@@ -19,19 +19,9 @@ Description: "Slight modification of Patient with limited MS. This profile is us
 * birthDate MS
 * birthDate ^comment = "If exact date of birth is partially or completely unknown, Payers SHALL populate this element with the date of birth information listed on the member's government-issued identification. This MAY include a partial date of birth like `1999` or `1999-01`, or \"filler\" for unknown portions. (E.g., if a member was born in 1950 but does not know the month or day, their government-issued identification may fill the month and day with `-01-01`. In this case, it is acceptable to populate this element with `1950-01-01` even if it is known the member was not actually born on January 1.) If date of birth is completely unknown and no government-issued identification is available, Payers MAY omit this element."
 
-* gender 0..0
-* gender ^short = "SHALL NOT be included"
+* gender 0..1
+* gender ^short = "MAY be excluded"
 * gender ^comment = "Self-identified gender may change over time, and it may not be possible to re-issue a credential updating the value of this element. Including this element could therefore create a situation where the gender element in the credential does not match that in another form of identification, or does not match the member's self-identified gender at the time they present their credential."
-
-* photo 0..0
-* photo ^comment = "Attachments are not allowed"
-
-* name 1..1
-* name and name.given and name.family MS
-* name obeys c4dic-name-invariant
-* name ^short = "Official name (i.e., legal name) of the member"
-* name ^definition = "Official name (i.e., legal name) of the member, corresponding to `official` in [this value set](https://www.hl7.org/fhir/valueset-name-use.html). Issuers SHALL provide a single `name` element UNLESS they believe providing multiple `name` elements is critical for verification of the credential. If providing only a single `name` element, Issuers SHALL NOT populate `name.use`, and Verifiers SHALL assume that the provided name is `official`."
-* name.text ^short = "Use instead of `family` and `given` if the member's name cannot be easily split these elements"
 
 * address.district MS
 * address.district ^comment = "The county for the member's primary address" 
