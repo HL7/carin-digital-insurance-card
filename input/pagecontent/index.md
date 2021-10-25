@@ -1,7 +1,7 @@
 <a name="introduction"> </a>
 ### Introduction
 
-This implementation guide describes the CARIN for Digital Insurance Card Framework, providing a set of resources that payers can display to consumers via a FHIR API. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transimmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the Table of Contents for more information.
+This implementation guide describes the CARIN for Digital Insurance Card Framework, providing a set of resources that payers can display to consumers via a FHIR API. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the Table of Contents for more information.
 
 <a name="the-carin-alliance"></a>
 ### The CARIN Alliance
@@ -22,11 +22,12 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
     * Pamela Maklari (Cognizant) [Pamela.Maklari@cognizant.com](mailto:Pamela.Maklari@cognizant.com)
     * Julia Meade Tulli (Anthem) [julia.tulli@anthem.com](mailto:julia.tulli@anthem.com)
     * Sarah Young (Anthem) [Sarah.Young@anthem.com](mailto:Sarah.Young@anthem.com)
+    * Joshua Kelly (Automate Medical) [josh@automatemedical.com](mailto:josh@automatemedical.com)
     * HL7 Financial Management Workgroup
     * HL7 Security Workgroup 
 
 
 ### Acknowledgements
-This IG was developed using FHIR Shorthand syntax and the SUSHI tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and assistance with the FHIR IG builds were provided by Corey Spears (MITRE), Joshua Kelly (Automate Medical), and Vince Van Dintel (Humana). 
+This IG was developed using FHIR Shorthand syntax and the SUSHI tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and assistance with the FHIR IG builds were provided by Corey Spears (MITRE), and Vince Van Dintel (Humana). 
 
 
