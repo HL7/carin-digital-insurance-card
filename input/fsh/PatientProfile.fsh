@@ -21,11 +21,9 @@ Description: "The goal of this profile is to describe a data-minimized version o
 * name.given 0..* MS
 
 * birthDate 0..1
-* birthDate ^short = "male | female | other | unknown"
 * birthDate ^comment = "MAY be excluded. This data element is printed on some physical insurance cards, but not all."
 
 * gender 0..1
-* gender ^short = "The date of birth for the individual"
 * gender ^comment = "MAY be excluded. Gender is not a data element typically found on physical insurance cards. Furthermore, self-identified gender may change over time. Including this element could create a situation where the gender element in the provided resource does not match that in another form of identification or does not match the member's self-identified gender."
 
 * address.district MS
