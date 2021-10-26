@@ -18,6 +18,7 @@ Description: "The goal of this profile is to describe a data-minimized version o
 
 * name 1..1 MS
 * name.family 1..1 MS
+* name.family ^comment = "Where an individual has only one name, payers SHALL provide the information as family name to ensure consistency."
 * name.given 0..* MS
 
 * birthDate 0..1
