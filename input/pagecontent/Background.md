@@ -7,7 +7,13 @@
 * There is a need to standardize how images often found on insurance cards are able to be expressed in a FHIR-based transaction in a way that is predictable and renderable by consuming applications.
 
 ### Overview
-<p>In order to represent the essential information found on the physicial insurance card, payers can leverage the Coverage resource to communicate the insurance plan information, the Organization resource to communicate the contact information for the plan (often found on the back of the physical card), and the Patient resource to communicate additional demographic information such as date of birth. The below diagram outlines how these resources relate.</p>
+<p>Payers can leverage the Coverage resource, the Organization resource, and the Patient resource to represent the essential information found on the physicial insurance card. The purpose of each resource is as follows:</p>
+
+* The Coverage resource communicates the insurance plan information
+* The Organization resource communicates the contact information for the plan (often found on the back of the physical insurance card)
+* The Patient resource communicates additional demographic information such as date of birth for the member whose data is being retrieved
+
+<p>The below diagram outlines how these resources relate. As shown below, the coverage.payor field will contain a reference to the corresponding Organization resource, and the coverage.beneficiary field will contain a reference to the corresponding Patient resource for the member whose data is being retrieved. </p>
 
 <p><img style="width: 85%; float: none; align: middle;" src="ResourceDiagram.png"/></p>
 
