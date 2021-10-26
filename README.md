@@ -5,5 +5,7 @@ This implementation guide describes the CARIN for Digital Insurance Card Framewo
 
 **To Do List**
 
-3. Cleanup "context of use" errors
-4. Cleanup terminology bindings
+* Create PR to JIRA repo (Josh)
+* Merge JIRA PR in our repo (Josh)
+* Adjust name cardinality (Cille)
+* Adjust code system for colors (Cille; currently blocked on finding the right code system to use)
