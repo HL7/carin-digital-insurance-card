@@ -7,4 +7,3 @@ This implementation guide describes the CARIN for Digital Insurance Card Framewo
 
 3. Cleanup "context of use" errors
 4. Cleanup terminology bindings
-5. Get rid of "terminology licensure" page?

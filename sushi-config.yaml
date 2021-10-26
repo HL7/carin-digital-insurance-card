@@ -47,8 +47,6 @@ pages:
       title: Search Parameters
   Physical_Insurance_Card_Data_Elements.md:
     title: Physical Insurance Card Data Elements
-  Terminology_Licensure.md:
-    title: Terminology Licensure
   Downloads.md:
     title: Downloads
 
@@ -64,7 +62,6 @@ menu:
   Guidance:
     General Guidance: General_Guidance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
-    Terminology Licensure: Terminology_Licensure.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Search Parameters: Search_Parameters.html
