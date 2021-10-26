@@ -16,7 +16,7 @@ Description: "The goal of this profile is to describe a data-minimized version o
 * insert Metaprofile-supportedProfile-slice
 * meta.profile[supportedProfile] = Canonical(C4DICPatient)
 
-* name 0..1 MS
+* name 1..1 MS
 * name.family 1..1 MS
 * name.given 0..* MS
 
