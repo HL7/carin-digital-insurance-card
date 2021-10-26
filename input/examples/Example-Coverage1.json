@@ -197,6 +197,10 @@
           }
       },
       {
+          "url" : "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-CardIssueDate-extension",
+          "valueDate" : "2020-12-15"
+      },
+      {
           "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BackgroundColor-extension",
           "valueCodeableConcept": {
               "coding": [
