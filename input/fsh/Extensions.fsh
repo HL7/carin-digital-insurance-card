@@ -71,6 +71,7 @@ Description: "This extension enables an insurance company to provide a backgroun
     isoColor 1..1
 * valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
 * valueCodeableConcept.coding[isoColor].code 1..1
+* valueCodeableConcept.coding[isoColor].code ^comment = "Color should be provided as a hex code in the #RRGGBB format"
 
 Extension: HighlightColor
 Id: C4DIC-HighlightColor-extension
@@ -88,7 +89,7 @@ Description: "This extension enables an insurance company to provide a highlight
     isoColor 1..1
 * valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
 * valueCodeableConcept.coding[isoColor].code 1..1
-//* valueCodeableConcept.coding.system = "urn:iso:std:iso-iec:61966:2-1"
+* valueCodeableConcept.coding[isoColor].code ^comment = "Color should be provided as a hex code in the #RRGGBB format"
 
 Extension: Logo
 Id: C4DIC-Logo-extension
