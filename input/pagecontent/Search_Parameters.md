@@ -1,7 +1,6 @@
 <h3>Search Parameters Required By This Implementation Guide</h3>
 <table class="grid">
 <thead>
-</tr>
 			<tr>
 				<th>Conformance</th>
                 <th>Resource</th>

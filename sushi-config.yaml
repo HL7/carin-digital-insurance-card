@@ -18,7 +18,7 @@ title: CARIN Digital Insurance Card
 status: active
 publisher:
   name: HL7 Payer/Provider Information Exchange Working Group (PIE WG)
-  url: http://www.hl7.org/Special/Committees/claims
+  url: http://www.hl7.org/Special/committees/claims
   email: pie@lists.HL7.org
 description: CARIN Digital Insurance Card
 license: CC0-1.0
@@ -29,22 +29,40 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  jira-code: carin-dic
 copyrightYear: 2021+
 releaseLabel: Draft STU1
 jurisdiction: urn:iso:std:iso:3166#US
+pages:
+  index.md:
+    title: Home
+  Background.md:
+    title: Background
+  Use_Case.md:
+    title: Use Case
+  General_Guidance.md:
+    title: General Guidance
+    Authorization_Authentication_and_Registration.md:
+      title: Authorization, Authentication and Registration
+    Search_Parameters.md:
+      title: Search Parameters
+  Physical_Insurance_Card_Data_Elements.md:
+    title: Physical Insurance Card Data Elements
+  Downloads.md:
+    title: Downloads
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Background: Background.html
   Use Cases:
     Terms and Concepts: Use_Case.html#terms-and-concepts
     Use Cases: Use_Case.html#use-cases
   Guidance:
     General Guidance: General_Guidance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
-    Terminology Licensure: Terminology_Licensure.html 
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Search Parameters: Search_Parameters.html
@@ -82,4 +100,3 @@ resources:
     name: Patient Example 2
     description: Patient Example 2 (beneficiary)
     exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
-
