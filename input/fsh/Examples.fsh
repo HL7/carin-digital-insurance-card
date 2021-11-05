@@ -34,9 +34,6 @@ Usage: #example
 * identifier[uniquememberid].type = C4DICIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
 * identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-//* identifier[patacctnum].type = C4DICIdentifierType#pat
-//* identifier[patacctnum].value = "1234-234-1243-12345678901a"
-//* identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 
 Instance: Coverage1
 InstanceOf: C4DICCoverage
