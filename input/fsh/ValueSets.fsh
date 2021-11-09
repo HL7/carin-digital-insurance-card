@@ -3,7 +3,6 @@ ValueSet: C4DICCoverageIdentifierType
 Title: "C4DIC Coverage Identifier Type"
 Description: "Identifies the type of identifier for payer coverage"
 * C4DICIdentifierType#um
-* C4DICIdentifierType#pat
 * $IdentifierType#MB
 * $IdentifierType#MR  
 * ^copyright = "This Valueset is not copyrighted."
