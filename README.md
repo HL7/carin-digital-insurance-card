@@ -7,3 +7,10 @@ This implementation guide describes the CARIN for Digital Insurance Card Framewo
 
 * Pending decision, supress US Core deviation warning
 * Suppress hint around URN for RBG color scheme
+
+**Feedback from HL7 Workgroups**
+
+* FM 11/9: Opportunity to clarify current coverage (possible confusion with encouraging support for vread; potential to add support for searching on status and/or period)
+* FM 11/9: RxBIN may need to be renamed RxIIN
+* FM 11/9: Add slice for RxIdentifier in coverage.class
+* FM 11/9: Consider compiling requests for teams working on R5 to overcome challenges we've seen (like coverage.network only allowing one string)
