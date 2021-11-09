@@ -5,6 +5,5 @@ This implementation guide describes the CARIN for Digital Insurance Card Framewo
 
 **To Do List**
 
-* Create PR to JIRA repo (Josh)
-* Merge JIRA PR in our repo (Cille, blocked by PR to JIRA Repo)
-* Adjust code system for colors (Cille; blocked on finding the right code system to use)
+* Pending decision, supress US Core deviation warning
+* Suppress hint around URN for RBG color scheme
