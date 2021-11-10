@@ -76,7 +76,8 @@ Description: "Data that reflect a payer’s coverage of the member."
    network 0..1 MS and
    rxbin 0..1 MS and
    rxpcn 0..1 MS and
-   rxgroup 0..1 MS
+   rxgroup 0..1 MS and
+   rxid 0..1 MS
   
 * class[group].type = $CoverageClassCS#group
 * class[plan].type = $CoverageClassCS#plan
@@ -85,6 +86,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 * class[rxbin].type = $CoverageClassCS#rxbin
 * class[rxpcn].type = $CoverageClassCS#rxpcn
 * class[rxgroup].type = $CoverageClassCS#rxgroup
+* class[rxid].type = $CoverageClassCS#rxid
 
 * costToBeneficiary MS
 * costToBeneficiary.type 1..1 MS
