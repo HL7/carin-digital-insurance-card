@@ -13,6 +13,7 @@ Title: "C4DIC Extended Coverage Class"
 Description: "This code system includes an extended set of Coverage Class codes."
 * #division "Division"
 * #network "Network"
+* #rxiin "RxIIN"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 

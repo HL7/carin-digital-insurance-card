@@ -2,7 +2,7 @@ Profile: C4DICPatient
 Parent: Patient
 Id: C4DIC-Patient
 Title: "C4DIC Patient"
-Description: "The goal of this profile is to describe a data-minimized version of Patient used to convey information about the Member who has health insurance coverage. Information that would normally not appear on an health insurance card is not required."
+Description: "The goal of this profile is to describe a data-minimized version of Patient used to convey information about the Member who has health insurance coverage. Information that would normally not appear on a health insurance card is not required. The use of this profile is only approved for conveying information related to a health insurance card as part of this IG."
 
 // Inherited short and definition include animals
 * . ^short = "Information about an individual who has health insurance coverage"
