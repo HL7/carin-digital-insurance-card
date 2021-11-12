@@ -100,6 +100,36 @@
 					<code class="highlighter-rouge">GET [base]/Coverage?identifier=[identifier]</code>
 				</td>
 			</tr>
+	<tr>
+				<td>
+					<strong>SHALL</strong>
+				</td>
+                <td>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+				</td>
+				<td>
+					<a href="http://hl7.org/fhir/R4/coverage.html#search">period</a>
+				</td>
+				<td>date</td>
+				<td>
+					<code class="highlighter-rouge">GET [base]/Coverage?period=[date]</code>
+				</td>
+			</tr>
+	<tr>
+				<td>
+					<strong>SHALL</strong>
+				</td>
+                <td>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+				</td>
+				<td>
+					<a href="http://hl7.org/fhir/R4/coverage.html#search">status</a>
+				</td>
+				<td>token</td>
+				<td>
+					<code class="highlighter-rouge">GET [base]/Coverage?status=[status]</code>
+				</td>
+			</tr>
             <tr>
 				<td>
 					<strong>SHALL</strong>
