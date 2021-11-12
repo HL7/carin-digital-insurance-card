@@ -35,7 +35,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#lastUpdated">_lastUpdated</a>
 				</td>
-				<td>reference</td>
+				<td>date</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Coverage?_lastUpdated=[dateTime]</code>
 				</td>
@@ -50,7 +50,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">beneficiary</a>
 				</td>
-				<td>date</td>
+				<td>reference</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Coverage?beneficiary=[beneficiary]</code>
 				</td>
@@ -65,7 +65,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">subscriber</a>
 				</td>
-				<td>token</td>
+				<td>reference</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Coverage?subscriber=[system]|[code]</code>
 				</td>
@@ -80,7 +80,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">patient</a>
 				</td>
-				<td>token</td>
+				<td>reference</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Coverage?patient=[system]|[code]</code>
 				</td>
@@ -95,7 +95,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">identifier</a>
 				</td>
-				<td>date</td>
+				<td>token</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Coverage?identifier=[identifier]</code>
 				</td>
@@ -140,7 +140,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#id">_id</a>
 				</td>
-				<td>reference</td>
+				<td>token</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Organization?_id=[id]</code>
 				</td>
@@ -155,7 +155,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#id">_id</a>
 				</td>
-				<td>reference</td>
+				<td>token</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Patient?_id=[id]</code>
 				</td>
@@ -170,7 +170,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#lastUpdated">_lastUpdated</a>
 				</td>
-				<td>reference</td>
+				<td>date</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Patient?_lastUpdated=[dateTime]</code>
 				</td>
@@ -185,7 +185,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/patient.html#search">identifier</a>
 				</td>
-				<td>reference</td>
+				<td>token</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Patient?identifier=[type]/[id]</code>
 				</td>
@@ -200,7 +200,7 @@
 				<td>
 					<a href="http://hl7.org/fhir/R4/patient.html#search">name</a>
 				</td>
-				<td>reference</td>
+				<td>string</td>
 				<td>
 					<code class="highlighter-rouge">GET [base]/Patient?name=[type]/[id]</code>
 				</td>
