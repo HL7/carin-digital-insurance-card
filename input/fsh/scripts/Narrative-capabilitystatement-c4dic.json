@@ -97,7 +97,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-id",
                             "name": "_id",
                             "type": "token"
                         },
@@ -108,7 +107,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-lastUpdated",
                             "name": "_lastUpdated",
                             "type": "reference"
                         },
@@ -119,7 +117,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-beneficiary",
                             "name": "beneficiary",
                             "type": "date"
                         },
@@ -130,7 +127,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-subscriber",
                             "name": "subscriber",
                             "type": "token"
                         },
@@ -141,7 +137,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-patient",
                             "name": "patient",
                             "type": "token"
                         },
@@ -152,7 +147,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/coverage-identifier",
                             "name": "identifier",
                             "type": "date"
                         }
@@ -209,7 +203,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/organization-id",
                             "name": "_id",
                             "type": "reference"
                         }
@@ -266,7 +259,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/patient-id",
                             "name": "_id",
                             "type": "reference"
                         },
@@ -277,7 +269,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/patient-lastUpdated",
                             "name": "_lastUpdated",
                             "type": "reference"
                         },
@@ -288,7 +279,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/patient-identifier",
                             "name": "identifier",
                             "type": "reference"
                         },
@@ -299,7 +289,6 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/insurance-card/SearchParameter/patient-name",
                             "name": "name",
                             "type": "reference"
                         }
