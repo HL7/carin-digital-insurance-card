@@ -1,7 +1,7 @@
 '''
 Benjamin Langley
 
-Usage: python3 R4CapStatement_NarrativeMaker.py [json file]
+Usage: python3 R4CapStatement_NarrativeMaker.py [json file] {[Artifacts Folder]}
 Dependecies: 
     fhirclient
     pandas
@@ -16,8 +16,7 @@ To install all dependencies: pip3 install -r requirements.txt
 to run on windows: python -m pip ...
 
 NOTE: this requires the r4models to be installed in the fhirclient pip site-package, to be installed in [installdir]/lib/python/site-packages/fhirclient
-Email Eric Haas for these models (the _element extension elements are not supported in that version. Corety Spears can provide a modified set or rfmodels for 
-the capabilitystatement element level extension )
+
 
 Modified from: 
 https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
@@ -462,9 +461,11 @@ def get_pname_map(file_names):
     
     pname_map = {}
     for file_name in file_names:
+        print("Searching: " + file_name + "\n")
         with open(file_name, 'r') as file_h:
             sd = SD.StructureDefinition(json.load(file_h))
             pname_map[sd.url] = sd.title
+            print("Found title: " + sd.title + " from URL:" + sd.url + "\n")
         file_h.close()
     
     return pname_map
@@ -491,19 +492,23 @@ def get_csname_map(file_names):
 
 def get_url_title(url, msg_context):
     print("Retrieving " + msg_context + " at: " + url)
-    r = get(url, headers={"Accept":"application/json"})
-    if r.status_code == 200:
-        try:
-            json_data = json.loads(r.content)
-            #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
-            if(json_data['title']):
-                return json_data['title']
-            else:
-                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-        except ValueError:
-            print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-    else:
-        print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
+    try:
+        r = get(url, headers={"Accept":"application/json"})
+        if r.status_code == 200:
+            try:
+                json_data = json.loads(r.content)
+                #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
+                if(json_data['title']):
+                    return json_data['title']
+                else:
+                    print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+            except ValueError:
+                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+        else:
+            print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
+    except ValueError:
+        print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve " + msg_context + " artifact (" + url + ")." + bcolors.ENDC)
+
 
 
 def markdown(text, *args, **kwargs):

@@ -24,6 +24,7 @@ import sys
 import os
 import os.path
 from os import path
+import validators
 import fhirclient.r4models.capabilitystatement as CS
 import fhirclient.r4models.codeableconcept as CC
 import fhirclient.r4models.fhirdate as D
@@ -61,6 +62,8 @@ combo_url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-
 # dict to for SP to get right canonicals, may use spreadsheet or package file in future.
 sp_specials = {
     'us-core-includeprovenance': 'http://hl7.org/fhir/us/core/SearchParameter/us-core-includeprovenance'}
+#this should be a map to the common
+sp_common_list = ["address", "address-city", "address-country", "address-postalcode", "address-state", "address-use", "birthdate", "code", "context", "context-quantity", "context-type", "context-type-quantity", "context-type-value", "date", "description", "email", "encounter", "family", "gender", "given", "identifier", "jurisdiction", "medication", "name", "patient", "phone", "phonetic", "publisher", "status", "status", "telecom", "title", "type", "url", "version"]
 none_list = ['', ' ', 'none', 'n/a', 'N/A', 'N', 'False']
 sep_list = (',', ';', ' ', ', ', '; ')
 f_now = D.FHIRDate(str(date.today()))
@@ -198,7 +201,7 @@ def main():
     path_map
 
     in_path = ''
-    in_file = 'R4capabilitystatement-server_orig.j2'
+    in_file = 'R4capabilitystatement-server.j2'
 
     env = Environment(
         loader=FileSystemLoader(searchpath=in_path),
@@ -214,8 +217,8 @@ def main():
     pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
     print(pname_map)
 
-    rendered = template.render(cs=cs, path_map=path_map,
-                            pname_map=pname_map, sp_map=sp_map)
+    rendered = template.render(cs=cs, path_map=path_map, pname_map=pname_map, sp_map=sp_map, igurl_map='', igname_map='', purl_map='', sp_url_map='')
+  
 
     # print(HTML(rendered))
 
@@ -379,10 +382,27 @@ def get_sp(r_type, df_sp, pre, canon):
               #  sp.definition = f'{canon}SearchParameter/{pre.lower()}-{i.base.lower()}-{i.code.split("_")[-1]}'
                  sp.definition = f'{canon}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
             else:  # use base definition
-                # removes the '_' for things like _id
-                #sp.definition = f'{fhir_base_url}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
-                sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
+                # Check to see if URL is relative or absolute.
+                if(validators.url(i.sp_url)):
+                    sp.definition = f'{i.sp_url}'
+                elif (len(i.base_id) > 0): #base id provided
+                    sp.definition = f'{fhir_base_url}SearchParameter/{i.base_id}'
+                else: #otherwise attempt to create the base canonical url - Should use a mapping to determine proper name
+                    if (i.code == "_text"): # if a Resource or DomainResource search parameter
+                        sp.definition = f'{fhir_base_url}SearchParameter/DomainResource-{i.code.split("_")[-1]}'
+                    elif (i.code[0] == '_'): # if a Resource or DomainResource search parameter
+                        sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
+                    elif (i.code in sp_common_list): # A common Parameter
+                        sp.definition = f'{fhir_base_url}SearchParameter/{i.code}'
+                    else:
+                        # removes the '_' for things like _id
+                        #sp.definition = f'{fhir_base_url}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
+                        #sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
+                        sp.definition = f'{fhir_base_url}SearchParameter/{i.base}-{i.code.split("_")[-1]}'
 
+            if(validators.url(i.rel_url)):
+                sp.documentation = f'{i.rel_url}'
+            # sp.documentation = f'{i.rel_url}'
             sp.type = i.type
             sp.extension = get_conf(i.base_conf)
             sp_list.append(sp.as_json())
@@ -441,7 +461,7 @@ def get_si(path):
 def get_si2(path):
     # Get the full path in case a relative path is provided.
     fullpath = os.path.abspath(path)
-
+    
     with open(f'{path}', 'r', encoding='utf-8-sig') as f:
         r = f.read()
         # encoding for loads was deprecated in 3.9  https://bugs.python.org/issue39377
