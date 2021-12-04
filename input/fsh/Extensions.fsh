@@ -62,16 +62,23 @@ Description: "This extension enables an insurance company to provide a backgroun
 * ^context[0].type = #element
 * ^context[0].expression = "Coverage"
 * value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from ISOColorVS
+
+/*
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
 * valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
 * valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
+
 * valueCodeableConcept.coding contains 
     isoColor 1..1
-* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+//* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+* valueCodeableConcept.coding[isoColor] from ISOColorVS
+* valueCodeableConcept.coding[isoColor]
 * valueCodeableConcept.coding[isoColor].code 1..1
-
+*/
 
 Extension: HighlightColor
 Id: C4DIC-HighlightColor-extension
@@ -80,6 +87,9 @@ Description: "This extension enables an insurance company to provide a highlight
 * ^context[0].type = #element
 * ^context[0].expression = "Coverage"
 * value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from ISOColorVS
+/*
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
@@ -89,6 +99,7 @@ Description: "This extension enables an insurance company to provide a highlight
     isoColor 1..1
 * valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
 * valueCodeableConcept.coding[isoColor].code 1..1
+*/
 
 Extension: Logo
 Id: C4DIC-Logo-extension

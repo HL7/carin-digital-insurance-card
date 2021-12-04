@@ -1,3 +1,17 @@
 == Suppressed Messages ==
 # Insurance cards do not require gender in the United States. See US Core ticket FHIR-34240.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile
+
+
+# INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
+Code System URI 'https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' is unknown so the code cannot be validated
+
+
+
+# WARNING: The following code systems are external and not supported by terminology server, and cannot be validated in examples
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' is unknown so the code cannot be validated]
+
+
+# WARNING: Unable to provide support for code system (Temporary external Code system waiting for HTA)
+WARNING: ValueSet.where(id = 'ISOColorVS'): Error from server: Unable to provide support for code system https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL
+
