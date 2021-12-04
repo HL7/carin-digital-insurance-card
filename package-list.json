@@ -10,6 +10,16 @@
         "path": "http://build.fhir.org/ig/HL7/insurance-card",
         "status": "ci-build",
         "current": true
+      },
+      {
+        "version": "0.1.0",
+        "desc": "CARIN Digital Insurance Card Release 1 | STU 1 Ballot",
+        "path": "http://build.fhir.org/ig/HL7/insurance-card/2022Jan",
+        "date": "2021-12-02",
+        "status": "ballot",
+        "sequence": "STU 1",
+        "fhirversion": "4.0.1",
+        "current": false
       }
     ],
     "category": "Financial"
