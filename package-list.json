@@ -14,7 +14,7 @@
       {
         "version": "0.1.0",
         "desc": "CARIN Digital Insurance Card Release 1 | STU 1 Ballot",
-        "path": "http://hl7.org/insurance-card/2022Jan",
+        "path": "http://hl7.org/fhir/us/insurance-card/2022Jan",
         "date": "2021-12-02",
         "status": "ballot",
         "sequence": "STU 1",
