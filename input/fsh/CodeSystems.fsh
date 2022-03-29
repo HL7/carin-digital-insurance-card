@@ -5,6 +5,7 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 * #payerid "Payer ID" "Payer ID"
 * #um "Unique Member ID" "Indicates that the patient identifier is a unique member identifier assigned by a payer across all lines of business"
 * ^copyright = "This CodeSystem is not copyrighted."
+* ^caseSensitive = true
 
 
 
@@ -15,6 +16,7 @@ Description: "This code system includes an extended set of Coverage Class codes.
 * #network "Network"
 * #rxiin "RxIIN"
 * ^copyright = "This CodeSystem is not copyrighted."
+* ^caseSensitive = true
 
 
 CodeSystem: C4DICExtendedCopayTypeCS
@@ -38,6 +40,7 @@ Description: "This code system includes an extended set of Copay Type codes."
 * #IndRxInMax "Individual Pharmacy In Network Out of Pocket Maximum"
 * #rx "Prescription"
 * ^copyright = "This CodeSystem is not copyrighted."
+* ^caseSensitive = true
 
 CodeSystem: C4DICExtendedContactTypeCS
 Title: "C4DIC Extended Contact Type"
@@ -47,3 +50,4 @@ Description: "This code system includes an extended set of Contact Type codes."
 * #provider "Provider Service"
 * #virtual "Virtual Care Services"
 * ^copyright = "This CodeSystem is not copyrighted."
+* ^caseSensitive = true

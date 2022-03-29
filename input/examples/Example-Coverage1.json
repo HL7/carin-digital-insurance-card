@@ -205,7 +205,7 @@
           "valueCodeableConcept": {
               "coding": [
                   {
-                      "system": "urn:iso:std:iso-iec:61966:2-1",
+                      "system": "https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL",
                       "code": "#00bfff"
                   }
               ]
@@ -216,7 +216,7 @@
           "valueCodeableConcept": {
               "coding": [
                   {
-                      "system": "urn:iso:std:iso-iec:61966:2-1",
+                      "system": "https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL",
                       "code": "#ceebf5"
                   }
               ]

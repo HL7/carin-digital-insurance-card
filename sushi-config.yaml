@@ -31,7 +31,7 @@ parameters:
   apply-publisher: true
   jira-code: carin-dic
 copyrightYear: 2021+
-releaseLabel: Draft STU1
+releaseLabel: STU 1 Ballot
 jurisdiction: urn:iso:std:iso:3166#US
 pages:
   index.md:
