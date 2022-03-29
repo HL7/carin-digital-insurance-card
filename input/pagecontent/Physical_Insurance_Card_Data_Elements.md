@@ -1,5 +1,5 @@
 ### Physical Insurance Card Data Elements
-<p>This table outlines the necessary data elements found on physicial insurance cards. This list of data elements was compiled through collaboration with numerous subject-matter experts across major insurance companies in the US. The authors of this IG also consulted the following resources for additional guidance:</p>
+<p>This table outlines the necessary data elements found on physical insurance cards. This list of data elements was compiled through collaboration with numerous subject-matter experts across major insurance companies in the US. The authors of this IG also consulted the following resources for additional guidance:</p>
 
 *	WEDI Health Identification Card Implementation Guide
 *	WEDI Virtual Clipboard
