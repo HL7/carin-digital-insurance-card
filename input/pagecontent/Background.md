@@ -7,7 +7,7 @@
 * There is a need to standardize how images often found on insurance cards are able to be expressed in a FHIR-based transaction in a way that is predictable and renderable by consuming applications.
 
 ### Overview
-<p>Payers can leverage the Coverage resource, the Organization resource, and the Patient resource to represent the essential information found on the physicial insurance card. The purpose of each resource is as follows:</p>
+<p>Payers can leverage the Coverage resource, the Organization resource, and the Patient resource to represent the essential information found on the physical insurance card. The purpose of each resource is as follows:</p>
 
 * The Coverage resource communicates the insurance plan information
 * The Organization resource communicates the contact information for the plan (often found on the back of the physical insurance card)
