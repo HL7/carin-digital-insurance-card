@@ -24,7 +24,7 @@
       <td>coverage.extension C4DIC-PlanBeneficiaries-extension (enables represenation of all members), coverage.identifier (reflecting the patient for whom this resource is being pulled), coverage.subscriberId (representing the subscriber of the plan)</td>
     </tr>
     <tr>
-      <td>Dependent code</td>
+      <td>Dependent Number</td>
       <td>Identifies the unique dependent under the plan</td>
       <td>coverage.dependent</td>
     </tr>
