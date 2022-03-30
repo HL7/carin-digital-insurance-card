@@ -15,7 +15,7 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 
 ### Must Support
 
-<p>For profiles defined in other IGs, the meaning of Must Support is established in the defining IG. Note that the Must Support requirements for this IG are modeled after the US Core implementation guide, with the requirements for CARIN Server APIs modeled on those for US Core Responders, and the requirements for CARIN Consumer Apps modeled on those for US Core Requestors.&nbsp; When querying and reading CARIN IG for Digital Insurance Card Profiles, *Must Support* on any profile data element <strong>SHALL</strong> be interpreted as follows:&nbsp;</p>
+<p>For profiles defined in other IGs, the meaning of Must Support is established in the defining IG. Note that the Must Support requirements for this IG are modeled after the US Core implementation guide. The requirements for Health Plan API actors are modeled on those for US Core Responders, and the requirements for Consumer App actors is modeled on those for US Core Requestors. When querying and reading CARIN IG for Digital Insurance Card Profiles, *Must Support* on any profile data element SHALL be interpreted as follows:</p>
 <ul>
 <li>Health Plan API actors <strong>SHALL</strong>&nbsp;be capable of populating all data elements as part of the query results as specified by the CARIN for Digital Insurance Card CapabilityStatement.</li>
 <li>Consumer App actors <strong>SHALL</strong> be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.</li>
@@ -23,7 +23,7 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 <li>In situations where information on a particular data element is not present and the reason for absence is unknown, Health Plan API actors SHALL NOT include the data elements in the resource instance returned as part of the query results.</li>
 <li>In situations where information on a particular data element is missing and the Health Plan API actor knows the precise reason for the absence of data, Health Plan API actors SHALL send the reason for the missing information using either the nullFlavors or dataAbsentReason extensions.</li>
 <li>When querying Health Plan APIs, Consumer App actors SHALL interpret missing data elements within resource instances as data not present in the Health Plan API actor's system. Consumer App actors SHALL be able to process resource instances with missing data without generating an error or causing the application to fail for the user. Consumer App actors SHOULD configure their applications to translate nullFalvors and dataAbsentReason extensions into a user-friendly message indicating the data has not been provided by the Health Plan API actor.</li>
-<p>NOTE: The above definition of *Must Support* is derived from HL7v2 concept Required but may be empty - RE described in HL7v2 V28_CH02B_Conformance.doc.</p>
+
 <p>NOTE: Readers are advised to understand <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> requirements, <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a> based on the HTTP protocol, along with <a href="http://hl7.org/fhir/R4/datatypes.html">FHIR Data Types</a>, <a href="http://hl7.org/fhir/R4/search.html">FHIR Search</a> and <a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a> formats before implementing CARIN IG for Digital Insurance Card requirements.</p>
 <a name="missing-data"></a>
 
