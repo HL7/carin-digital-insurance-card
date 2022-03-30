@@ -3,8 +3,8 @@
 
 The following actors are part of the CARIN IG for Digital Insurance Card:
 
-* CARIN IG for Digital Insurance Requestor: An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction.
-* CARIN IG for Digital Insurance Responder: A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction.
+* CARIN IG for Digital Insurance Requestor or Consumer App: An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction.
+* CARIN IG for Digital Insurance Responder or Health Plan API: A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction.
 
 <a name="conformance-verbs"></a>
 ### Conformance Verbs
@@ -35,12 +35,12 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 
 ### Conformance to US Core Profiles
 
-<p>Any actor acting as a Health Plan API actor in this IG SHALL:</p>
+<p>Any Health Plan API actor in this IG SHALL:</p>
   
 * Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as *Must Support* as defined by that profiles StructureDefinition.
 * Conform to the US Core Server Capability Statement expectations for that profile's type.
 
-<p>Any actor acting a FHIR Client in this IG SHALL:</p>
+<p>Any Consumer App actor in this IG SHALL:</p>
 * Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.
 * Conform to the US Core Client Capability Statement expectations for that profiles type.
 
