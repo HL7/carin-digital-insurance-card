@@ -141,7 +141,7 @@
     </tr>
     <tr>
       <td>Copay Designation & Amounts:</td>
-      <td>What type of payment required for various types of medical services</td>
+      <td>Payment required for various types of health care services</td>
       <td> </td>
     </tr>
     <tr>
