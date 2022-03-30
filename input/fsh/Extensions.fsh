@@ -49,7 +49,7 @@ Description: "This extension enables the passing of free text items often found 
 Extension: CardIssueDate
 Id: C4DIC-CardIssueDate-extension
 Title: "Card Issue Date"
-Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force."
+Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force. Please note, this data element is distinct from the coverage period for the health plan as the insurance card may be provided in advance of the coverage start date or following the coverage start date (for example, in the event a replacement card is needed.)"
 * ^context[0].type = #element
 * ^context[0].expression = "Coverage"
 * value[x] 1..1
