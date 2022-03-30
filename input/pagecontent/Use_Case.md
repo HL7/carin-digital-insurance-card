@@ -59,7 +59,7 @@
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
 <p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>
 <h4>Technical Workflow</h4>
-<p>Precondition: App registers with a payer endpoint and receives a client ID and client secret<p>
+<p>Precondition: Consumer App registers with a payer endpoint and receives a client ID and client secret<p>
 <p><img style="width: 100%; float: none; align: middle;" src="CARINSequence.png" /> Actors:</p>
 <ul>
 <li>Consumer (aka Subscriber, Beneficiary, Patient, or Personal Representative)</li>
