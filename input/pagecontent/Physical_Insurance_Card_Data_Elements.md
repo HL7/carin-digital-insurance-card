@@ -120,7 +120,7 @@
     </tr>
     <tr>
       <td>RxIIN</td>
-      <td>ANSI issued Issuer Identification Numbe</td>
+      <td>ANSI issued Issuer Identification Number</td>
       <td>coverage.class where type = rxiin</td>
     </tr>
     <tr>
