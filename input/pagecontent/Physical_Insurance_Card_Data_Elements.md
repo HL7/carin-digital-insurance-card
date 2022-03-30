@@ -85,7 +85,7 @@
     </tr>
     <tr>
       <td>Secondary Network Name</td>
-      <td>Is the name of the gropu that identifies a group of providers in a network.</td>
+      <td>Is the name of the group that identifies a group of providers in a network.</td>
       <td>coverage.class where type = network</td>
     </tr>
     <tr>
@@ -117,6 +117,11 @@
       <td>RxBin/BIN</td>
       <td>Bank identification number used to locate your pharmacy member profile under the PBM system</td>
       <td>coverage.class where type = rxbin</td>
+    </tr>
+    <tr>
+      <td>RxIIN</td>
+      <td>ANSI issued Issuer Identification Numbe</td>
+      <td>coverage.class where type = rxiin</td>
     </tr>
     <tr>
       <td>RxPCN </td>
