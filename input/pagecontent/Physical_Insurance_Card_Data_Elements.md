@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td>Member Name</td>
-      <td>Member's first and last name and may include middle name or initial</td>
+      <td>Member's first and last name and may include middle name or initial. Note: A member is any individual covered by the benefits offered by an entity, such as an employer or insurance company. </td>
       <td>coverage.extension C4DIC-PlanBeneficiaries-extension (enables represenation of all members), coverage.beneficiary (reflecting the patient for whom this resource is being pulled), patient.name (reflecting the patient for whom this resource is being pulled)</td>
     </tr>
     <tr>
@@ -25,12 +25,12 @@
     </tr>
     <tr>
       <td>Dependent Number</td>
-      <td>Identifies the unique dependent under the plan</td>
+      <td>Identifies the unique dependent under the plan. Note: A Dependent is an individual, other than the subscriber, who has insurance coverage under the benefits selected by a subscriber</td>
       <td>coverage.dependent</td>
     </tr>
     <tr>
       <td>Subscriber</td>
-      <td>The person covered by the health insurance plan</td>
+      <td>An individual or entity that selects benefits offered by an entity, such as an employer, government, or insurance company</td>
       <td>coverage.subscriber</td>
     </tr>
     <tr>
