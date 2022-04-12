@@ -42,7 +42,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * status MS
 * type 1..1 MS
-* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
+* type = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 * subscriber 1..1 MS
 * subscriber.reference 1..1 MS
