@@ -67,7 +67,7 @@
 <ol>
 <li>Consumer App presents a list of potential Payers / Health Plans that can be accessed by the Consumer.</li>
 <li>Consumer selects the Payer / Health Plan to initiate the login and consent flow.</li>
-<li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server.</li>
+<li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server. Please note: The Health Plan may leverage a Third Party authentication service or technology for user login.</li>
 <li>Consumer enters the credentials and consents to data sharing.</li>
 <li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with authorized Consumer identities encoded.</li>
 <li>Consumer App successfully links the user to the Payer / Health Plan and notifies the Consumer.</li>
