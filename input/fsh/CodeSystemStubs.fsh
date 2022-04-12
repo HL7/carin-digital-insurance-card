@@ -1,7 +1,7 @@
 CodeSystem: ISOColorCS
 Title: "C4DIC ISO Color Codes"
 Description: "ISO Color Measurement and Management Codes"
-* ^url = "https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
+* ^url = "https://terminology.hl7.org/3.1.0/CodeSystem-IECColourManagement.html"
 * ^caseSensitive = true
 * ^content = #not-present
 
