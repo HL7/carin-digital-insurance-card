@@ -4,7 +4,7 @@
 *	WEDI Health Identification Card Implementation Guide
 *	WEDI Virtual Clipboard
 *	NYS DFS Title 11, section 52.69
-*	CCA/No Surprises Act, section 107 
+*	CAA/No Surprises Act, section 107 
 *	SMART Health Card IG (related to QR codes)
 
 <table border="1">
