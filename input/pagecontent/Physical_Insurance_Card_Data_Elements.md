@@ -135,7 +135,7 @@
     </tr>
     <tr>
       <td>RxID</td>
-      <td>A Pharmacy Benefit Manager specified Member ID.</td>
+      <td>NCPDP Cardholder ID defined as 'the Insurance ID assigned to the cardholder or identification number used by the plan'</td>
       <td>coverage.class where type = rxid</td>
     </tr>
     <tr>
