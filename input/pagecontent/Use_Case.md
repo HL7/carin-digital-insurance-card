@@ -69,7 +69,7 @@
 <li>Consumer selects the Payer / Health Plan to initiate the login and consent flow.</li>
 <li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server.</li>
 <li>Consumer enters the credentials and consents to data sharing.</li>
-<li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with Consumer and authorized patient/beneficiary identities encoded.</li>
+<li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with authorized Consumer identities encoded.</li>
 <li>Consumer App successfully links the user to the Payer / Health Plan and notifies the Consumer.</li>
 <li>Consumer App requests the Coverage resource and associated resources as desired (i.e. Organization and/or Patient) along with the token and PatientID from step #5.</li>
 <li>Health Plan’s Authorization server validates the access token.</li>
