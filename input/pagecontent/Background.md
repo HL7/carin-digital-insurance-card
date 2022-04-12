@@ -21,8 +21,8 @@
 
 <p>For additional information about the exchange of insurance card information please visit these pages:</p>
 
-* Use Case
-* Physical Insurance Card Data Elements
+* <a href="http://hl7.org/fhir/us/insurance-card/2022Jan/Use_Case.html">Use Case</a>
+* <a href="http://hl7.org/fhir/us/insurance-card/2022Jan/Physical_Insurance_Card_Data_Elements.html">Physical Insurance Card Data Elements</a>
 
 ### Boundaries
 
