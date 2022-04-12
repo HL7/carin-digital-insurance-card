@@ -90,7 +90,7 @@
     </tr>
     <tr>
       <td>Payer Contact Details:</td>
-      <td>Contacts details often found on the back of the physical insurance card.</td>
+      <td>The contact details often found on the back of the physical insurance card. Please note, there may be multiple types of contacts for different purposes such as member support, pharmacist inquiries, etc.</td>
       <td></td>
     </tr>
     <tr>
