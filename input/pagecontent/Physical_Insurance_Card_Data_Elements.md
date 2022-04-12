@@ -45,12 +45,12 @@
     </tr>
     <tr>
       <td>Payer ID</td>
-      <td>This is the Unique ID assigned to each insurance provider</td>
+      <td>This is the Unique ID assigned to each payer</td>
       <td>organization.identifier</td>
     </tr>
     <tr>
       <td>Payer Name</td>
-      <td>The name of the insurance provider</td>
+      <td>The name of the payer</td>
       <td>coverage.payor.display, organization.name</td>
     </tr>
     <tr>
