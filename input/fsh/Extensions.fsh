@@ -32,7 +32,7 @@ Description: "This extension allows for the representation of copay details as s
 * extension[costToBeneficiary].extension[type] ^short = "Type of cost"
 * extension[costToBeneficiary].extension[type].value[x] 1..1
 * extension[costToBeneficiary].extension[type].value[x] only CodeableConcept
-* extension[costToBeneficiary].extension[type].valueCodeableConcept from C4DICCopayTypeVS (required)
+* extension[costToBeneficiary].extension[type].valueCodeableConcept from C4DICCopayTypeVS (extensible)
 * extension[costToBeneficiary].extension[cost] ^short = "Cost description"
 * extension[costToBeneficiary].extension[cost].value[x] 1..1
 * extension[costToBeneficiary].extension[cost].value[x] only string
