@@ -28,6 +28,6 @@
 
 <p>This Implementation Guide enables the digital exchange and digital rendering of the elements found on a person’s physical insurance card. The primary use case is to support insurance members who wish to retrieve their current proof of insurance coverage digitally via a consumer-facing application. </p>
 <p>This IG does NOT address eligibility checks between health providers and the insurance company. </p>
-<p>This IG is not intended to replace use of any existing standards for pharmacy insurance cards, i.e. NCPDP standards, and is being provided to augment existing physical insurance cards where pharmacy benefits may need to be included with other coverage. </p>
+<p>Prescription benefit information is addressed in this implementation guide, but it does not replace pharmacy-specific benefit card standards, i.e. NCPDP standards, and is being provided to augment existing physical insurance cards where pharmacy benefits may need to be included with other coverage.</p>
 <p>In keeping with the 80/20 rule, this IG does not solve for all possible insurance card data elements. If additional data elements of interest are identified by the community, they will be integrated in STU2 of this IG. For example, there are a few unique fields relevant to Medicare cards that were unable to be incorporated into this initial IG development cycle (i.e. CMS Contract Number, PBP Code, Segment ID). </p>
 
