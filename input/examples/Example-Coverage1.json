@@ -205,7 +205,7 @@
           "valueCodeableConcept": {
               "coding": [
                   {
-                      "system": "https://terminology.hl7.org/3.1.0/CodeSystem-IECColourManagement.html",
+                      "system": "http://terminology.hl7.org/CodeSystem/IECColourManagement",
                       "code": "#00bfff"
                   }
               ]
@@ -216,7 +216,7 @@
           "valueCodeableConcept": {
               "coding": [
                   {
-                      "system": "https://terminology.hl7.org/3.1.0/CodeSystem-IECColourManagement.html",
+                      "system": "http://terminology.hl7.org/CodeSystem/IECColourManagement",
                       "code": "#ceebf5"
                   }
               ]

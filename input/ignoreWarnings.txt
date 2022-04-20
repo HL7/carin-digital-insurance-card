@@ -9,7 +9,7 @@ Code System URI 'https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DE
 
 
 # WARNING: The following code systems are external and not supported by terminology server, and cannot be validated in examples
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.iso.org/standard/35883-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' is unknown so the code cannot be validated]
+ValueSet.where(id = 'ISOColorVS')	warning	Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/IECColourManagement
 
 
 # WARNING: Unable to provide support for code system (Temporary external Code system waiting for HTA)
