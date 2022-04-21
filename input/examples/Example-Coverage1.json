@@ -170,8 +170,9 @@
               },
               {
                   "url": "image",
-                  "valueReference" : {
-                      "reference" : "DocumentReference/QRCode1234"
+                  "valueAttachment" : {
+                    "contentType" : "image/png",
+                    "data" : "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
                     }
               }
           ]
