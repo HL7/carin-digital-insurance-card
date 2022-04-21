@@ -91,7 +91,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary MS
 * costToBeneficiary.type 1..1 MS
 * costToBeneficiary.type from C4DICCopayTypeVS (extensible)
-* costToBeneficiary.value[x]
+* costToBeneficiary.value[x] only Money
 * costToBeneficiary.valueMoney 1..1 MS
 * costToBeneficiary.valueMoney obeys ValueMoney-details-or-extension
 * costToBeneficiary.valueMoney.extension contains
