@@ -114,7 +114,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 * class[plan].value ^comment = "Business concept used by a health plan to describe its benefit offerings (154)"
 * class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
 
-* costToBeneficiary.valueMoney.extension[BeneficiaryCostString] ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Costs extension is MS"
+* costToBeneficiary.valueMoney.extension[BeneficiaryCostString] ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
 * costToBeneficiary.valueMoney.value ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
 * costToBeneficiary.valueMoney.currency ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
 
