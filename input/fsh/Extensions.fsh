@@ -30,7 +30,7 @@ Id: C4DIC-BeneficiaryCostString-extension
 Title: "Beneficiary Cost as String"
 Description: "This extension allows for the representation of copay details as strings. This can be passed as part of the Coverage resource where payors need to communicate costToBeneficiary details that cannot be expressed as SimpleQuantity or Money data types."
 * ^context[0].type = #element
-* ^context[0].expression = "Coverage"
+* ^context[0].expression = "Coverage.costToBeneficiary.valueMoney"
 
 * value[x] only string
 * valueString ^short = "Cost represented as a string of text"
