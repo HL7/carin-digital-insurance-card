@@ -95,7 +95,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary.valueMoney 1..1 MS
 * costToBeneficiary.valueMoney obeys ValueMoney-details-or-extension
 * costToBeneficiary.valueMoney.extension contains
-   BeneficiaryCosts named C4DIC-BeneficiaryCosts-extension 0..1 MS
+   BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
 
 * costToBeneficiary.valueMoney.value 0..1 MS
 * costToBeneficiary.valueMoney.currency 0..1 MS
@@ -114,9 +114,9 @@ Description: "Data that reflect a payer’s coverage of the member."
 * class[plan].value ^comment = "Business concept used by a health plan to describe its benefit offerings (154)"
 * class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
 
-* costToBeneficiary.valueMoney.extension[BeneficiaryCosts] ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Costs extension is MS"
-* costToBeneficiary.valueMoney.value ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Costs extension is MS"
-* costToBeneficiary.valueMoney.currency ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Costs extension is MS"
+* costToBeneficiary.valueMoney.extension[BeneficiaryCostString] ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Costs extension is MS"
+* costToBeneficiary.valueMoney.value ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
+* costToBeneficiary.valueMoney.currency ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
 
 RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.discriminator.type = #pattern
@@ -129,7 +129,7 @@ RuleSet: Metaprofile-supportedProfile-slice
 
  
 Invariant: ValueMoney-details-or-extension
-Description: "costToBeneficiary SHALL have a value and currency or a Beneficiary Costs extension"
-Expression: "(value and currency) or extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCosts-extension')"
+Description: "costToBeneficiary SHALL have a value AND currency OR a Beneficiary Costs extension"
+Expression: "(value and currency) or extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension')"
 Severity: #error
 
