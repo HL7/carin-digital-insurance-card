@@ -23,6 +23,7 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
     * Gail Kocher (Blue Cross Blue Shield Association) [Gail.Kocher@bcbsa.com](mailto:Gail.Kocher@bcbsa.com)
     * Pamela Maklari (Cognizant) [Pamela.Maklari@cognizant.com](mailto:Pamela.Maklari@cognizant.com)
     * Julia Meade Tulli (Anthem) [julia.tulli@anthem.com](mailto:julia.tulli@anthem.com)
+    * Corey Spears (MITRE) [cspears@mitre.org](mailto:cspears@mitre.org)
     * Sarah Young (Anthem) [Sarah.Young@anthem.com](mailto:Sarah.Young@anthem.com)
     * HL7 Financial Management Workgroup
     * HL7 Security Workgroup 
