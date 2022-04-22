@@ -59,7 +59,7 @@
       <td>coverage.class where type = group</td>
     </tr>
     <tr>
-      <td><b>Group Name<b/></td>
+      <td><b>Group Name</b></td>
       <td>The group from which your insurance coverage is from. Typically your employer.</td>
       <td>coverage.class where type = group</td>
     </tr>
@@ -69,7 +69,7 @@
       <td>coverage.class where type = division</td>
     </tr>
     <tr>
-      <td><b>Primary Network ID<b/></td>
+      <td><b>Primary Network ID</b></td>
       <td>Identifes a group of providers in one network.</td>
       <td>coverage.class where type = network</td>
     </tr>
@@ -99,7 +99,7 @@
       <td>coverage.class where type = rxiin</td>
     </tr>
     <tr>
-      <td><b>RxPCN<b/></td>
+      <td><b>RxPCN</b></td>
       <td>Processor control number tells the pharmacy which group you're in so they can process your prescription payment correctly</td>
       <td>coverage.class where type = rxpcn</td>
     </tr>
@@ -140,7 +140,7 @@
       <td>coverage.costToBeneficiary (where value can be represented as valueMoney), coverage.extension C4DIC-AdditionalCardInformation-extension (where string is required)</td>
     </tr>
     <tr>
-      <td><b>Individual or Family Out of Network Out of Pocket Max<b/></td>
+      <td><b>Individual or Family Out of Network Out of Pocket Max</b></td>
       <td>The limit on the amount of money you have to pay for covered health services. Out of Network amount.</td>
       <td>coverage.costToBeneficiary (where value can be represented as valueMoney), coverage.extension C4DIC-AdditionalCardInformation-extension (where string is required)</td>
     </tr>
@@ -150,7 +150,7 @@
       <td>coverage.costToBeneficiary (where value can be represented as valueMoney), coverage.extension C4DIC-AdditionalCardInformation-extension (where string is required)</td>
     </tr>
     <tr>
-      <td><b>Individual or Family Pharmacy Out of Network Out of Pocket Max<b/></td>
+      <td><b>Individual or Family Pharmacy Out of Network Out of Pocket Max</b></td>
       <td>The limit on the amount of money you have to pay for covered health services. Pharmacy Out of Network amount.</td>
       <td>coverage.costToBeneficiary (where value can be represented as valueMoney), coverage.extension C4DIC-AdditionalCardInformation-extension (where string is required)</td>
     </tr>
