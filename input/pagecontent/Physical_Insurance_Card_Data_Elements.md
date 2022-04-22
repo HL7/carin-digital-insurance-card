@@ -34,7 +34,7 @@
       <td>coverage.subscriber</td>
     </tr>
     <tr>
-      <td><b>Patient Relationship to Subscriber<b/></td>
+      <td><b>Patient Relationship to Subscriber</b></td>
       <td>Describes how the beneficiary and how the plan subscriber are related</td>
       <td>coverage.relationship</td>
     </tr>
