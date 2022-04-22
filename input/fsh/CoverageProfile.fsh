@@ -97,6 +97,9 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary.valueMoney.extension contains
    BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
 
+* extension contains
+   BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
+
 * costToBeneficiary.valueMoney.value 0..1 MS
 * costToBeneficiary.valueMoney.currency 0..1 MS
 
@@ -129,7 +132,7 @@ RuleSet: Metaprofile-supportedProfile-slice
 
  
 Invariant: ValueMoney-details-or-extension
-Description: "costToBeneficiary SHALL have a value AND currency OR a Beneficiary Costs extension"
+Description: "costToBeneficiary SHALL have (value AND currency) OR Beneficiary Cost String extension"
 Expression: "(value and currency) or extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension')"
 Severity: #error
 

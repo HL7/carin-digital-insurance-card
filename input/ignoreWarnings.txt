@@ -3,5 +3,6 @@
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile
 
 # WARNING: The following code systems are external and not supported by terminology server, and cannot be validated in examples
-ValueSet.where(id = 'ISOColorVS')	warning	Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/IECColourManagement
-
+Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/IECColourManagement
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated]
+Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated
