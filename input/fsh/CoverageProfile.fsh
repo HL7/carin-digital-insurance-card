@@ -132,7 +132,7 @@ RuleSet: Metaprofile-supportedProfile-slice
 
  
 Invariant: ValueMoney-details-or-extension
-Description: "costToBeneficiary SHALL have (value AND currency) OR Beneficiary Cost String extension"
-Expression: "(value and currency) or extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension')"
+Description: "costToBeneficiary SHALL have (value AND currency) OR Beneficiary Cost String extension, but not both"
+Expression: "((value.exists() and currency.exists()) xor extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension').exists()) and ((value.exists() xor currency.exists())).not()"
 Severity: #error
 
