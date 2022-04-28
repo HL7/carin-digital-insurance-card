@@ -1,7 +1,7 @@
 {
-    "package-id": "hl7.fhir.us.carin-insurance-card",
+    "package-id": "hl7.fhir.us.carin-digital-insurance-card",
     "title": "CARIN Digital Insurance Card",
-    "canonical": "http://hl7.org/fhir/us/carin-insurance-card",
+    "canonical": "http://hl7.org/fhir/us/carin-digital-insurance-card",
     "introduction": "This implementation guide describes the CARIN Digital Insurance Card Framework.",
     "list": [
       {
