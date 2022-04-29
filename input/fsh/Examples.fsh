@@ -1,92 +1,135 @@
-/*
-Instance: Patient1
-InstanceOf: C4DICPatient
-Description: "Patient Example1"
-Usage: #example
-//* id = "1234-234-1243-12345678901"
-//* meta.profile = Canonical(C4DICPatient)
-* meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
-* language = #en-US
-* id = "Patient1"
-* active = true
-* name[0].family = "Example1"
-* name[0].given[0] = "Johnny"
-* telecom[0].system = http://hl7.org/fhir/contact-point-system#phone
-* telecom[0].value = "(301)555-1212"
-* telecom[0].rank = 1
-* telecom[0].system = 	http://hl7.org/fhir/contact-point-system#phone
-* telecom[0].value = "(301)666-1212"
-* telecom[0].rank = 2
-* gender = http://hl7.org/fhir/administrative-gender#male
-* birthDate = "1986-01-01"
-* address[0].type = http://hl7.org/fhir/address-type#physical
-* address[0].line[0] = "123 Main Street"
-* address[0].city = "Pittsburgh"
-* address[0].state = "PA"
-* address[0].postalCode = "12519"
-* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
-* identifier[memberid].type = $IdentifierType#MB
-* identifier[memberid].value = "1234-234-1243-12345678901"
-* identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-//* identifier[medrecnum].type = $IdentifierType#MR
-//* identifier[medrecnum].value = "1234-234-1243-12345678901m"
-//* identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
-* identifier[uniquememberid].type = C4DICIdentifierType#um
-* identifier[uniquememberid].value = "1234-234-1243-12345678901u"
-* identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-
-Instance: Coverage1
+Instance: Example-Coverage-FSH
 InstanceOf: C4DICCoverage
-Description: "Coverage Example1"
+Description: "Coverage Example 1 in FSH"
 Usage: #example
-//* id = "1234-234-1243-12345678901-20190101-20191031"
-* id = "Coverage1"
-//* meta.profile = Canonical(C4DICCoverage)
-* meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
-* language = #en-US
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-04-06T10:49:02.473+00:00"
+* meta.profile = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage"
+
+* extension[PlanBeneficiaries][+]
+  * extension[memberId].valueString = "102345672-01"
+  * extension[name].valueHumanName.family = "Doe"
+  * extension[name].valueHumanName.given = "John"
+
+* extension[PlanBeneficiaries][+]
+  * extension[memberId].valueString = "102345672-02"
+  * extension[name].valueHumanName.family = "Doe"
+  * extension[name].valueHumanName.given = "jane"
+
+* extension[PlanBeneficiaries][+]
+  * extension[memberId].valueString = "102345672-03"
+  * extension[name].valueHumanName.family = "Doe"
+  * extension[name].valueHumanName.given = "Jimmy"
+
+* extension[PlanBeneficiaries][+]
+  * extension[memberId].valueString = "102345672-04"
+  * extension[name].valueHumanName.family = "Doe"
+  * extension[name].valueHumanName.given = "Ginny"
+
+
+* extension[AdditionalCardInformation][+].valueAnnotation.text = "If you use a TTY, call 711.\nYou may be asked to present this card when you receive care or fill a perscription. This card does not gaurentee coverage. Intentionally misusing this card may be considered fraud or a violation of the law.\nWe encourage you to use a primary care physician as a valuable resource and personal health advocate."
+
+
+* extension[CardIssueDate].valueDate = "2020-12-15"
+
+* extension[BackgroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##00bfff
+
+* extension[HighlightColor]
+  * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##ceebf5
+
+* extension[Logo]
+  * extension[label].valueString = "ACME Inc."
+  * extension[description].valueString = "Company logo"
+  * extension[image].valueAttachment.contentType = #image/png
+  * extension[image].valueAttachment.data = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
+
+
+
+* extension[QRCode][+]
+  * extension[label].valueString = "Some label for this QR code"
+  * extension[description].valueString = "Usage text for this QR code for the end user"
+  * extension[image].valueAttachment.contentType = #image/png
+  * extension[image].valueAttachment.data = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
+
+* extension[Barcode][+]
+  * extension[label].valueString = "Some label for this Barcode"
+  * extension[description].valueString = "Usage text for this Barcode for the end user"
+  * extension[image].valueAttachment.contentType = #image/png
+  * extension[image].valueAttachment.data = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
+
+* extension[SupportingImage][+]
+  * extension[label].valueString = "Some label text"
+  * extension[description].valueString = "Some text for the end user about the usage/meaning of this image"
+  * extension[image].valueAttachment.contentType = #image/png
+  * extension[image].valueAttachment.data = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
+
+
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
+* identifier.system = "https://www.acmeinsurance.com/glossary/memberid"
+* identifier.value = "102345672-02"
+* identifier.assigner.display = "Acme Insurance Co"
 * status = #active
-* identifier[0].type = $IdentifierType#MB
-* identifier[0].value = "1234-234-1243-12345678901"
-* identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
+* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP "health insurance plan policy"
 * type.text = "health insurance plan policy"
-* policyHolder = Reference(Patient1)
-* subscriber = Reference(Patient1)
-* beneficiary = Reference(Patient1)
-* subscriberId = "12345678901"  
-* dependent = "01"
-* period.start = "2019-01-01"
-* period.end = "2019-10-31"
-
-* class[group].type = $CoverageClassCS#group 
-* class[group].type.text = "An employee group"
-* class[group].value = "021890"
-* class[group].name = "Acme Corporation"
-* class[plan].type = $CoverageClassCS#plan
-* class[plan].type.text = "Plan"
-* class[plan].value = "XYZ123"
-* class[plan].name = "XYZ123-UPMC CONSUMER ADVA"
-// * class[0].type = $CoverageClassCS#subgroup 
-// * class[0].type.text = "A subgroup of an employee group"
-// * class[0].value = "300"
-// * class[0].name = "ACME HSA PPO 1500"
-* network = "XYZ123-UPMC CONSUMER ADVA"
-* relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
-* payor = Reference(OrganizationPayer1)
+* subscriber = Reference(Patient/Example-Patient1) "John Doe"
+* subscriberId = "102345672-01"
+* beneficiary = Reference(Patient/Example-Patient2) "Jane Doe"
+* dependent = "02"
+* relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#spouse "Spouse"
+* relationship.text = "Spouse"
+* period.start = "2021-01-01"
+* payor = Reference(Organization/Example-PayerOrganization1) "Acme Insurance Co"
 
 
-Instance: OrganizationPayer1
-InstanceOf: C4DICOrganization
-Description: "Payer1"
-Usage: #example
-* id = "Payer1"
-//* meta.profile = Canonical(C4DICOrganization)
-* meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* language = #en-US
-* identifier[NPI].type = $C4DICIdentifierTypeCS#npi
-* identifier[NPI].value = "345678"
-* identifier[payerid].type = $C4DICIdentifierTypeCS#payerid
-* identifier[payerid].value = "901234"
-* name = "Payer 1"
-* active = true 
-*/
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#group
+* class[=].value = "993355"
+* class[=].name = "Stars Inc"
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
+* class[=].value = "11461128"
+* class[=].name = "Acme Gold Plus"
+* class[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS#division
+* class[=].value = "11"
+* class[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS#network
+* class[=].value = "561490"
+* class[=].name = "Acme Gold Plus South"
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#rxbin
+* class[=].value = "100045"
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#rxpcn
+* class[=].value = "1234000"
+
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamOutDed "Family Out of Network Deductible"
+* costToBeneficiary[=].valueMoney.value = 10000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamInDed "Family In Network Deductible"
+* costToBeneficiary[=].valueMoney.value = 8000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxOutDed "Family Pharmacy Out of Network Deductible"
+* costToBeneficiary[=].valueMoney.value = 2000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxInDed "Family Pharmacy In Network Deductible"
+* costToBeneficiary[=].valueMoney.value = 1500
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamOutMax "Family Out of Network Out of Pocket Maximum"
+* costToBeneficiary[=].valueMoney.value = 12000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamInMax "Family In Network Out of Pocket Maximum"
+* costToBeneficiary[=].valueMoney.value = 10000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxOutMax "Family Pharmacy Out of Network Out of Pocket Maximum"
+* costToBeneficiary[=].valueMoney.value = 3000
+* costToBeneficiary[=].valueMoney.currency = #USD
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxInMax "Family Pharmacy In Network Out of Pocket Maximum"
+* costToBeneficiary[=].valueMoney.value = 2000
+* costToBeneficiary[=].valueMoney.currency = #USD
+
+* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#gpvisit
+* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+
+* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#spvisit
+* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+
+* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#emergency
+* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+
+* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#rx
+* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "DED THEN $10/$40/$70/25%"

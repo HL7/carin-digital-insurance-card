@@ -6,7 +6,6 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * extension contains
    PlanBeneficiaries named C4DIC-PlanBeneficiaries-extension 0..* and
-   BeneficiaryCosts named C4DIC-BeneficiaryCosts-extension 0..1 and
    AdditionalCardInformation named C4DIC-AdditionalCardInformation-extension 0..* and
    BackgroundColor named C4DIC-BackgroundColor-extension 0..1 and
    HighlightColor named C4DIC-HighlightColor-extension 0..1 and
@@ -42,7 +41,6 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * status MS
 * type 1..1 MS
-* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
 
 * subscriber 1..1 MS
 * subscriber.reference 1..1 MS
@@ -95,8 +93,15 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary.type from C4DICCopayTypeVS (extensible)
 * costToBeneficiary.value[x] only Money
 * costToBeneficiary.valueMoney 1..1 MS
-* costToBeneficiary.valueMoney.value 1..1 MS
-* costToBeneficiary.valueMoney.currency 1..1 MS
+* costToBeneficiary.valueMoney obeys ValueMoney-details-or-extension
+* costToBeneficiary.valueMoney.extension contains
+   BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
+
+* extension contains
+   BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
+
+* costToBeneficiary.valueMoney.value 0..1 MS
+* costToBeneficiary.valueMoney.currency 0..1 MS
 
 * meta.lastUpdated ^comment = "Defines the date the coverage that was effective as of the date of service or admission (163). The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service or admission of the claim"
 * meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
@@ -112,6 +117,10 @@ Description: "Data that reflect a payer’s coverage of the member."
 * class[plan].value ^comment = "Business concept used by a health plan to describe its benefit offerings (154)"
 * class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
 
+* costToBeneficiary.valueMoney.extension[BeneficiaryCostString] ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
+* costToBeneficiary.valueMoney.value ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
+* costToBeneficiary.valueMoney.currency ^comment = "Either valueMoney.value and valueMoney.currency is MS or Beneficiary Cost String extension is MS"
+
 RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.discriminator.type = #pattern
 * meta.profile ^slicing.discriminator.path = "$this"
@@ -119,3 +128,11 @@ RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.ordered = false
 * meta.profile ^slicing.description = "Slice based on value"
 * meta.profile contains supportedProfile 1..1
+
+
+ 
+Invariant: ValueMoney-details-or-extension
+Description: "costToBeneficiary SHALL have (value AND currency) OR Beneficiary Cost String extension, but not both"
+Expression: "((value.exists() and currency.exists()) xor extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension').exists()) and ((value.exists() xor currency.exists())).not()"
+Severity: #error
+

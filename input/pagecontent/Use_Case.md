@@ -18,11 +18,7 @@
 </tr>
 <tr>
 <td>Member</td>
-<td>Any individual covered by the benefits offered by an entity, such as an employer or insurance company</td>
-</tr>
-<tr>
-<td>Beneficiary</td>
-<td>Any individual that selects or is covered by benefits provided by government programs</td>
+<td>Any individual covered by the benefits offered by an entity, such as an employer or insurance company. In the US, some government programs refer to Members as Beneficiaries.</td>
 </tr>
 <tr>
 <td>Patient</td>
@@ -59,10 +55,10 @@
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
 <p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>
 <h4>Technical Workflow</h4>
-<p>Precondition: App registers with a payer endpoint and receives a client ID and client secret<p>
+<p>Precondition: Consumer App registers with a payer endpoint and receives a client ID and client secret<p>
 <p><img style="width: 100%; float: none; align: middle;" src="CARINSequence.png" /> Actors:</p>
 <ul>
-<li>Consumer (aka Subscriber, Beneficiary, Patient, or Personal Representative)</li>
+<li>Consumer (aka Subscriber, Member, Dependent, Patient, or Personal Representative)</li>
 <li>Consumer App (aka digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface)</li>
 <li>Health Plan API (aka Payer, Covered Entity)</li>
 <li>Health Plan&rsquo;s Identity and Access Authorization server</li>
@@ -71,9 +67,9 @@
 <ol>
 <li>Consumer App presents a list of potential Payers / Health Plans that can be accessed by the Consumer.</li>
 <li>Consumer selects the Payer / Health Plan to initiate the login and consent flow.</li>
-<li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server.</li>
+<li>Consumer App redirects to the Health Plan’s Identity and Access Authorization server. Please note: The Health Plan may leverage a Third Party authentication service or technology for user login.</li>
 <li>Consumer enters the credentials and consents to data sharing.</li>
-<li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with Consumer and authorized patient/beneficiary identities encoded.</li>
+<li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with authorized Consumer identities encoded.</li>
 <li>Consumer App successfully links the user to the Payer / Health Plan and notifies the Consumer.</li>
 <li>Consumer App requests the Coverage resource and associated resources as desired (i.e. Organization and/or Patient) along with the token and PatientID from step #5.</li>
 <li>Health Plan’s Authorization server validates the access token.</li>

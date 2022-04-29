@@ -3,11 +3,13 @@ Extension: PlanBeneficiaries
 Id: C4DIC-PlanBeneficiaries-extension
 Title: "Plan Beneficiaries"
 Description: "This extension allows for the representation of all of the members on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
-* ^context[0].type = #element
-* ^context[0].expression = "Coverage"
+//* ^context[0].type = #element
+//* ^context[0].expression = "Coverage"
 * extension contains
 	memberId 1..1 MS and
-    name 1..1 MS
+    name 1..1 MS and
+	personReference 0..1
+
 * extension[memberId] ^short = "Member Id"
 * extension[memberId].value[x] 1..1
 * extension[memberId].value[x] only string
@@ -16,26 +18,24 @@ Description: "This extension allows for the representation of all of the members
 * extension[name].value[x] only HumanName
 * extension[name].valueHumanName.family 1..1 MS
 * extension[name].valueHumanName.given 0..* MS
+* extension[personReference] ^short = "Reference to the Person resource"
+* extension[personReference].value[x] 1..1
+* extension[personReference].value[x] only Reference(Person)
+//* extension[personReference].valueReference only Reference(Person)
 
-Extension: BeneficiaryCosts
-Id: C4DIC-BeneficiaryCosts-extension
-Title: "Beneficiary Costs"
+
+
+Extension: BeneficiaryCostString
+Id: C4DIC-BeneficiaryCostString-extension
+Title: "Beneficiary Cost as String"
 Description: "This extension allows for the representation of copay details as strings. This can be passed as part of the Coverage resource where payors need to communicate costToBeneficiary details that cannot be expressed as SimpleQuantity or Money data types."
-* ^context[0].type = #element
-* ^context[0].expression = "Coverage"
-* extension contains
-	costToBeneficiary 0..* MS
-* extension[costToBeneficiary].extension contains
-	type 1..1 MS and
-    cost 1..1 MS
-* extension[costToBeneficiary] ^short = "Cost to beneficiary"
-* extension[costToBeneficiary].extension[type] ^short = "Type of cost"
-* extension[costToBeneficiary].extension[type].value[x] 1..1
-* extension[costToBeneficiary].extension[type].value[x] only CodeableConcept
-* extension[costToBeneficiary].extension[type].valueCodeableConcept from C4DICCopayTypeVS (required)
-* extension[costToBeneficiary].extension[cost] ^short = "Cost description"
-* extension[costToBeneficiary].extension[cost].value[x] 1..1
-* extension[costToBeneficiary].extension[cost].value[x] only string
+//* ^context[0].type = #element
+//* ^context[0].expression = "Coverage.costToBeneficiary.valueMoney"
+
+* value[x] only string
+* valueString ^short = "Cost represented as a string of text"
+* valueString 1..1
+
 
 Extension: AdditionalCardInformation
 Id: C4DIC-AdditionalCardInformation-extension
@@ -49,7 +49,7 @@ Description: "This extension enables the passing of free text items often found 
 Extension: CardIssueDate
 Id: C4DIC-CardIssueDate-extension
 Title: "Card Issue Date"
-Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force."
+Description: "This extension allows for the expression of the date at which the insurance card was issued by the payer. The health plan may pass this along with the Coverage resource to indicate when the information became in force. Please note, this data element is distinct from the coverage period for the health plan as the insurance card may be provided in advance of the coverage start date or following the coverage start date (for example, in the event a replacement card is needed.)"
 * ^context[0].type = #element
 * ^context[0].expression = "Coverage"
 * value[x] 1..1
@@ -112,9 +112,15 @@ Description: "This extension enables payers to provide an image of their company
 	image 1..1 and
 	label 1..1
 * extension[description].value[x] only string
-* extension[image].value[x] only Attachment
+* extension[image].value[x] only Attachment or Reference(DocumentReference)
+// Perhaps value[x] should be 1..1, or else there is no requirement to have the actual image(reference or attachment)
+// * extension[image].value[x] 1..1
 * extension[image].valueAttachment.contentType 1..1
 * extension[image].valueAttachment.data 1..1
+
+* extension[image].valueReference only Reference(DocumentReference)
+* extension[image].valueReference.reference 1..1
+
 * extension[label].value[x] only string
 
 Extension: QRCode
@@ -128,9 +134,15 @@ Description: "This extension enables payers to provide an image of the QR code f
 	image 1..1 and
 	label 1..1
 * extension[description].value[x] only string
-* extension[image].value[x] only Attachment
+* extension[image].value[x] only Attachment or Reference(DocumentReference)
+// Perhaps value[x] should be 1..1, or else there is no requirement to have the actual image(reference or attachment)
+// * extension[image].value[x] 1..1
 * extension[image].valueAttachment.contentType 1..1
 * extension[image].valueAttachment.data 1..1
+
+* extension[image].valueReference only Reference(DocumentReference)
+* extension[image].valueReference.reference 1..1
+
 * extension[label].value[x] only string
 
 Extension: Barcode
@@ -144,9 +156,15 @@ Description: "This extension enables payers to provide an image of the barcode f
 	image 1..1 and
 	label 1..1
 * extension[description].value[x] only string
-* extension[image].value[x] only Attachment
+* extension[image].value[x] only Attachment or Reference(DocumentReference)
+// Perhaps value[x] should be 1..1, or else there is no requirement to have the actual image(reference or attachment)
+// * extension[image].value[x] 1..1
 * extension[image].valueAttachment.contentType 1..1
 * extension[image].valueAttachment.data 1..1
+
+* extension[image].valueReference only Reference(DocumentReference)
+* extension[image].valueReference.reference 1..1
+
 * extension[label].value[x] only string
 
 Extension: SupportingImage
@@ -160,7 +178,13 @@ Description: "This extension enables payers to provide other supporting images f
 	image 1..1 and
 	label 1..1
 * extension[description].value[x] only string
-* extension[image].value[x] only Attachment
+* extension[image].value[x] only Attachment or Reference(DocumentReference)
+// Perhaps value[x] should be 1..1, or else there is no requirement to have the actual image(reference or attachment)
+// * extension[image].value[x] 1..1
 * extension[image].valueAttachment.contentType 1..1
 * extension[image].valueAttachment.data 1..1
+
+* extension[image].valueReference only Reference(DocumentReference)
+* extension[image].valueReference.reference 1..1
+
 * extension[label].value[x] only string

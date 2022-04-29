@@ -26,6 +26,21 @@
 				</td>
 			</tr>
 			<tr>
+								<td>
+					<strong>SHALL</strong>
+				</td>
+                <td>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+				</td>
+				<td>
+					<a href="http://hl7.org/fhir/R4/search.html#profile">_profile</a>
+				</td>
+				<td>reference</td>
+				<td>
+					<code class="highlighter-rouge">GET [base]/Coverage?_profile=http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage</code>
+				</td>
+			</tr>
+			<tr>
 				<td>
 					<strong>SHALL</strong>
 				</td>

@@ -13,3 +13,4 @@ Alias:   $HL7ContactTypeVS = http://hl7.org/fhir/ValueSet/contactentity-type
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300 
 Alias:   $TAXCodeCS = urn:oid:2.16.840.1.113883.4.4
+Alias:   $ISOColorCS = http://terminology.hl7.org/CodeSystem/IECColourManagement

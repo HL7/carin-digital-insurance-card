@@ -1,7 +1,7 @@
 <a name="introduction"> </a>
 ### Introduction
 
-This implementation guide describes the CARIN for Digital Insurance Card Framework, providing a set of resources that payers can display to consumers via a FHIR API. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the Table of Contents for more information.
+This implementation guide describes the CARIN for Digital Insurance Card (C4DIC) Framework, providing a set of resources that payers can display to consumers via a FHIR API. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the Table of Contents for more information.
 
 <a name="the-carin-alliance"></a>
 ### The CARIN Alliance
@@ -23,6 +23,7 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
     * Gail Kocher (Blue Cross Blue Shield Association) [Gail.Kocher@bcbsa.com](mailto:Gail.Kocher@bcbsa.com)
     * Pamela Maklari (Cognizant) [Pamela.Maklari@cognizant.com](mailto:Pamela.Maklari@cognizant.com)
     * Julia Meade Tulli (Anthem) [julia.tulli@anthem.com](mailto:julia.tulli@anthem.com)
+    * Corey Spears (MITRE) [cspears@mitre.org](mailto:cspears@mitre.org)
     * Sarah Young (Anthem) [Sarah.Young@anthem.com](mailto:Sarah.Young@anthem.com)
     * HL7 Financial Management Workgroup
     * HL7 Security Workgroup 

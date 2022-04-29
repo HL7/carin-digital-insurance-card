@@ -24,7 +24,7 @@ import sys
 import os
 import os.path
 from os import path
-import validators
+
 import fhirclient.r4models.capabilitystatement as CS
 import fhirclient.r4models.codeableconcept as CC
 import fhirclient.r4models.fhirdate as D
