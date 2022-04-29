@@ -10,8 +10,8 @@
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.carin-digital-insurance-card
-canonical: http://hl7.org/fhir/us/carin-digital-insurance-card
+id: hl7.fhir.us.insurance-card
+canonical: http://hl7.org/fhir/us/insurance-card
 version: 0.1.0
 name: CARINForDigitalInsuranceCard
 title: CARIN Digital Insurance Card
@@ -87,16 +87,16 @@ resources:
   Coverage/Example-Coverage1:
     name: Coverage Example 1
     description: Coverage Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-digital-insurance-card/StructureDefinition/C4DIC-Coverage
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage
   Organization/Example-PayerOrganization1:
     name: Payer Organization Example 1
     description: Payer Organization Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-digital-insurance-card/StructureDefinition/C4DIC-Organization
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Organization
   Patient/Example-Patient1:
     name: Patient Example 1
     description: Patient Example 1 (subscriber)
-    exampleCanonical: http://hl7.org/fhir/us/carin-digital-insurance-card/StructureDefinition/C4DIC-Patient
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
   Patient/Example-Patient2:
     name: Patient Example 2
     description: Patient Example 2 (beneficiary)
-    exampleCanonical: http://hl7.org/fhir/us/carin-digital-insurance-card/StructureDefinition/C4DIC-Patient
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
