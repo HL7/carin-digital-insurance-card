@@ -11,7 +11,7 @@
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-digital-insurance-card
-canonical: http://hl7.org/fhir/us/insurance-card
+canonical: http://hl7.org/fhir/us/carin-digital-insurance-card
 version: 0.1.0
 name: CARINForDigitalInsuranceCard
 title: CARIN Digital Insurance Card
