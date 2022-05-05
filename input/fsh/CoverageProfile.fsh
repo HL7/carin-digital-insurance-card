@@ -96,6 +96,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary.valueMoney obeys ValueMoney-details-or-extension
 * costToBeneficiary.valueMoney.extension contains
    BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
+   
 
 * costToBeneficiary.valueMoney.value 0..1 MS
 * costToBeneficiary.valueMoney.currency 0..1 MS
