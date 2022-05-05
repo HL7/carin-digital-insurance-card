@@ -6,3 +6,5 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/
 Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/IECColourManagement
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated]
 Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated
+
+# INFORMATION: The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
