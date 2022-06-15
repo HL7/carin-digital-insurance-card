@@ -4,7 +4,7 @@ Description: "Coverage Example 1 in FSH"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-04-06T10:49:02.473+00:00"
-* meta.profile = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage"
+* meta.profile[supportedProfile] = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage"
 
 * extension[PlanBeneficiaries][+]
   * extension[memberId].valueString = "102345672-01"
@@ -64,10 +64,10 @@ Usage: #example
   * extension[image].valueAttachment.data = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAQAAAAqEXJRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBoOCChye9NTAAAAsklEQVQ4y+WSsQrCMBCGv9ZCUdwUBEcfR+c+kVPewHdxdxEcBQW1FBTpkFoQ6iJxiSHaRCdB9L/l5+6/kP/uAHpMOKCeYoegDdBlUyveY06zwZghPvQpYe3tVyhmARdi/DhGVvnEVLMRLc1irOcWRpqanAx5g98QRI6WhI6dsAcVkrB82IW0BTmr2rJkgHr5heIzNgsqv+CMYEDutlkh9ARSt81/PpjvONqt4XvDMq6alTdjhHqxFxxRQAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxNDowODo0MCswMDowMF+TI3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTQ6MDg6NDArMDA6MDAuzpvGAAAAAElFTkSuQmCC"
 
 
-* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
-* identifier.system = "https://www.acmeinsurance.com/glossary/memberid"
-* identifier.value = "102345672-02"
-* identifier.assigner.display = "Acme Insurance Co"
+* identifier[memberid].type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
+* identifier[memberid].system = "https://www.acmeinsurance.com/glossary/memberid"
+* identifier[memberid].value = "102345672-02"
+* identifier[memberid].assigner.display = "Acme Insurance Co"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP "health insurance plan policy"
 * type.text = "health insurance plan policy"

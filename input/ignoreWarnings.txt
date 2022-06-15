@@ -2,7 +2,7 @@
 # Insurance cards do not require gender in the United States. See US Core ticket FHIR-34240.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile
 
-== Suppress Information warning that pattern applies to repeats in slice. Repeats following this pattern must be allowed ==
+# Suppress Information warning that pattern applies to repeats in slice. The IG needs to support multiple repeats with this pattern for the slice.
 INFORMATION: StructureDefinition/C4DIC-Organization: StructureDefinition.snapshot.element[21].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users) 
 
 
@@ -11,4 +11,4 @@ Error from server: Unable to provide support for code system http://terminology.
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated]
 Code System URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' is unknown so the code cannot be validated
 
-# INFORMATION: StructureDefinition.snapshot.element[21].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+

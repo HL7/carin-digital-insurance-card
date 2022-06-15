@@ -12,6 +12,16 @@
         "current": true
       },
       {
+        "version": "1.0.0",
+        "desc": "CARIN Digital Insurance Card Release 1 - US Realm STU",
+        "path": "http://hl7.org/fhir/us/insurance-card/STU1",
+        "date": "2022-06-15",
+        "status": "trial-use",
+        "sequence": "STU 1",
+        "fhirversion": "4.0.1",
+        "current": true
+      },
+      {
         "version": "0.1.0",
         "desc": "CARIN Digital Insurance Card Release 1 | STU 1 Ballot",
         "path": "http://hl7.org/fhir/us/insurance-card/2022Jan",
