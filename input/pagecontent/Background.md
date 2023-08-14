@@ -6,6 +6,9 @@
 * The Coverage resource does not allow for expression of copays in the form of text strings. Some copays are able to represented as the required SimpleQuantity or Money data types while others require strings.
 * There is a need to standardize how images often found on insurance cards are able to be expressed in a FHIR-based transaction in a way that is predictable and renderable by consuming applications.
 
+While STU 1.0.0 focused on a FHIR API-based exchange of digital insurance cards, in 2023, the need was identified to create portable, verifiable versions of digital insurance cards. In [version 2.0.0], the IG was expanded to include support for SMART Health Links.
+
+
 ### Overview
 <p>Payers can leverage the Coverage resource, the Organization resource, and the Patient resource to represent the essential information found on the physicial insurance card. This Implementation Guide creates 3 FHIR profiles to enable the standardized exchange of this information. The purpose of each profile is as follows:</p>
 
