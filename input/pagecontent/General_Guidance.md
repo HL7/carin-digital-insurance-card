@@ -49,3 +49,38 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 ### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
 
 <p>The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the&nbsp;<a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS).&nbsp;</a>The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC&nbsp;<a href="https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health">U.S. Core Data for Interoperability(USCDI)&nbsp;</a>.</p>
+
+### A Payer, to provide members with SMART Health Digital Insurance Cards:
+
+- **SHALL** generate a complete and appropriate FHIR bundle using as described in this specification, including Coverage, Organization, and Patient information, as well as any additional information defined by this IG’s extensions.
+- **SHALL** follow the [SMART Health Cards specification](https://spec.smarthealth.cards/) to create a SMART Health Card containing the FHIR bundle.
+  - **SHALL** create the SMART Health Card as a JWS string, as defined by [https://spec.smarthealth.cards/#health-cards-are-encoded-as-compact-serialization-json-web-signatures-jws](https://spec.smarthealth.cards/#health-cards-are-encoded-as-compact-serialization-json-web-signatures-jws).
+  - **SHOULD** implement revocation as defined by [https://spec.smarthealth.cards/#revocation](https://spec.smarthealth.cards/#revocation).
+
+- **SHALL** follow the [SMART Health Links specification](https://docs.smarthealthit.org/smart-health-links/spec) to create a SMART Health Link referencing the SMART Health Card.
+  - **SHALL** include the SMART Health Card as `application/smart-health-card`, a JSON file with a `.verifiableCredential array` containing the SMART Health Card JWS string, as specified by [https://spec.smarthealth.cards#via-file-download](https://spec.smarthealth.cards#via-file-download).
+  - **SHALL NOT** require the user to set a passcode, and SHALL NOT enforce a passcode by default.
+
+- **SHALL** share the Digital Insurance Card with the member as other personal information would be shared.
+ - **SHALL** provide the member the SMART Health Link in text URI format as well as   QR format, as described here [https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink).
+ - **SHALL** in close proximity to the link and QR code, specify to the member:
+   - Data referenced in the link.
+   - Expiration date.
+   - Whether or not the information is updated over time.
+   - Caution about sharing the link with parties they trust.
+
+### A Consumer App, in helping members manage and share their Digital Insurance Card:
+- Can process the SMART Health Link as described here [https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink).
+- **SHALL** display the included data elements for the card.
+  - If the `flag: L` is present, indicating the contents are for long term use, the application SHALL update the display of the contents or display a message noting that the contents may be stale.
+
+- **SHALL** display the expiration date, `exp` (if present)  for the card.
+- **SHALL** inform the user if the card has been revoked, as specified by [https://spec.smarthealth.cards/#revocation](https://spec.smarthealth.cards/#revocation).
+- **SHALL** update the display of data from the SMART Health Link
+- **SHALL** provide the member with the ability to share the SMART Health Link as they see fit.
+  - **SHALL** provide the member the SMART Health Link in text URI format as well as QR code, as described here [https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink).
+  - **SHALL** in close proximity to the link and QR code, caution the member about sharing the link with parties they trust.
+
+### Providers, receiving the Digital Insurance Card:
+
+Can process the SMART Health Link as described here [https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink).
