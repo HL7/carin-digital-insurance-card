@@ -13,4 +13,5 @@ Title: "C4DIC ISO Color"
 Description: "ISO Color Measurement and Management"
 
 * codes from system $ISOColorCS
+* ^experimental = true
 
