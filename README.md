@@ -3,7 +3,16 @@
 
 This implementation guide describes the CARIN for Digital Insurance Card Framework, providing a set of resources that payers can display to consumers via a FHIR API. The goal is to enable insurance members to retrieve the data elements found on their physical insurance cards via a FHIR interaction. See the Table of Contents for more information.
 
-**Change Log**
+## Resources
+
+GitHub Repository: https://github.com/HL7/carin-digital-insurance-card
+
+Old CI Build location: http://build.fhir.org/ig/HL7/carin-digital-insurance-card
+New CI Build Location: http://build.fhir.org/ig/HL7/insurance-card
+
+Published IG: http://hl7.org/fhir/us/insurance-card/
+
+## Change Log
 
 * 11/12: Added disclaimer to Patient Profile description to indicate profile deviating from US Core is only approved for use in this IG; Supressed US Core deviation warning (As Approved by Cross-Projects Group)
 * 11/12: Added clarification to background and use case pages that this IG is intended to be used to retrieve current proof of coverage (As recommended by FM)
