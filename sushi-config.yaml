@@ -25,6 +25,7 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.davinci-drug-formulary: 2.0.0
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
@@ -50,6 +51,8 @@ pages:
     title: Physical Insurance Card Data Elements
   Downloads.md:
     title: Downloads
+  ChangeHistory.md:
+    title: Change History
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
@@ -63,6 +66,7 @@ menu:
   Guidance:
     General Guidance: General_Guidance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
+    Change History: ChangeHistory.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Search Parameters: Search_Parameters.html

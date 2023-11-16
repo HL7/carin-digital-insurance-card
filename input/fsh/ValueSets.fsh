@@ -23,6 +23,7 @@ Title: "C4DIC Copay Type"
 Description: "This value set includes an extended set of copay type codes."
 * codes from valueset $HL7CopayTypeVS
 * codes from system C4DICExtendedCopayTypeCS
+* codes from system $DrugTierCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = true
 

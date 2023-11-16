@@ -68,13 +68,13 @@ Description: "This extension enables an insurance company to provide a backgroun
 /*
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
-* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
 * valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
 
-* valueCodeableConcept.coding contains 
+* valueCodeableConcept.coding contains
     isoColor 1..1
-//* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+//* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1"
 * valueCodeableConcept.coding[isoColor] from ISOColorVS
 * valueCodeableConcept.coding[isoColor]
 * valueCodeableConcept.coding[isoColor].code 1..1
@@ -92,14 +92,52 @@ Description: "This extension enables an insurance company to provide a highlight
 /*
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
-* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern 
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
 * valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
 * valueCodeableConcept.coding contains
     isoColor 1..1
-* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1" 
+* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1"
 * valueCodeableConcept.coding[isoColor].code 1..1
 */
+
+Extension: ForegroundColor
+Id: C4DIC-ForegroundColor-extension
+Title: "Foreground Color"
+Description: "This extension enables an insurance company to provide a foreground color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member."
+* ^context[0].type = #element
+* ^context[0].expression = "Coverage"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from ISOColorVS
+
+/*
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* valueCodeableConcept.coding ^slicing.ordered = false   // can be omitted, since false is the default
+* valueCodeableConcept.coding ^slicing.description = "Slice based on $this pattern"
+
+* valueCodeableConcept.coding contains
+   isoColor 1..1
+//* valueCodeableConcept.coding[isoColor].system = "urn:iso:std:iso-iec:61966:2-1"
+* valueCodeableConcept.coding[isoColor] from ISOColorVS
+* valueCodeableConcept.coding[isoColor]
+* valueCodeableConcept.coding[isoColor].code 1..1
+*/
+
+Extension: ColorPalette
+Id: C4DIC-ColorPalette-extension
+Title: "Color Palette"
+Description: "This extension groups the Foreground, Background and Highlight color extensions into a single extension"
+* ^context[0].type = #element
+* ^context[0].expression = "Coverage"
+* extension contains
+     ForegroundColor named C4DIC-ForegroundColor-extension 0..1 and
+     BackgroundColor named C4DIC-BackgroundColor-extension 0..1 and
+     HighlightColor named C4DIC-HighlightColor-extension 0..1
+
+
 
 Extension: Logo
 Id: C4DIC-Logo-extension
@@ -188,3 +226,10 @@ Description: "This extension enables payers to provide other supporting images f
 * extension[image].valueReference.reference 1..1
 
 * extension[label].value[x] only string
+
+
+// ---- Attempting Invariant to prevent foreground and background color being the same.
+Invariant:  foreground-and-background-color-nor-equal
+Description: "In Color Palette extension if forground or background color are present they can not be equal."
+Expression: "extension('ForegroundColor').exists() and extension('BackgroundColor').exists() and (extension('ForegroundColor')=extension('BackgroundColor'))"
+Severity:   #error

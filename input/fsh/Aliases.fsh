@@ -11,6 +11,10 @@ Alias:   $HL7CopayTypeVS = http://hl7.org/fhir/ValueSet/coverage-copay-type
 Alias:   $HL7ContactTypeCS = http://terminology.hl7.org/CodeSystem/contactentity-type
 Alias:   $HL7ContactTypeVS = http://hl7.org/fhir/ValueSet/contactentity-type
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300 
+Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300
 Alias:   $TAXCodeCS = urn:oid:2.16.840.1.113883.4.4
 Alias:   $ISOColorCS = http://terminology.hl7.org/CodeSystem/IECColourManagement
+
+// Da Vinci PDex Drug Formulary
+
+Alias: $DrugTierCS = http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS-TEMPORARY-TRIAL-USE

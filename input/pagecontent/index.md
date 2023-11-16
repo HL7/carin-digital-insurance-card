@@ -33,4 +33,7 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
 ### Acknowledgements
 This IG was developed using FHIR Shorthand syntax and the SUSHI tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and assistance with the FHIR IG builds were provided by Corey Spears (MITRE) and Vince Van Dintel (Humana). 
 
+### Change History
+
+Check out the [Change History](ChangeHistory.html) page to see which Jira tickets have been applied.
 
