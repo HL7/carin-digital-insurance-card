@@ -26,8 +26,10 @@
 <artifact id="StructureDefinition/C4DIC-Organization" key="StructureDefinition-C4DIC-Organization" name="C4DIC Organization"/>
 <artifact id="StructureDefinition/C4DIC-Patient" key="StructureDefinition-C4DIC-Patient" name="C4DIC Patient"/>
 <artifact id="StructureDefinition/C4DIC-CardIssueDate-extension" key="StructureDefinition-C4DIC-CardIssueDate-extension" name="Card Issue Date"/>
+<artifact id="StructureDefinition/C4DIC-ColorPalette-extension" key="StructureDefinition-C4DIC-ColorPalette-extension" name="Color Palette"/>
 <artifact id="Coverage/Example-Coverage1" key="Coverage-Example-Coverage1" name="Coverage Example 1"/>
 <artifact id="Coverage/Example-Coverage-FSH" key="Coverage-Example-Coverage-FSH" name="Example-Coverage-FSH"/>
+<artifact id="StructureDefinition/C4DIC-ForegroundColor-extension" key="StructureDefinition-C4DIC-ForegroundColor-extension" name="Foreground Color"/>
 <artifact id="StructureDefinition/C4DIC-HighlightColor-extension" key="StructureDefinition-C4DIC-HighlightColor-extension" name="Highlight Color"/>
 <artifact id="StructureDefinition/C4DIC-Logo-extension" key="StructureDefinition-C4DIC-Logo-extension" name="Logo"/>
 <artifact id="Patient/Example-Patient1" key="Patient-Example-Patient1" name="Patient Example 1"/>
@@ -41,6 +43,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="Authorization_Authentication_and_Registration" name="Authorization, Authentication and Registration"/>
 <page key="Background" name="Background"/>
+<page key="ChangeHistory" name="Change History"/>
 <page key="downloads" name="Downloads"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>

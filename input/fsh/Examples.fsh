@@ -32,10 +32,10 @@ Usage: #example
 
 * extension[CardIssueDate].valueDate = "2020-12-15"
 
-* extension[BackgroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##00bfff
-
-* extension[HighlightColor]
-  * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##ceebf5
+* extension[ColorPalette]
+  * extension[BackgroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##00bfff
+  * extension[ForegroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##000000
+  * extension[HighlightColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##ceebf5
 
 * extension[Logo]
   * extension[label].valueString = "ACME Inc."
@@ -122,14 +122,18 @@ Usage: #example
 * costToBeneficiary[=].valueMoney.value = 2000
 * costToBeneficiary[=].valueMoney.currency = #USD
 
-* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#gpvisit
-* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+//* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#gpvisit
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"
+//
+//* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#spvisit
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"
+//
+//* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#emergency
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"
 
-* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#spvisit
-* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
-
-* costToBeneficiary[+].type = http://terminology.hl7.org/CodeSystem/coverage-copay-type#emergency
-* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
-
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#rx
-* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "DED THEN $10/$40/$70/25%"
+//* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#rx
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "DED THEN $10/$40/$70/25%"
+//* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"

@@ -7,12 +7,11 @@ Description: "Data that reflect a payer’s coverage of the member."
 * extension contains
    PlanBeneficiaries named C4DIC-PlanBeneficiaries-extension 0..* and
    AdditionalCardInformation named C4DIC-AdditionalCardInformation-extension 0..* and
-   BackgroundColor named C4DIC-BackgroundColor-extension 0..1 and
-   HighlightColor named C4DIC-HighlightColor-extension 0..1 and
-   Logo named C4DIC-Logo-extension 0..1 and 
-   QRCode named C4DIC-QRCode-extension 0..* and 
+   ColorPalette named C4DIC-ColorPalette-extension 0..1 and
+   Logo named C4DIC-Logo-extension 0..1 and
+   QRCode named C4DIC-QRCode-extension 0..* and
    Barcode named C4DIC-Barcode-extension 0..* and
-   SupportingImage named C4DIC-SupportingImage-extension 0..* and  
+   SupportingImage named C4DIC-SupportingImage-extension 0..* and
    CardIssueDate named C4DIC-CardIssueDate-extension 0..1
 
 * meta 1..1 MS
@@ -21,17 +20,17 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * insert Metaprofile-supportedProfile-slice
 * meta.profile[supportedProfile] = Canonical(C4DICCoverage)
-* identifier MS 
+* identifier MS
 
 * identifier.type from C4DICCoverageIdentifierType (extensible)
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.discriminator.type = #pattern 
+* identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.ordered = false   // can be omitted, since false is the default
 * identifier ^slicing.description = "Slice based on $this pattern"
 
-* identifier contains 
-   memberid 1..1 MS 
+* identifier contains
+   memberid 1..1 MS
 
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type = $IdentifierType#MB
@@ -48,7 +47,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 
 * beneficiary 1..1 MS
 * beneficiary.reference 1..1 MS
-* beneficiary only Reference(C4DICPatient) 
+* beneficiary only Reference(C4DICPatient)
 
 * dependent MS
 
@@ -58,16 +57,16 @@ Description: "Data that reflect a payer’s coverage of the member."
 * period MS
 
 * payor 1..1 MS
-* payor only Reference (C4DICOrganization) 
+* payor only Reference (C4DICOrganization)
 
-* class MS 
+* class MS
 * class.type from C4DICCoverageClassVS (required)
 * class ^slicing.discriminator.type = #pattern
 * class ^slicing.discriminator.path = "type"
 * class ^slicing.rules = #open
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
-* class contains 
+* class contains
    group 0..1  MS and
    plan 0..1 MS and
    division 0..1 MS and
@@ -77,7 +76,7 @@ Description: "Data that reflect a payer’s coverage of the member."
    rxgroup 0..1 MS and
    rxid 0..1 MS and
    rxiin 0..1 MS
-  
+
 * class[group].type = $CoverageClassCS#group
 * class[plan].type = $CoverageClassCS#plan
 * class[division].type = C4DICExtendedCoverageClassCS#division
@@ -91,12 +90,13 @@ Description: "Data that reflect a payer’s coverage of the member."
 * costToBeneficiary MS
 * costToBeneficiary.type 1..1 MS
 * costToBeneficiary.type from C4DICCopayTypeVS (extensible)
+* costToBeneficiary.type ^comment = "Includes codes to represent the drug tier of a particular medication in a health plan. Base set are examples. Each plan may have its own controlled vocabulary. Therefore the codes used here should relate to the tier codes used in the member's drug formulary"
 * costToBeneficiary.value[x] only Money
 * costToBeneficiary.valueMoney 1..1 MS
 * costToBeneficiary.valueMoney obeys ValueMoney-details-or-extension
 * costToBeneficiary.valueMoney.extension contains
    BeneficiaryCostString named C4DIC-BeneficiaryCostString-extension 0..1 MS
-   
+
 
 * costToBeneficiary.valueMoney.value 0..1 MS
 * costToBeneficiary.valueMoney.currency 0..1 MS
@@ -128,7 +128,7 @@ RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile contains supportedProfile 1..1
 
 
- 
+
 Invariant: ValueMoney-details-or-extension
 Description: "costToBeneficiary SHALL have (value AND currency) OR Beneficiary Cost String extension, but not both"
 Expression: "((value.exists() and currency.exists()) xor extension.where(url='http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension').exists()) and ((value.exists() xor currency.exists())).not()"
