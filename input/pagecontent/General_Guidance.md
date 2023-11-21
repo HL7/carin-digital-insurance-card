@@ -84,3 +84,7 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 ### Providers, receiving the Digital Insurance Card:
 
 Can process the SMART Health Link as described here [https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink).
+
+### Color Palette Extension
+
+When rendering foreground and background colors, the implementer SHOULD not use the same foreground and background colors and instead should algorithmically determine a high color contrast.
