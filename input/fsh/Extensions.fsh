@@ -3,8 +3,8 @@ Extension: PlanBeneficiaries
 Id: C4DIC-PlanBeneficiaries-extension
 Title: "Plan Beneficiaries"
 Description: "This extension allows for the representation of all of the members on the plan with corresponding Names and MemberIDs. This enables health plans to pass this information along with the Coverage resources to align with how this content is printed on physical insurance cards."
-//* ^context[0].type = #element
-//* ^context[0].expression = "Coverage"
+* ^context[0].type = #element
+* ^context[0].expression = "Coverage"
 * extension contains
 	memberId 1..1 MS and
     name 1..1 MS and
@@ -29,7 +29,8 @@ Extension: BeneficiaryCostString
 Id: C4DIC-BeneficiaryCostString-extension
 Title: "Beneficiary Cost as String"
 Description: "This extension allows for the representation of copay details as strings. This can be passed as part of the Coverage resource where payors need to communicate costToBeneficiary details that cannot be expressed as SimpleQuantity or Money data types."
-//* ^context[0].type = #element
+* ^context[0].type = #element
+* ^context[0].expression = "Coverage"
 //* ^context[0].expression = "Coverage.costToBeneficiary.valueMoney"
 
 * value[x] only string
