@@ -3,10 +3,12 @@
 
 ### STU 1.0.1
 
-| JIRA Ticket                                          | Change                                                                               |
-|------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [FHIR-42840](https://jira.hl7.org/browse/FHIR-42840) | Copay type lists Rx but Tiers are needed                                             | 
-| [FHIR-42779](https://jira.hl7.org/browse/FHIR-42779) | Background color is specified, therefore the foreground should also be specified     | 
+| JIRA Ticket                                          | Change                                                                           |
+|------------------------------------------------------|----------------------------------------------------------------------------------|
+| [FHIR-43141](https://jira.hl7.org/browse/FHIR-43141) | Please tighten your extension contexts                                           | 
+| [FHIR-43109](https://jira.hl7.org/browse/FHIR-43109) | Extensions should have more specific context                                     | 
+| [FHIR-42840](https://jira.hl7.org/browse/FHIR-42840) | Copay type lists Rx but Tiers are needed                                         | 
+| [FHIR-42779](https://jira.hl7.org/browse/FHIR-42779) | Background color is specified, therefore the foreground should also be specified | 
 
 ### STU 1.0.1 - General Enhancements
 
