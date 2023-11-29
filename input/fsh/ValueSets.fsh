@@ -16,6 +16,8 @@ Description: "This value set includes an extended set of coverage class codes."
 * codes from system C4DICExtendedCoverageClassCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
 
 
 ValueSet: C4DICCopayTypeVS
@@ -26,6 +28,8 @@ Description: "This value set includes an extended set of copay type codes."
 * codes from system $DrugTierCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
 
 ValueSet: C4DICContactTypeVS
 Title: "C4DIC Contact Type"
@@ -35,3 +39,5 @@ Description: "This value set includes an extended set of contact type codes."
 * codes from system C4DICExtendedContactTypeCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims

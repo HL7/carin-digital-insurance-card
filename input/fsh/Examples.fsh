@@ -6,25 +6,21 @@ Usage: #example
 * meta.lastUpdated = "2021-04-06T10:49:02.473+00:00"
 * meta.profile[supportedProfile] = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage"
 
-* extension[PlanBeneficiaries][+]
-  * extension[memberId].valueString = "102345672-01"
-  * extension[name].valueHumanName.family = "Doe"
-  * extension[name].valueHumanName.given = "John"
+* extension[PlanBeneficiaries][+].extension[memberId].valueString = "102345672-01"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.family = "Doe"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.given = "John"
 
-* extension[PlanBeneficiaries][+]
-  * extension[memberId].valueString = "102345672-02"
-  * extension[name].valueHumanName.family = "Doe"
-  * extension[name].valueHumanName.given = "jane"
+* extension[PlanBeneficiaries][+].extension[memberId].valueString = "102345672-02"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.family = "Doe"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.given = "jane"
 
-* extension[PlanBeneficiaries][+]
-  * extension[memberId].valueString = "102345672-03"
-  * extension[name].valueHumanName.family = "Doe"
-  * extension[name].valueHumanName.given = "Jimmy"
+* extension[PlanBeneficiaries][+].extension[memberId].valueString = "102345672-03"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.family = "Doe"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.given = "Jimmy"
 
-* extension[PlanBeneficiaries][+]
-  * extension[memberId].valueString = "102345672-04"
-  * extension[name].valueHumanName.family = "Doe"
-  * extension[name].valueHumanName.given = "Ginny"
+* extension[PlanBeneficiaries][+].extension[memberId].valueString = "102345672-04"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.family = "Doe"
+* extension[PlanBeneficiaries][=].extension[name].valueHumanName.given = "Ginny"
 
 
 * extension[AdditionalCardInformation][+].valueAnnotation.text = "If you use a TTY, call 711.\nYou may be asked to present this card when you receive care or fill a perscription. This card does not gaurentee coverage. Intentionally misusing this card may be considered fraud or a violation of the law.\nWe encourage you to use a primary care physician as a valuable resource and personal health advocate."
@@ -32,10 +28,9 @@ Usage: #example
 
 * extension[CardIssueDate].valueDate = "2020-12-15"
 
-* extension[ColorPalette]
-  * extension[BackgroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##00bfff
-  * extension[ForegroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##000000
-  * extension[HighlightColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##ceebf5
+* extension[ColorPalette].extension[BackgroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##00bfff
+* extension[ColorPalette].extension[ForegroundColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##000000
+* extension[ColorPalette].extension[HighlightColor].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/IECColourManagement##ceebf5
 
 * extension[Logo]
   * extension[label].valueString = "ACME Inc."

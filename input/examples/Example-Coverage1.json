@@ -96,26 +96,34 @@
           "valueDate" : "2020-12-15"
       },
       {
-          "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BackgroundColor-extension",
-          "valueCodeableConcept": {
-              "coding": [
-                  {
-                      "system": "http://terminology.hl7.org/CodeSystem/IECColourManagement",
-                      "code": "#00bfff"
+          "extension" : [{
+              "url" : "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BackgroundColor-extension",
+              "valueCodeableConcept" : {
+                  "coding" : [{
+                      "system" : "http://terminology.hl7.org/CodeSystem/IECColourManagement",
+                      "code" : "#00bfff"
+                  }]
+              }
+          },
+              {
+                  "url" : "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-ForegroundColor-extension",
+                  "valueCodeableConcept" : {
+                      "coding" : [{
+                          "system" : "http://terminology.hl7.org/CodeSystem/IECColourManagement",
+                          "code" : "#000000"
+                      }]
                   }
-              ]
-          }
-      },
-      {
-          "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-HighlightColor-extension",
-          "valueCodeableConcept": {
-              "coding": [
-                  {
-                      "system": "http://terminology.hl7.org/CodeSystem/IECColourManagement",
-                      "code": "#ceebf5"
+              },
+              {
+                  "url" : "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-HighlightColor-extension",
+                  "valueCodeableConcept" : {
+                      "coding" : [{
+                          "system" : "http://terminology.hl7.org/CodeSystem/IECColourManagement",
+                          "code" : "#ceebf5"
+                      }]
                   }
-              ]
-          }
+              }],
+          "url" : "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-ColorPalette-extension"
       },
       {
           "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Logo-extension",
@@ -457,7 +465,7 @@
             }
           ]
         },
-        "valueMoney" : 
+        "valueMoney" :
             {
                 "extension" : [
                   {
@@ -476,7 +484,7 @@
             }
           ]
         },
-        "valueMoney" : 
+        "valueMoney" :
             {
                 "extension" : [
                   {
@@ -495,7 +503,7 @@
             }
           ]
         },
-        "valueMoney" : 
+        "valueMoney" :
             {
                 "extension" : [
                   {
@@ -514,7 +522,7 @@
             }
           ]
         },
-        "valueMoney" : 
+        "valueMoney" :
             {
                 "extension" : [
                   {

@@ -7,6 +7,9 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^caseSensitive = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
+
 
 
 
@@ -19,6 +22,8 @@ Description: "This code system includes an extended set of Coverage Class codes.
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^caseSensitive = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
 
 
 CodeSystem: C4DICExtendedCopayTypeCS
@@ -44,6 +49,9 @@ Description: "This code system includes an extended set of Copay Type codes."
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^caseSensitive = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
+
 
 CodeSystem: C4DICExtendedContactTypeCS
 Title: "C4DIC Extended Contact Type"
@@ -55,3 +63,6 @@ Description: "This code system includes an extended set of Contact Type codes."
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^caseSensitive = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
+

@@ -12,12 +12,12 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.insurance-card
 canonical: http://hl7.org/fhir/us/insurance-card
-version: 1.0.1
+version: 1.1.0
 name: CARINForDigitalInsuranceCard
 title: CARIN Digital Insurance Card
 status: active
 publisher:
-  name: HL7 Payer/Provider Information Exchange Working Group (PIE WG)
+  name: HL7 International / Payer/Provider Information Exchange Work Group
   url: http://www.hl7.org/Special/committees/claims
   email: pie@lists.HL7.org
 description: CARIN Digital Insurance Card
@@ -26,14 +26,21 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 4.0.0
   hl7.fhir.us.davinci-drug-formulary: 2.0.0
+  hl7.fhir.uv.extensions: current
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
   jira-code: carin-dic
 copyrightYear: 2022+
-releaseLabel: STU 1
+releaseLabel: STU 1.1
 jurisdiction: urn:iso:std:iso:3166#US
+
+extension:
+  - url: "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+    valueCode: claims
+
+
 pages:
   index.md:
     title: Home
@@ -51,6 +58,8 @@ pages:
     title: Physical Insurance Card Data Elements
   Downloads.md:
     title: Downloads
+  ImplementationGuide-hl7.fhir.us.insurance-card.md:
+    title: CARIN Digital Insurance Card Implementation Guide
   ChangeHistory.md:
     title: Change History
 
@@ -73,6 +82,7 @@ menu:
     Extensions: artifacts.html#3
     Terminology: artifacts.html#4
     Capability Statement: CapabilityStatement-c4dic.html
+    Implementation Guide: ImplementationGuide-hl7.fhir.us.insurance-card.html
     Examples: artifacts.html#6
   Security:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
