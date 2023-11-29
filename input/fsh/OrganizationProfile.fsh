@@ -1,12 +1,10 @@
 Profile: C4DICOrganization
-
 Parent: $USCoreOrganization
-
 Id: C4DIC-Organization
-
 Title: "C4DIC Organization"
-
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer organization."
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
 
 * meta 1..1 MS
 
@@ -68,7 +66,7 @@ virtual 0..* MS
 
 manually define them one by one?
 
-CAS: Yes, just define your valueSet with the codes of interest. See "C4DICContactTypeVS" in ValueSets.fsh. 
+CAS: Yes, just define your valueSet with the codes of interest. See "C4DICContactTypeVS" in ValueSets.fsh.
     If you want to allow other codes where needed make it (extensible) - See below
 */
 /*

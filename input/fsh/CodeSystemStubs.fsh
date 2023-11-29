@@ -11,7 +11,9 @@ Description: "ISO Color Measurement and Management Codes"
 ValueSet: ISOColorVS
 Title: "C4DIC ISO Color"
 Description: "ISO Color Measurement and Management"
-
 * codes from system $ISOColorCS
 * ^experimental = true
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
+
 

@@ -5,6 +5,7 @@
 
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
+| Publication Prep                                     | Change Version to 1.1.0                                                          | 
 | [FHIR-43141](https://jira.hl7.org/browse/FHIR-43141) | Please tighten your extension contexts                                           | 
 | [FHIR-43109](https://jira.hl7.org/browse/FHIR-43109) | Extensions should have more specific context                                     | 
 | [FHIR-42840](https://jira.hl7.org/browse/FHIR-42840) | Copay type lists Rx but Tiers are needed                                         | 
