@@ -1,0 +1,107 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭──────────────────────ImplementationGuide-hl7.fhir.us.insurance-card.json───────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.insurance-card
+canonical: http://hl7.org/fhir/us/insurance-card
+version: 1.0.1
+name: CARINForDigitalInsuranceCard
+title: CARIN Digital Insurance Card
+status: active
+publisher:
+  name: HL7 Payer/Provider Information Exchange Working Group (PIE WG)
+  url: http://www.hl7.org/Special/committees/claims
+  email: pie@lists.HL7.org
+description: CARIN Digital Insurance Card
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 6.1.0
+#  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.davinci-drug-formulary: 2.0.0
+parameters:
+  show-inherited-invariants: false
+  apply-jurisdiction: true
+  apply-publisher: true
+  jira-code: carin-dic
+copyrightYear: 2022+
+releaseLabel: STU 1
+jurisdiction: urn:iso:std:iso:3166#US
+pages:
+  index.md:
+    title: Home
+  Background.md:
+    title: Background
+  Use_Case.md:
+    title: Use Case
+  General_Guidance.md:
+    title: General Guidance
+    Authorization_Authentication_and_Registration.md:
+      title: Authorization, Authentication and Registration
+    Search_Parameters.md:
+      title: Search Parameters
+  Physical_Insurance_Card_Data_Elements.md:
+    title: Physical Insurance Card Data Elements
+  Downloads.md:
+    title: Downloads
+  ChangeHistory.md:
+    title: Change History
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Background: Background.html
+  Use Cases:
+    Terms and Concepts: Use_Case.html#terms-and-concepts
+    Use Cases: Use_Case.html#use-cases
+  Guidance:
+    General Guidance: General_Guidance.html
+    Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
+    Change History: ChangeHistory.html
+  FHIR Artifacts:
+    Profiles: artifacts.html#2
+    Search Parameters: Search_Parameters.html
+    Extensions: artifacts.html#3
+    Terminology: artifacts.html#4
+    Capability Statement: CapabilityStatement-c4dic.html
+    Examples: artifacts.html#6
+  Security:
+    SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
+    Authorization and Authentication: Authorization_Authentication_and_Registration.html#authorization-and-authentication
+  #Examples:  artifacts.html#7
+  Downloads: Downloads.html
+
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+resources:
+  CapabilityStatement/c4dic:
+    name: C4DIC CapabilityStatement
+  Coverage/Example-Coverage1:
+    name: Coverage Example 1
+    description: Coverage Example 1
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage
+  Organization/Example-PayerOrganization1:
+    name: Payer Organization Example 1
+    description: Payer Organization Example 1
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Organization
+  Patient/Example-Patient1:
+    name: Patient Example 1
+    description: Patient Example 1 (subscriber)
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
+  Patient/Example-Patient2:
+    name: Patient Example 2
+    description: Patient Example 2 (beneficiary)
+    exampleCanonical: http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient
