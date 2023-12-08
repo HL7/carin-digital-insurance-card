@@ -61,7 +61,7 @@ pages:
   ImplementationGuide-hl7.fhir.us.insurance-card.md:
     title: CARIN Digital Insurance Card Implementation Guide
   ChangeHistory.md:
-    title: Change History
+    title: Change Notes
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
@@ -89,6 +89,7 @@ menu:
     Authorization and Authentication: Authorization_Authentication_and_Registration.html#authorization-and-authentication
   #Examples:  artifacts.html#7
   Downloads: Downloads.html
+  Change Notes: ChangeHistory.html
 
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮

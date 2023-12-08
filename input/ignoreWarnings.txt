@@ -30,3 +30,8 @@ WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[2].value.of
 # Variance requested from Cross-Products Group. Upgrade to US Core 6.1.0 or later to be considered for next Update
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile
 
+# Information Messages
+%The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/IECColourManagement' doesnt provide any codes so the code cannot be validated
+%Reference to draft item http://terminology.hl7.org/CodeSystem/coverage-class|0.1.0
+%Reference to draft item http://terminology.hl7.org/CodeSystem/contactentity-type|0.5.0
+%Reference to draft item http://terminology.hl7.org/CodeSystem/coverage-copay-type|0.1.0

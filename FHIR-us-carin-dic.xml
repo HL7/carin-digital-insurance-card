@@ -45,7 +45,7 @@
 <page key="Authorization_Authentication_and_Registration" name="Authorization, Authentication and Registration"/>
 <page key="Background" name="Background"/>
 <page key="ImplementationGuide-hl7.fhir.us.insurance-card" name="CARIN Digital Insurance Card Implementation Guide"/>
-<page key="ChangeHistory" name="Change History"/>
+<page key="ChangeHistory" name="Change Notes"/>
 <page key="downloads" name="Downloads"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
