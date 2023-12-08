@@ -1,7 +1,7 @@
 
 {% include style_insert_table_blue.html %}
 
-### STU 1.0.1
+### Changes and Updates for version 1.1.0 (from version 1.0.0)
 
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -11,21 +11,20 @@
 | [FHIR-42840](https://jira.hl7.org/browse/FHIR-42840) | Copay type lists Rx but Tiers are needed                                         | 
 | [FHIR-42779](https://jira.hl7.org/browse/FHIR-42779) | Background color is specified, therefore the foreground should also be specified | 
 
-### STU 1.0.1 - General Enhancements
-
 #### Home Page
-https://build.fhir.org/ig/HL7/carin-digital-insurance-card/index.html
-Update the intro to reflect the SHL use case, I think we just need to add a few words:
+[https://build.fhir.org/ig/HL7/carin-digital-insurance-card/index.html](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/index.html)
+Update the intro to reflect the SHL use case.
+
 1.1 Introduction
 This implementation guide describes the CARIN for Digital Insurance Card (C4DIC) Framework, providing a set of resources that payers can display to consumers via a FHIR API or SMART Health Link. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the Table of Contents for more information.
 
 #### Background
-https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Background.html
+[https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Background.html](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Background.html)
 Add a reference to updating the IG to include SHLs at the end of Introduction 2.1:
-While STU 1.0.0 focused on a FHIR API -based exchange of digital insurance cards, in 2023, the need was identified to create portable, verifiable versions of digital insurance cards. In [version x.x.x], the IG was expanded to include support for SMART Health Links.
+While STU 1.0.0 focused on a FHIR API -based exchange of digital insurance cards, in 2023, the need was identified to create portable, verifiable versions of digital insurance cards. In STU 1.1.0, the IG was expanded to include support for SMART Health Links.
 
 #### Use Cases
-https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Use_Case.html#use-cases
+[https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Use_Case.html#use-cases](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/Use_Case.html#use-cases)
 Add a new sub-use-case for SHLs as a means for consumer access and exchange:
 The Digital Insurance Card can also be made available to the member in a verifiable, tamper-proof package that the subscriber can store, manage, and share with healthcare providers as they see fit. In this model, the payer provides the member with a QR code or URL representing their digital insurance card, likely using the same modalities used to share digital cards today (e.g. payer mobile application, website, email). The member is able to present the QR code to be scanned during in-person visits or provide the QR code or URL to mobile or web forms during online registration or check-in flows. The provider then uses the QR code or URL to retrieve the Digital Insurance Card and verify its authenticity.
 SMART Health Cards are a FHIR-based verifiable credential technical framework that has been made available to hundreds of millions of people around the world for proof of vaccination and infectious disease laboratory testing results.
@@ -47,7 +46,7 @@ Healthcare provider, EHR vendor, or other platform vendor incorporates insurance
 
 #### Guidance
 
-https://build.fhir.org/ig/HL7/carin-digital-insurance-card/General_Guidance.html
+[https://build.fhir.org/ig/HL7/carin-digital-insurance-card/General_Guidance.html](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/General_Guidance.html)
 
 _Add a section for SHL-based implementation:_
 **A Payer, to provide members with SMART Health Digital Insurance Cards:**
@@ -72,17 +71,17 @@ Caution about sharing the link with parties they trust.
 
 
 **A Consumer App, in helping members manage and share their Digital Insurance Card:**
-Can process the SMART Health Link as described here https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink.
+Can process the SMART Health Link as described here [https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink).
 **SHALL** display the included data elements for the card.
 If the `flag: L` is present, indicating the contents are for long term use, the application SHALL update the display of the contents or display a message noting that the contents may be stale.
 
 **SHALL** display the expiration date, `exp` (if present)  for the card.
-**SHALL** inform the user if the card has been revoked, as specified by https://spec.smarthealth.cards/#revocation.
+**SHALL** inform the user if the card has been revoked, as specified by [https://spec.smarthealth.cards/#revocation](https://spec.smarthealth.cards/#revocation).
 **SHALL** update the display of data from the SMART Health Link
 **SHALL** provide the member with the ability to share the SMART Health Link as they see fit.
-**SHALL** provide the member the SMART Health Link in text URI format as well as QR code, as described here https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink.
+**SHALL** provide the member the SMART Health Link in text URI format as well as QR code, as described here [https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#sharing-user-transmits-a-shlink).
 **SHALL** in close proximity to the link and QR code, caution the member about sharing the link with parties they trust.
 
 
 **Providers, receiving the Digital Insurance Card:**
-Can process the SMART Health Link as described here https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink.
+Can process the SMART Health Link as described here [https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink](https://docs.smarthealthit.org/smart-health-links/spec#shl-receiving-application-processes-a-shlink).
