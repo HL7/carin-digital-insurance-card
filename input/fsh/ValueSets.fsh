@@ -38,6 +38,16 @@ Description: "This value set includes an extended set of contact type codes."
 * $HL7ContactTypeCS#PAYOR
 * codes from system C4DICExtendedContactTypeCS
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = true
+* ^experimental = false
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
+
+ValueSet: ISOColorVS
+Title: "C4DIC ISO Color"
+Description: "ISO Color Measurement and Management"
+* codes from system $ISOColorCS
+* ^experimental = false
+* ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension.valueCode = #claims
+
+

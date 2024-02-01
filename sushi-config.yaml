@@ -24,8 +24,10 @@ description: CARIN Digital Insurance Card
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.core: 3.1.1
   hl7.fhir.us.davinci-drug-formulary: 2.0.0
+  hl7.terminology.r4: 5.3.0
+  # hl7.fhir.uv.extensions: 1.0.0
   hl7.fhir.uv.extensions: current
 parameters:
   show-inherited-invariants: false
