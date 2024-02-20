@@ -33,6 +33,9 @@ WARNING: ValueSet.where(id = 'ISOColorVS'): Error from http://tx.fhir.org/r4: Un
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-copay-type|0.1.0
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|0.5.0
 
-# Variance requested from Cross-Products Group. Upgrade to US Core 6.1.0 or later to be considered for next Update
+# Variance requested from Cross-Products Group. Upgrade to US Core 6.1.0 or later to be considered for next Update. FHIR-43300 - US Core Coverage variance, FHIR-43303 - US Core Coverage variance.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
+# PIE Work Group (claims) is not represented in HL7-work-group CodeSystem.
+% Unknown code 'claims' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/hl7-work-group'%
+%The value provided ('claims') was not found in the value set 'HL7Workgroup'%

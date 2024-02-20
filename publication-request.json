@@ -4,7 +4,7 @@
   "path" : "http://hl7.org/fhir/us/insurance-card/STU1.1",
   "mode" : "milestone",
   "status" : "trial-use",
-  "sequence" : "STU1.1",
+  "sequence" : "STU1",
   "desc" : "CARIN Digital Insurance Card",
   "descmd" : "CARIN Digital Insurance Card"
 }
