@@ -39,3 +39,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/
 # PIE Work Group (claims) is not represented in HL7-work-group CodeSystem.
 % Unknown code 'claims' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/hl7-work-group'%
 %The value provided ('claims') was not found in the value set 'HL7Workgroup'%
+
+# Unresolvable CapabilityStatement Version-Specific Link - This CapabilityStatement has not been published yet.
+%is a canonical link and is therefore unsafe with regard to versions%
+%is a canonical reference, and is unsafe because of version handling (points to the current version, not this version)%
