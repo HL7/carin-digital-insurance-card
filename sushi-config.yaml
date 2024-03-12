@@ -27,10 +27,13 @@ dependencies:
   hl7.fhir.us.core: 3.1.1
   hl7.fhir.us.davinci-drug-formulary: 2.0.0
   hl7.terminology.r4: 5.3.0
+  #hl7.terminology: 5.5.0
   # switching from CI Build to working copy
   # This will introduce issues for extensions owned by PIE since their identifier "claims"
   # is not in the HL7 Workgroup CodeSystem
-  hl7.fhir.uv.extensions: 1.0.0
+  # hl7.fhir.uv.extensions: 1.0.0
+  hl7.fhir.uv.extensions: 5.1.0-ballot1
+  # hl7.fhir.uv.extensions: 5.1.0-snapshot1
   # Current build has fixed the PIE entry in HL7 workgroup CodeSystem
   # hl7.fhir.uv.extensions: current
 parameters:
