@@ -13,6 +13,7 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 
 
 
+
 CodeSystem: C4DICExtendedCoverageClassCS
 Title: "C4DIC Extended Coverage Class"
 Description: "This code system includes an extended set of Coverage Class codes."
