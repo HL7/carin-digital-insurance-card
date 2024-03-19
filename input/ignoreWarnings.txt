@@ -43,3 +43,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/
 # Unresolvable CapabilityStatement Version-Specific Link - This CapabilityStatement has not been published yet.
 %is a canonical link and is therefore unsafe with regard to versions%
 %is a canonical reference, and is unsafe because of version handling (points to the current version, not this version)%
+
+# Tooling issue - to be fixed in post 1.6.2 publisher release
+%The value provided ('auto-oid-root') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0), and a code is required from this value set%

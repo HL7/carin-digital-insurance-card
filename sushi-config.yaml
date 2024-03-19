@@ -36,11 +36,13 @@ dependencies:
   # hl7.fhir.uv.extensions: 5.1.0-snapshot1
   # Current build has fixed the PIE entry in HL7 workgroup CodeSystem
   # hl7.fhir.uv.extensions: current
+  #hl7.fhir.uv.tools: 0.2.0-snapshot
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
   jira-code: carin-dic
+  auto-oid-root: 2.16.840.1.113883.4.642.40.9
 copyrightYear: 2022+
 releaseLabel: STU 1.1
 jurisdiction: urn:iso:std:iso:3166#US
