@@ -28,3 +28,6 @@ Published IG: http://hl7.org/fhir/us/insurance-card/
 
 * FM 11/9: Consider compiling requests for teams working on R5 to overcome challenges we've seen (like coverage.network only allowing one string)
 
+## JIRA Spec Artifacts
+
+Make sure ci build uses http urls.
