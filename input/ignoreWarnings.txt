@@ -36,13 +36,9 @@ WARNING: ValueSet.where(id = 'ISOColorVS'): Error from http://tx.fhir.org/r4: Un
 # Variance requested from Cross-Products Group. Upgrade to US Core 6.1.0 or later to be considered for next Update. FHIR-43300 - US Core Coverage variance, FHIR-43303 - US Core Coverage variance.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# PIE Work Group (claims) is not represented in HL7-work-group CodeSystem.
-% Unknown code 'claims' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/hl7-work-group'%
-%The value provided ('claims') was not found in the value set 'HL7Workgroup'%
-
 # Unresolvable CapabilityStatement Version-Specific Link - This CapabilityStatement has not been published yet.
 %is a canonical link and is therefore unsafe with regard to versions%
 %is a canonical reference, and is unsafe because of version handling (points to the current version, not this version)%
 
-# Tooling issue - to be fixed in post 1.6.2 publisher release
-%The value provided ('auto-oid-root') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0), and a code is required from this value set%
+# Migration of appropriate CodeSystems to THO is planned for the next release of this IG.
+%Most code systems defined in HL7 IGs will need to move to THO later during the process.%
