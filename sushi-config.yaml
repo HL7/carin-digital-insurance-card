@@ -42,7 +42,7 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   jira-code: carin-dic
-  auto-oid-root: 2.16.840.1.113883.4.642.40.9
+  #  auto-oid-root: 2.16.840.1.113883.4.642.40.9
 copyrightYear: 2022+
 releaseLabel: STU 1.1
 jurisdiction: urn:iso:std:iso:3166#US
