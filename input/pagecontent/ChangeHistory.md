@@ -1,5 +1,12 @@
 
 {% include style_insert_table_blue.html %}
+### Changes and Updates for version 2.0.0 (from version 1.1.0)
+
+| JIRA Ticket                                          | Change                                                                           |
+|------------------------------------------------------|----------------------------------------------------------------------------------|
+| [FHIR-53030](https://jira.hl7.org/browse/FHIR-53030)  | Update Change History for STU2 |
+| [FHIR-53028](https://jira.hl7.org/browse/FHIR-53028). | Add Support sub-mneu to Menu Bar | 
+
 
 ### Changes and Updates for version 1.1.0 (from version 1.0.0)
 

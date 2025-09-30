@@ -34,8 +34,9 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   jira-code: carin-dic
-copyrightYear: 2022+
-releaseLabel: STU 1.1
+  shownav: true
+copyrightYear: 2025+
+releaseLabel: STU 2.0
 jurisdiction: urn:iso:std:iso:3166#US
 
 extension:
@@ -90,7 +91,13 @@ menu:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
     Authorization and Authentication: Authorization_Authentication_and_Registration.html#authorization-and-authentication
   #Examples:  artifacts.html#7
-  Downloads: Downloads.html
+  Support:
+    Discussion Forum: new-tab https://chat.fhir.org/#narrow/channel/285193-CARIN-IG-for-Digital-Insurance-Card/topic/Implementations.20and.20Examples/with/507783712
+    Project Page: new-tab https://confluence.hl7.org/spaces/CAR/pages/104579206/CARIN+IG+for+Digital+Insurance+Card
+    Implementer Support: new-tab https://confluence.hl7.org/spaces/CAR/pages/391187088/Implementer+Support+-STU2
+    Jira Dashboard: new-tab https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=14305
+    Propose a Change: new-tab https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-us-carin-dic
+    Downloads: Downloads.html
   Change Notes: ChangeHistory.html
 
 
