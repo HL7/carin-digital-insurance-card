@@ -18,3 +18,6 @@ Alias:   $ISOColorCS = http://terminology.hl7.org/CodeSystem/IECColourManagement
 // Da Vinci PDex Drug Formulary
 
 Alias: $DrugTierCS = http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS-TEMPORARY-TRIAL-USE
+
+// THO
+Alias: $HL7WorkGroup = http://terminology.hl7.org/CodeSystem/hl7-work-group|7.0.0

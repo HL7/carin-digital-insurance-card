@@ -10,9 +10,10 @@
 
 ### Changes and Updates for version 1.1.0 (from version 1.0.0)
 
-| JIRA Ticket                                          | Change                                                                           |
-|------------------------------------------------------|----------------------------------------------------------------------------------|
-| Publication Prep                                     | Change Version to 1.1.0                                                          | 
+| JIRA Ticket                                         | Change                                                                           |
+|-----------------------------------------------------|----------------------------------------------------------------------------------|
+| Publisher 1.6.2 requires auto-oid-root value        | hl7.fhir.us.insurance-card = 2.16.840.1.113883.4.642.40.9                                                                     |
+| Publication Prep                                    | Change Version to 1.1.0                                                          | 
 | [FHIR-43141](https://jira.hl7.org/browse/FHIR-43141) | Please tighten your extension contexts                                           | 
 | [FHIR-43109](https://jira.hl7.org/browse/FHIR-43109) | Extensions should have more specific context                                     | 
 | [FHIR-42840](https://jira.hl7.org/browse/FHIR-42840) | Copay type lists Rx but Tiers are needed                                         | 

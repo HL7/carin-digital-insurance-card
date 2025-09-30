@@ -23,6 +23,11 @@ Published IG: http://hl7.org/fhir/us/insurance-card/
 * 11/12: Added text in boundaries section to indicate not all nuanced data elements made it into this first IG (As recommended by PIE)
 * 11/15: Updated CapabilityStatement and other documentation to add search parameters for coverage.status and coverage.period (As recommended by FM)
 
+* 02/01: Updated Publisher to 1.5.16
 **Outstanding Feedback from HL7 Workgroups**
 
 * FM 11/9: Consider compiling requests for teams working on R5 to overcome challenges we've seen (like coverage.network only allowing one string)
+
+## JIRA Spec Artifacts
+
+Make sure ci build uses http urls.
