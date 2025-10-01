@@ -1,5 +1,5 @@
 Profile: C4DICPatient
-Parent: Patient
+Parent: $USCorePatient
 Id: C4DIC-Patient
 Title: "C4DIC Patient"
 Description: "The goal of this profile is to describe a data-minimized version of Patient used to convey information about the Member who has health insurance coverage. Information that would normally not appear on a health insurance card is not required. The use of this profile is only approved for conveying information related to a health insurance card as part of this IG."
@@ -26,5 +26,5 @@ Description: "The goal of this profile is to describe a data-minimized version o
 * birthDate 0..1
 * birthDate ^comment = "MAY be excluded. This data element is printed on some physical insurance cards, but not all."
 
-* gender 0..1
+// * gender 0..1
 * gender ^comment = "MAY be excluded. Gender is not a data element typically found on physical insurance cards. Furthermore, self-identified gender may change over time. Including this element could create a situation where the gender element in the provided resource does not match that in another form of identification or does not match the member's self-identified gender."

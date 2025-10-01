@@ -24,8 +24,21 @@ description: CARIN Digital Insurance Card
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1
-  hl7.fhir.us.davinci-drug-formulary: 2.0.0
+  # hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core:
+    version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore6
+    reason: |
+      Defines USCDI 3 resources that will be used by CARIN Digital Insurance Card.
+  hl7.fhir.us.core.v700:
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore7
+    reason: |
+      Needed for systems supporting USCDI v4
+  # hl7.fhir.us.davinci-drug-formulary: 2.0.0
+  hl7.fhir.us.davinci-drug-formulary: 2.1.0
   hl7.terminology.r4: 5.3.0
   #hl7.terminology: 5.5.0
   # switching from CI Build to working copy
