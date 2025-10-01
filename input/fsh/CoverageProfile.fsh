@@ -1,5 +1,5 @@
 Profile: C4DICCoverage
-Parent: Coverage
+Parent: $USCoreCoverage
 Id: C4DIC-Coverage
 Title: "C4DIC Coverage"
 Description: "Data that reflect a payer’s coverage of the member."
@@ -29,14 +29,14 @@ Description: "Data that reflect a payer’s coverage of the member."
 * identifier ^slicing.ordered = false   // can be omitted, since false is the default
 * identifier ^slicing.description = "Slice based on $this pattern"
 
-* identifier contains
-   memberid 1..1 MS
+// * identifier contains
+//    memberid 1..1 MS
 
-* identifier[memberid] ^short = "Member ID"
-* identifier[memberid].type = $IdentifierType#MB
-* identifier[memberid].system 1..1 MS
-* identifier[memberid].value 1..1 MS
-* identifier[memberid].assigner 1..1 MS
+// * identifier[memberid] ^short = "Member ID"
+// * identifier[memberid].type = $IdentifierType#MB
+// * identifier[memberid].system 1..1 MS
+// * identifier[memberid].value 1..1 MS
+// * identifier[memberid].assigner 1..1 MS
 
 * status MS
 * type 1..1 MS
@@ -67,8 +67,8 @@ Description: "Data that reflect a payer’s coverage of the member."
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains
-   group 0..1  MS and
-   plan 0..1 MS and
+//   group 0..1  MS and
+//   plan 0..1 MS and
    division 0..1 MS and
    network 0..1 MS and
    rxbin 0..1 MS and
@@ -77,8 +77,8 @@ Description: "Data that reflect a payer’s coverage of the member."
    rxid 0..1 MS and
    rxiin 0..1 MS
 
-* class[group].type = $CoverageClassCS#group
-* class[plan].type = $CoverageClassCS#plan
+// * class[group].type = $CoverageClassCS#group
+// * class[plan].type = $CoverageClassCS#plan
 * class[division].type = C4DICExtendedCoverageClassCS#division
 * class[network].type = C4DICExtendedCoverageClassCS#network
 * class[rxbin].type = $CoverageClassCS#rxbin

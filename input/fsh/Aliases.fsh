@@ -2,6 +2,7 @@
 
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+Alias:   $USCoreCoverage = http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage 
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
