@@ -71,7 +71,17 @@ pages:
   Background.md:
     title: Background
   Use_Case.md:
-    title: Use Case
+    title: Use Cases
+    Use_Case_Authorization.md:
+      title: Authorization and Sharing
+    Use_Case_Distribution.md:
+      title: Distribution of Insurance Card Data  
+    Use_Case_Consumer_Access.md:
+      title: Consumer Access to their Insurance Card Data
+    Use_Case_Consumer_Access_And_Exchange.md:
+      title: Consumer Access and Exchange
+    Use_Case_RTPBC.md:
+      title: Real-Time Pharmacy Benefit Check
   General_Guidance.md:
     title: General Guidance
     Authorization_Authentication_and_Registration.md:

@@ -42,16 +42,21 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="Use_Case_Authorization" name="Authorization and Sharing"/>
 <page key="Authorization_Authentication_and_Registration" name="Authorization, Authentication and Registration"/>
 <page key="Background" name="Background"/>
 <page key="ImplementationGuide-hl7.fhir.us.insurance-card" name="CARIN Digital Insurance Card Implementation Guide"/>
 <page key="ChangeHistory" name="Change Notes"/>
+<page key="Use_Case_Consumer_Access_And_Exchange" name="Consumer Access and Exchange"/>
+<page key="Use_Case_Consumer_Access" name="Consumer Access to their Insurance Card Data"/>
+<page key="Use_Case_Distribution" name="Distribution of Insurance Card Data"/>
 <page key="downloads" name="Downloads"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
 <page key="Physical_Insurance_Card_Data_Elements" name="Physical Insurance Card Data Elements"/>
+<page key="Use_Case_RTPBC" name="Real-Time Pharmacy Benefit Check"/>
 <page key="Search_Parameters" name="Search Parameters"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology_Licensure" name="Terminology Licensure"/>
-<page key="Use_Case" name="Use Case"/>
+<page key="Use_Case" name="Use Cases"/>
 </specification>
