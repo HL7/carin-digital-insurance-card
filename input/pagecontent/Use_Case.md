@@ -25,6 +25,8 @@ This Implementation Guide provides both foundational and specific use cases for 
 
 - [Authorization](Use_Case_Authorization.html)
 - [Distribution](Use_Case_Distribution.html)
+- [Patient Access API](Use_Case_Patient_Access_API.html)
+- [Representing Multiple Coverages for the Same Payer](Use_Case_Multiple_Coverages.html)
 
 ### Insurance Card Transaction Examples
 

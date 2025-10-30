@@ -70,22 +70,26 @@ pages:
     title: Home
   Background.md:
     title: Background
+  General_Guidance.md:
+    title: General Guidance
+    Authorization_Authentication_and_Registration.md:
+      title: Authorization, Authentication and Registration
   Use_Case.md:
     title: Use Cases
     Use_Case_Authorization.md:
       title: Authorization and Sharing
     Use_Case_Distribution.md:
-      title: Distribution of Insurance Card Data  
+      title: Distribution of Insurance Card Data
+    Use_Case_Patient_Access_API.md:
+      title: Patient Access API
+    Use_Case_Multiple_Coverages.md:
+      title: Representing Multiple Types of Coverage for the Same Payer    
     Use_Case_Consumer_Access.md:
       title: Consumer Access to their Insurance Card Data
     Use_Case_Consumer_Access_And_Exchange.md:
       title: Consumer Access and Exchange
     Use_Case_RTPBC.md:
       title: Real-Time Pharmacy Benefit Check
-  General_Guidance.md:
-    title: General Guidance
-    Authorization_Authentication_and_Registration.md:
-      title: Authorization, Authentication and Registration
     Search_Parameters.md:
       title: Search Parameters
   Physical_Insurance_Card_Data_Elements.md:
@@ -103,13 +107,12 @@ pages:
 menu:
   Home: index.html
   Background: Background.html
-  Use Cases:
-    Terms and Concepts: Use_Case.html#terms-and-concepts
-    Use Cases: Use_Case.html#use-cases
   Guidance:
     General Guidance: General_Guidance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
-    Change History: ChangeHistory.html
+  Use Cases:
+    Terms and Concepts: Use_Case.html#terms-and-concepts
+    Use Cases: Use_Case.html#use-cases
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Search Parameters: Search_Parameters.html

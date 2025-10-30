@@ -53,8 +53,10 @@
 <page key="downloads" name="Downloads"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
+<page key="Use_Case_Patient_Access_API" name="Patient Access API"/>
 <page key="Physical_Insurance_Card_Data_Elements" name="Physical Insurance Card Data Elements"/>
 <page key="Use_Case_RTPBC" name="Real-Time Pharmacy Benefit Check"/>
+<page key="Use_Case_Multiple_Coverages" name="Representing Multiple Types of Coverage for the Same Payer"/>
 <page key="Search_Parameters" name="Search Parameters"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology_Licensure" name="Terminology Licensure"/>
