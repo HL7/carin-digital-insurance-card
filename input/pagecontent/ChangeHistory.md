@@ -4,6 +4,8 @@
 
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
+| **Block-Vote-1**                                      |                        |
+| [FHIR-53289](https://jira.hl7.org/browse/FHIR-53289) |Restructure Menu Bar and Add Use Cases | 
 | [FHIR-53096](https://jira.hl7.org/browse/FHIR-53096) |Restructure Use Case Page to connect multiple use case pages | 
 | [FHIR-53035](https://jira.hl7.org/browse/FHIR-53034) |Switch to support US Core 6.1.0 and US Core 7.0.0 for Resources | 
 | [FHIR-53030](https://jira.hl7.org/browse/FHIR-53030)  | Update Change History for STU2 |
