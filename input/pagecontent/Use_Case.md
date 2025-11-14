@@ -27,11 +27,11 @@ This Implementation Guide provides both foundational and specific use cases for 
 - [Distribution](Use_Case_Distribution.html)
 - [Patient Access API](Use_Case_Patient_Access_API.html)
 - [Representing Multiple Coverages for the Same Payer](Use_Case_Multiple_Coverages.html)
+- [Support for Multiple Digital Insurance cards](Use_Case_Multiple_Cards.html)
 
 ### Insurance Card Transaction Examples
 
 - [Consumer Access to their Insurance Card Data](Use_Case_Consumer_Access.html)
 - [Consumer Access and Exchange](Use_Case_Consumer_Access_And_Exchange.html)
 - [Real-Time Pharmacy Benefit Check](Use_Case_RTPBC.html)
-
 

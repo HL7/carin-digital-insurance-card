@@ -1,0 +1,2 @@
+### Guidance on Displaying RxIIN (formerly RxBIN) on Digital Insurance Cards
+The American National Standards Institute (ANSI) has transitioned the Issuer Identification Number (IIN), formerly known as the Bank Identification Number (BIN), from a **six-digit** to an **eight-digit** format in accordance with ISO/IEC 7812-1. This change is being adopted across the pharmacy ecosystem, including in the NCPDP Telecommunication Standard Version F6 © and the Pharmacy/Combination ID Card Standard Version 7.1 ©.
