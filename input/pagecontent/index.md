@@ -1,7 +1,7 @@
 <a name="introduction"> </a>
 ### Introduction
 
-This implementation guide describes the CARIN for Digital Insurance Card (C4DIC) Framework, providing a set of resources that payers can display to consumers via a FHIR API or SMART Health Link. This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the [Table of Contents](toc.html) for more information.
+This implementation guide describes the CARIN for Digital Insurance Card (C4DIC) Framework, providing a set of resources that payers can display to consumers via a FHIR API or [SMART Health Link]({{site.data.fhir.ver.shcl}}). This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources. See the [Table of Contents](toc.html) for more information.
 
 <a name="the-carin-alliance"></a>
 ### The CARIN Alliance

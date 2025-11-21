@@ -10,6 +10,8 @@ For browser-based applications, the consumer can share access using one of the f
 
 Alternatively, the provider’s office may display a QR code that the consumer can scan using their mobile device and direct them to a web browser. A provider’s office may also send a secure access link via email to the consumer to initiate access to the browser.
 
+Note: Additional standards-based approaches to improve this user experience, such as the Web Credentials API, are under active exploration. For updates on emerging standards as they evolve, please see the Support section [insert link].
+
 #### Scenario 2: Sharing from a mobile device application
 
 A consumer uses a mobile application on their personal device to authorize access to their digital health insurance information. To initiate this process, the consumer may receive an entry point message such as an SMS, email, or other message containing a link or QR code either ahead of time or while at the provider’s office. This entry point directs them to a mobile application.

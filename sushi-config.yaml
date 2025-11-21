@@ -37,6 +37,10 @@ dependencies:
     id: uscore7
     reason: |
       Needed for systems supporting USCDI v4
+  hl7.fhir.uv.smart-health-cards-and-links:
+    version: 1.0.0
+    uri: http://hl7.org/fhir/uv/smart-health-cards-and-links/ImplementationGuide/hl7.fhir.uv.smart-health-cards-and-links
+    id: shcl
   # hl7.fhir.us.davinci-drug-formulary: 2.0.0
   hl7.fhir.us.davinci-drug-formulary: 2.1.0
   hl7.terminology.r4: 5.3.0
