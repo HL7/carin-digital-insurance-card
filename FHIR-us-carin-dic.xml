@@ -48,6 +48,7 @@
 <page key="Best_Practice" name="Best Practices"/>
 <page key="ImplementationGuide-hl7.fhir.us.insurance-card" name="CARIN Digital Insurance Card Implementation Guide"/>
 <page key="ChangeHistory" name="Change Notes"/>
+<page key="Use_Case_IPS" name="Comparison with the International Patient Summary IG"/>
 <page key="Use_Case_Consumer_Access_And_Exchange" name="Consumer Access and Exchange"/>
 <page key="Use_Case_Consumer_Access" name="Consumer Access to their Insurance Card Data"/>
 <page key="Use_Case_Distribution" name="Distribution of Insurance Card Data"/>
@@ -59,6 +60,7 @@
 <page key="Use_Case_RTPBC" name="Real-Time Pharmacy Benefit Check"/>
 <page key="Use_Case_Multiple_Coverages" name="Representing Multiple Types of Coverage for the Same Payer"/>
 <page key="Search_Parameters" name="Search Parameters"/>
+<page key="Use_Case_Summary_of_Benefits" name="Summary of Benefits and Coverage"/>
 <page key="Use_Case_Multiple_Cards" name="Support for Multiple Digital insurance Cards"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology_Licensure" name="Terminology Licensure"/>
