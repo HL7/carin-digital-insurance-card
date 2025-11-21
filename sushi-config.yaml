@@ -41,6 +41,10 @@ dependencies:
     version: 1.0.0
     uri: http://hl7.org/fhir/uv/smart-health-cards-and-links/ImplementationGuide/hl7.fhir.uv.smart-health-cards-and-links
     id: shcl
+  hl7.fhir.uv.ips:
+    version: 2.0.0
+    uri: http://hl7.org/fhir/uv/ips
+    id: ips
   # hl7.fhir.us.davinci-drug-formulary: 2.0.0
   hl7.fhir.us.davinci-drug-formulary: 2.1.0
   hl7.terminology.r4: 5.3.0
@@ -98,6 +102,10 @@ pages:
       title: Consumer Access and Exchange
     Use_Case_RTPBC.md:
       title: Real-Time Pharmacy Benefit Check
+    Use_Case_IPS.md:
+      title: Comparison with the International Patient Summary IG
+    Use_Case_Summary_of_Benefits.md:
+      title: Summary of Benefits and Coverage
     Search_Parameters.md:
       title: Search Parameters
   Physical_Insurance_Card_Data_Elements.md:

@@ -18,7 +18,7 @@ App first gets access using one of the [authorization use cases](Use_Case_Author
 
 #### Flow:
 1. Consumer App extracts member ID, group number, and BIN/IIN/PCN from Coverage resource.
-2. Consumer App constructs and submits an National Council for Prescription Drug Programs (NCPDP) RTPBC request per CARIN RTPBC specifications.
+2. Consumer App constructs and submits a CARIN Consumer-Facing Real Time Pharmacy Benefit Check message.
 3. RTPBC Service returns formulary and benefit information.
 4. Consumer App displays medication costs and coverage to the consumer.
 
