@@ -3,3 +3,7 @@
 The widely adopted CARIN Blue Button IG supports the generation of FHIR Coverage resources to represent insurance coverage associated with adjudicated claims and encounters. The CARIN Digital Insurance Card IG supports the digital representation of a consumer’s insurance card. To enable broader interoperability and consumer usability, implementers may choose to generate both of these distinct Coverage resources.
 
 This approach allows payers to leverage existing functionality from CARIN Blue Button and the resources in this IG to expose both claims-related coverage and insurance card coverage. Applications can query for both resources using standard FHIR search parameters (e.g., _profile, type, status) and present them in context. For example, a consumer-facing app may show the member’s digital insurance card alongside their Explanation of Benefits (EOBs), while a provider-facing system may use both resources to verify coverage and review recent claims during patient intake. This integration supports both consumer-facing (B2C) and provider-facing (B2B) workflows and enhances usability, transparency, and compliance with federal regulations.
+
+If you decide to implement the DIC, you could expand the coverage resource and could also use it for CARIN Blue Button. 
+
+Example: Part D Rx identifiers exist in CARIN DIC. These could be used in CARIN BB as there is no conflict between the two.

@@ -5,6 +5,7 @@
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
 | **Block-Vote-1**                                      |                        |
+| [FHIR-53643](https://jira.hl7.org/browse/FHIR-53643) | Add additional narrative that allows integration with existing Coverage resources | 
 | [FHIR-53494](https://jira.hl7.org/browse/FHIR-53494) | Update Smart Health Card/Smart Health Links in IG | 
 | [FHIR-53443](https://jira.hl7.org/browse/FHIR-53443) | Add Guidance on RxIIN in Coverage Class ValueSet | 
 | [FHIR-53442](https://jira.hl7.org/browse/FHIR-53442) | Add Use Case for Support for Multiple Digital insurance Cards. | 
