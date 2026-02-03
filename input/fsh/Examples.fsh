@@ -25,6 +25,10 @@ Usage: #example
 
 * extension[AdditionalCardInformation][+].valueAnnotation.text = "If you use a TTY, call 711.\nYou may be asked to present this card when you receive care or fill a perscription. This card does not gaurentee coverage. Intentionally misusing this card may be considered fraud or a violation of the law.\nWe encourage you to use a primary care physician as a valuable resource and personal health advocate."
 
+// Reference to Summary of Benefits and Coverage (SBC) document
+* extension[AdditionalCardInformation][+].valueReference = Reference(SBCExampleHMO)
+* extension[AdditionalCardInformation][=].valueReference.display = "Summary of Benefits and Coverage - Acme Gold Plus HMO"
+
 
 * extension[CardIssueDate].valueDate = "2020-12-15"
 
@@ -82,9 +86,9 @@ Usage: #example
 * class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
 * class[=].value = "11461128"
 * class[=].name = "Acme Gold Plus"
-* class[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS#division
+* class[+].type = C4DICExtendedCoverageClassCS#division
 * class[=].value = "11"
-* class[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS#network
+* class[+].type = C4DICExtendedCoverageClassCS#network
 * class[=].value = "561490"
 * class[=].name = "Acme Gold Plus South"
 * class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#rxbin
@@ -92,28 +96,28 @@ Usage: #example
 * class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#rxpcn
 * class[=].value = "1234000"
 
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamOutDed "Family Out of Network Deductible"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamOutDed "Family Out of Network Deductible"
 * costToBeneficiary[=].valueMoney.value = 10000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamInDed "Family In Network Deductible"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamInDed "Family In Network Deductible"
 * costToBeneficiary[=].valueMoney.value = 8000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxOutDed "Family Pharmacy Out of Network Deductible"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamRxOutDed "Family Pharmacy Out of Network Deductible"
 * costToBeneficiary[=].valueMoney.value = 2000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxInDed "Family Pharmacy In Network Deductible"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamRxInDed "Family Pharmacy In Network Deductible"
 * costToBeneficiary[=].valueMoney.value = 1500
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamOutMax "Family Out of Network Out of Pocket Maximum"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamOutMax "Family Out of Network Out of Pocket Maximum"
 * costToBeneficiary[=].valueMoney.value = 12000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamInMax "Family In Network Out of Pocket Maximum"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamInMax "Family In Network Out of Pocket Maximum"
 * costToBeneficiary[=].valueMoney.value = 10000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxOutMax "Family Pharmacy Out of Network Out of Pocket Maximum"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamRxOutMax "Family Pharmacy Out of Network Out of Pocket Maximum"
 * costToBeneficiary[=].valueMoney.value = 3000
 * costToBeneficiary[=].valueMoney.currency = #USD
-* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#FamRxInMax "Family Pharmacy In Network Out of Pocket Maximum"
+* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#FamRxInMax "Family Pharmacy In Network Out of Pocket Maximum"
 * costToBeneficiary[=].valueMoney.value = 2000
 * costToBeneficiary[=].valueMoney.currency = #USD
 
@@ -129,6 +133,6 @@ Usage: #example
 //* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "N/A"
 //* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"
 
-//* costToBeneficiary[+].type = http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS#rx
+//* costToBeneficiary[+].type = C4DICExtendedCopayTypeCS#rx
 //* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][+].valueString = "DED THEN $10/$40/$70/25%"
 //* costToBeneficiary[=].valueMoney.extension[BeneficiaryCostString][=].url = "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension"

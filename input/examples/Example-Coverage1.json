@@ -293,7 +293,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCoverageClassCS",
                       "code": "division"
                   }
               ]
@@ -304,7 +304,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCoverageClassCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCoverageClassCS",
                       "code": "network"
                   }
               ]
@@ -340,7 +340,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamOutDed",
                       "display": "Family Out of Network Deductible"
                   }
@@ -355,7 +355,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamInDed",
                       "display": "Family In Network Deductible"
                   }
@@ -370,7 +370,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamRxOutDed",
                       "display": "Family Pharmacy Out of Network Deductible"
                   }
@@ -385,7 +385,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamRxInDed",
                       "display": "Family Pharmacy In Network Deductible"
                   }
@@ -400,7 +400,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamOutMax",
                       "display": "Family Out of Network Out of Pocket Maximum"
                   }
@@ -415,7 +415,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamInMax",
                       "display": "Family In Network Out of Pocket Maximum"
                   }
@@ -430,7 +430,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamRxOutMax",
                       "display": "Family Pharmacy Out of Network Out of Pocket Maximum"
                   }
@@ -445,7 +445,7 @@
           "type": {
               "coding": [
                   {
-                      "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                      "system": "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
                       "code": "FamRxInMax",
                       "display": "Family Pharmacy In Network Out of Pocket Maximum"
                   }
@@ -517,7 +517,7 @@
         "type" : {
           "coding" : [
             {
-              "system" : "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+              "system" : "http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS",
               "code" : "rx"
             }
           ]

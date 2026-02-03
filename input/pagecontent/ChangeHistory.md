@@ -5,6 +5,7 @@
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
 | **Block-Vote-1**                                      |                        |
+| [FHIR-55562](https://jira.hl7.org/browse/FHIR-55562) | Add experimental Summary of Benefit Profile |
 | [FHIR-53643](https://jira.hl7.org/browse/FHIR-53643) | Add additional narrative that allows integration with existing Coverage resources | 
 | [FHIR-53494](https://jira.hl7.org/browse/FHIR-53494) | Update Smart Health Card/Smart Health Links in IG | 
 | [FHIR-53443](https://jira.hl7.org/browse/FHIR-53443) | Add Guidance on RxIIN in Coverage Class ValueSet | 
@@ -15,6 +16,8 @@
 | [FHIR-53035](https://jira.hl7.org/browse/FHIR-53034) | Switch to support US Core 6.1.0 and US Core 7.0.0 for Resources | 
 | [FHIR-53030](https://jira.hl7.org/browse/FHIR-53030)  | Update Change History for STU2 |
 | [FHIR-53028](https://jira.hl7.org/browse/FHIR-53028). | Add Support sub-mneu to Menu Bar | 
+| [FHIR-43292](https://jira.hl7.org/browse/FHIR-43292). | Coverage profile should be based on US Core Coverage | 
+| [FHIR-34681](https://jira.hl7.org/browse/FHIR-34681). | Sending primary and secondary networks | 
 
 
 ### Changes and Updates for version 1.1.0 (from version 1.0.0)

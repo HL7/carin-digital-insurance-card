@@ -10,9 +10,11 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
 <a name="authors"> </a>
 ### Authors
 
+Authors and Contributors can include people who may no longer be with the organization listed. The contribution recognize people and the organization they represented at the time of their contribution.
+
 * Primary
     * Mark Roberts (Leavitt Partners, LLC) - [mark.roberts@leavittpartners.com](mailto:mark.roberts@leavittpartners.com)
-    * MArk Scrimshire (Onyx Technology, LLC) - [Mark.Scrimshire@onyxhealth.io](Mark.Scrimshire@onyxhealth.io)
+    * Mark Scrimshire (Onyx Technology, LLC) - [mark.scrimshire@onyxhealth.io](mailto:mark.scrimshire@onyxhealth.io)
     * HL7 Payer/Provider Workgroup
 
 * Secondary
@@ -20,12 +22,12 @@ The CARIN (Creating Access to Real-time Information Now through Consumer-Directe
     * Anthony Gatti (Humana) [agatti@humana.com](mailto:agatti@humana.com)
     * Ryan Howells (Leavitt Partners, LLC) - [ryan.howells@leavittpartners.com](mailto:ryan.howells@leavittpartners.com)
     * Cille Kissel Watkins (Humana) – [Ckissel@humana.com](mailto:Ckissel@humana.com)
-    * Joshua Kelly (Automate Medical) [josh@automatemedical.com](mailto:josh@automatemedical.com)
+    * Joshua Kelly (Flexpa) [josh@flexpa.com](mailto:josh@flexpa.com)
     * Gail Kocher (Blue Cross Blue Shield Association) [Gail.Kocher@bcbsa.com](mailto:Gail.Kocher@bcbsa.com)
     * Pamela Maklari (Cognizant) [Pamela.Maklari@cognizant.com](mailto:Pamela.Maklari@cognizant.com)
     * Julia Meade Tulli (Anthem) [julia.tulli@anthem.com](mailto:julia.tulli@anthem.com)
     * Mark Scrimshire (Onyx Technology, LLC) - [mark.scrimshire@onyxhealth.io](mailto:mark.scrimshire@onyxhealth.io)
-    * Corey Spears (MITRE) [cspears@mitre.org](mailto:cspears@mitre.org)
+    * Corey Spears (Lantana Consulting) [corey.spears@lantanagroup.com](mailto:corey.spears@lantanagroup.com)
     * Sarah Young (Anthem) [Sarah.Young@anthem.com](mailto:Sarah.Young@anthem.com)
     * HL7 Financial Management Workgroup
     * HL7 Security Workgroup 

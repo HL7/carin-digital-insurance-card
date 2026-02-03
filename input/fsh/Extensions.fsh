@@ -34,8 +34,7 @@ Description: "This extension allows for the representation of copay details as s
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[0].type = #element
-//* ^context[0].expression = "Coverage"
-* ^context[0].expression = "Coverage.costToBeneficiary.value.ofType(Money)"
+* ^context[0].expression = "Coverage.costToBeneficiary.value[x]"
 
 * value[x] only string
 * valueString ^short = "Cost represented as a string of text"
@@ -45,9 +44,9 @@ Description: "This extension allows for the representation of copay details as s
 Extension: AdditionalCardInformation
 Id: C4DIC-AdditionalCardInformation-extension
 Title: "Additional Insurance Card Information"
-Description: "This extension enables the passing of free text items often found on insurance cards. Health plans may provide this extension as part of the Coverage resource to communicate concepts such as TTY, disclaimers about eligibility or limits to coverage, notice of dental or vision coverage, etc."
+Description: "This extension enables the passing of free text items often found on insurance cards or references to related resources such as Summary of Benefits and Coverage (SBC) documents. Health plans may provide this extension as part of the Coverage resource to communicate concepts such as TTY, disclaimers about eligibility or limits to coverage, notice of dental or vision coverage, or to link to a structured SBC InsurancePlan resource."
 * value[x] 1..1
-* value[x] only Annotation
+* value[x] only Annotation or Reference(SBCInsurancePlan)
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[0].type = #element

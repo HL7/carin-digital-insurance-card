@@ -71,6 +71,7 @@ Description: "Data that reflect a payer’s coverage of the member."
 //   plan 0..1 MS and
    division 0..1 MS and
    network 0..1 MS and
+   alternatenetwork 0..* MS and
    rxbin 0..1 MS and
    rxpcn 0..1 MS and
    rxgroup 0..1 MS and
@@ -81,6 +82,11 @@ Description: "Data that reflect a payer’s coverage of the member."
 // * class[plan].type = $CoverageClassCS#plan
 * class[division].type = C4DICExtendedCoverageClassCS#division
 * class[network].type = C4DICExtendedCoverageClassCS#network
+* class[network] ^short = "Primary Network"
+* class[network] ^definition = "The primary network or network tier associated with the coverage"
+* class[alternatenetwork].type = C4DICExtendedCoverageClassCS#alternatenetwork
+* class[alternatenetwork] ^short = "Alternate Network"
+* class[alternatenetwork] ^definition = "Secondary or additional networks or network tiers associated with the coverage"
 * class[rxbin].type = $CoverageClassCS#rxbin
 * class[rxpcn].type = $CoverageClassCS#rxpcn
 * class[rxgroup].type = $CoverageClassCS#rxgroup

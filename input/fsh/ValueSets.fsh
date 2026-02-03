@@ -6,7 +6,7 @@ Description: "Identifies the type of identifier for payer coverage"
 * $IdentifierType#MB
 * $IdentifierType#MR
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = true
+* ^experimental = false
 
 
 ValueSet: C4DICCoverageClassVS
@@ -15,7 +15,7 @@ Description: "This value set includes an extended set of coverage class codes."
 * codes from system $CoverageClassCS
 * codes from system C4DICExtendedCoverageClassCS
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = true
+* ^experimental = false
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 
@@ -27,7 +27,7 @@ Description: "This value set includes an extended set of copay type codes."
 * codes from system C4DICExtendedCopayTypeCS
 * codes from system $DrugTierCS
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = true
+* ^experimental = false
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 

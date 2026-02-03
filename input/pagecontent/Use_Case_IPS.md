@@ -1,4 +1,4 @@
-### Comparison with the International Patient Summary IG
+### Using the Digital Insurance Card with the International Patient Summary IG
 
 The CARIN Digital Insurance Card IG defines how members may release their insurance card information via a payer-provided FHIR API, using the Coverage, Patient, and Organization resources. It supports both direct API access and verifiable packaging via [SMART Health Cards (SHC) and SMART Health Links (SHL)]({{site.data.fhir.ver.shcl}}). These formats allow patients to store and share their insurance card digitally—via QR codes, URLs, or mobile wallets.
 
