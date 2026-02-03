@@ -5,7 +5,7 @@ Title: "SBC Insurance Plan Profile"
 Description: "Profile of InsurancePlan resource for representing Summary of Benefits and Coverage (SBC) documents as required under ACA Section 2715 and implementing regulations at 45 CFR 147.200, 29 CFR 2590.715-2715, and 26 CFR 54.9815-2715"
 
 * ^status = #draft
-* ^experimental = false
+* ^experimental = true
 * ^purpose = "To represent Summary of Benefits and Coverage documents in structured FHIR format, enabling machine-readable representation of the 27 required benefit categories, cost-sharing information, network distinctions, and regulatory disclosures"
 
 // Required elements for SBC identification and metadata

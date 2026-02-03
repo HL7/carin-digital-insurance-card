@@ -4,6 +4,7 @@ Id: sbc-metadata
 Title: "SBC Metadata Extension"
 Description: "Extension containing regulatory metadata required for Summary of Benefits and Coverage documents"
 * ^status = #draft
+* ^experimental = true
 * ^context.type = #element
 * ^context.expression = "InsurancePlan"
 
@@ -36,6 +37,7 @@ Id: excluded-services
 Title: "Excluded Services Extension"
 Description: "Extension for documenting services that are not covered by the health insurance plan, as required in SBC 'Excluded Services & Other Covered Services' section"
 * ^status = #draft
+* ^experimental = true
 * ^context.type = #element
 * ^context.expression = "InsurancePlan"
 
@@ -63,6 +65,7 @@ Id: benefit-limitation
 Title: "Benefit Limitation Extension"
 Description: "Extension for documenting limitations and exceptions that apply to specific benefits in the SBC"
 * ^status = #draft
+* ^experimental = true
 * ^context[0].type = #element
 * ^context[0].expression = "InsurancePlan.coverage.benefit"
 * ^context[1].type = #element

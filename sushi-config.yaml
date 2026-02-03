@@ -24,36 +24,34 @@ description: CARIN Digital Insurance Card
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  # hl7.fhir.us.core: 3.1.1
+  # Primary dependency is US Core 6.1.0 (USCDI v3)
+  # This IG also supports US Core 7.0.0 (USCDI v4) - see General Guidance for compatibility notes
   hl7.fhir.us.core:
     version: 6.1.0
     uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     id: uscore6
     reason: |
-      Defines USCDI 3 resources that will be used by CARIN Digital Insurance Card.
-  hl7.fhir.us.core.v700:
-    version: 7.0.0
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-    id: uscore7
-    reason: |
-      Needed for systems supporting USCDI v4
+      Defines USCDI v3 resources that will be used by CARIN Digital Insurance Card.
+      This IG is also compatible with US Core 7.0.0 (USCDI v4).
   hl7.fhir.uv.smart-health-cards-and-links:
     version: 1.0.0
     uri: http://hl7.org/fhir/uv/smart-health-cards-and-links/ImplementationGuide/hl7.fhir.uv.smart-health-cards-and-links
     id: shcl
   hl7.fhir.uv.ips:
     version: 2.0.0
-    uri: http://hl7.org/fhir/uv/ips
+    uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
     id: ips
   # hl7.fhir.us.davinci-drug-formulary: 2.0.0
   hl7.fhir.us.davinci-drug-formulary: 2.1.0
-  hl7.terminology.r4: 5.3.0
-  #hl7.terminology: 5.5.0
+  hl7.terminology.r4: 6.2.0
+  # Note: 7.0.1 is available but may have breaking changes
   # switching from CI Build to working copy
   # This will introduce issues for extensions owned by PIE since their identifier "claims"
   # is not in the HL7 Workgroup CodeSystem
   # hl7.fhir.uv.extensions: 1.0.0
-  hl7.fhir.uv.extensions: 5.1.0-ballot1
+  # Note: Use R4 version for FHIR 4.0.1 compatibility
+  hl7.fhir.uv.extensions.r4: 5.2.0
+  # hl7.fhir.uv.extensions: 5.1.0-ballot1
   # hl7.fhir.uv.extensions: 5.1.0-snapshot1
   # Current build has fixed the PIE entry in HL7 workgroup CodeSystem
   # hl7.fhir.uv.extensions: current
@@ -64,13 +62,23 @@ parameters:
   apply-publisher: true
   jira-code: carin-dic
   shownav: true
-copyrightYear: 2025+
+  # CodeSystems transitioning to THO - using special-url to allow THO URLs while still defined in this IG
+  special-url:
+    - http://terminology.hl7.org/CodeSystem/C4DICIdentifierType
+    - http://terminology.hl7.org/CodeSystem/C4DICExtendedCoverageClassCS
+    - http://terminology.hl7.org/CodeSystem/C4DICExtendedCopayTypeCS
+    - http://terminology.hl7.org/CodeSystem/C4DICExtendedContactTypeCS
+copyrightYear: 2026+
 releaseLabel: STU 2.0
 jurisdiction: urn:iso:std:iso:3166#US
 
 extension:
   - url: "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
     valueCode: claims
+  - url: "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+    valueCode: trial-use
+  - url: "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+    valueInteger: 2
 
 
 pages:
@@ -78,6 +86,8 @@ pages:
     title: Home
   Background.md:
     title: Background
+  narrative-conformance.md:
+    title: Narrative Conformance
   General_Guidance.md:
     title: General Guidance
     Authorization_Authentication_and_Registration.md:
@@ -108,6 +118,16 @@ pages:
       title: Summary of Benefits and Coverage
     Search_Parameters.md:
       title: Search Parameters
+    sbc.md:
+      title: Summary of Benefits and Coverage (SBC) Integration
+    sbc-mapping.md:
+      title: SBC to FHIR Mapping
+    sbc-profiles.md:
+      title: SBC FHIR Profiles
+    sbc-terminology.md:
+      title: SBC FHIR Terminology
+    sbc-examples.md:
+      title: SBC FHIR Examples  
   Physical_Insurance_Card_Data_Elements.md:
     title: Physical Insurance Card Data Elements
   Downloads.md:
@@ -125,6 +145,7 @@ menu:
   Background: Background.html
   Guidance:
     General Guidance: General_Guidance.html
+    Narrative Conformance: narrative-conformance.html
     Physical Insurance Card Data Elements: Physical_Insurance_Card_Data_Elements.html
     Best_Practices: Best_Practice.html 
   Use Cases:
@@ -141,7 +162,6 @@ menu:
   Security:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
     Authorization and Authentication: Authorization_Authentication_and_Registration.html#authorization-and-authentication
-  #Examples:  artifacts.html#7
   Support:
     Discussion Forum: new-tab https://chat.fhir.org/#narrow/channel/285193-CARIN-IG-for-Digital-Insurance-Card/topic/Implementations.20and.20Examples/with/507783712
     Project Page: new-tab https://confluence.hl7.org/spaces/CAR/pages/104579206/CARIN+IG+for+Digital+Insurance+Card

@@ -3,7 +3,7 @@ Id: sbc-plan-type
 Title: "SBC Plan Type Code System"
 Description: "Code system for health insurance plan types displayed in Summary of Benefits and Coverage documents"
 * ^status = #draft
-* ^experimental = false
+* ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
 

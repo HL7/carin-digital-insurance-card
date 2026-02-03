@@ -24,6 +24,9 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 
 payerid 0..* MS
 
+// Mark inherited US Core slices as MS for consistency
+* identifier[CLIA] MS
+* identifier[NAIC] MS
 
 * identifier[payerid] ^short = "Payer ID"
 
