@@ -5,6 +5,7 @@
 | JIRA Ticket                                          | Change                                                                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
 | **Block-Vote-1**                                      |                        |
+| [FHIR-56139](https://jira.hl7.org/browse/FHIR-56139) | Add support for front and back of card images in SupportingImage-Extension |
 | [FHIR-55562](https://jira.hl7.org/browse/FHIR-55562) | Add experimental Summary of Benefit Profile |
 | [FHIR-53643](https://jira.hl7.org/browse/FHIR-53643) | Add additional narrative that allows integration with existing Coverage resources | 
 | [FHIR-53494](https://jira.hl7.org/browse/FHIR-53494) | Update Smart Health Card/Smart Health Links in IG | 
