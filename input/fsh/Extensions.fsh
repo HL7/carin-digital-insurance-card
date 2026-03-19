@@ -66,7 +66,7 @@ Description: "This extension allows for the expression of the date at which the 
 Extension: BackgroundColor
 Id: C4DIC-BackgroundColor-extension
 Title: "Background Color"
-Description: "This extension enables an insurance company to provide a background color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer SHOULD not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
+Description: "This extension enables an insurance company to provide a background color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer should not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[+].type = #element
@@ -93,7 +93,7 @@ Description: "This extension enables an insurance company to provide a backgroun
 Extension: HighlightColor
 Id: C4DIC-HighlightColor-extension
 Title: "Highlight Color"
-Description: "This extension enables an insurance company to provide a highlight color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer SHOULD not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
+Description: "This extension enables an insurance company to provide a highlight color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer should not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[+].type = #element
@@ -116,7 +116,7 @@ Description: "This extension enables an insurance company to provide a highlight
 Extension: ForegroundColor
 Id: C4DIC-ForegroundColor-extension
 Title: "Foreground Color"
-Description: "This extension enables an insurance company to provide a foreground color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer SHOULD not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
+Description: "This extension enables an insurance company to provide a foreground color to be used by consuming applications when they render the information found on an insurance card for the insurance plan member. When rendering foreground and background colors, the implementer should not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[+].type = #element
@@ -143,7 +143,7 @@ Description: "This extension enables an insurance company to provide a foregroun
 Extension: ColorPalette
 Id: C4DIC-ColorPalette-extension
 Title: "Color Palette"
-Description: "This extension groups the Foreground, Background and Highlight color extensions into a single extension. When rendering foreground and background colors, the implementer SHOULD not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
+Description: "This extension groups the Foreground, Background and Highlight color extensions into a single extension. When rendering foreground and background colors, the implementer should not use the same foreground and background colors and instead should algorithmically determine a high color contrast."
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension.valueCode = #claims
 * ^context[0].type = #element

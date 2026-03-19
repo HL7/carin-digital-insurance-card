@@ -12,10 +12,10 @@
 <tbody>
 <tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#id">_id</a>
@@ -27,10 +27,10 @@
 			</tr>
 			<tr>
 								<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#profile">_profile</a>
@@ -42,10 +42,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#lastUpdated">_lastUpdated</a>
@@ -57,10 +57,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">beneficiary</a>
@@ -72,10 +72,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">subscriber</a>
@@ -87,10 +87,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">patient</a>
@@ -102,10 +102,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">identifier</a>
@@ -117,10 +117,10 @@
 			</tr>
 	<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">period</a>
@@ -132,10 +132,10 @@
 			</tr>
 	<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/coverage.html#search">status</a>
@@ -147,10 +147,10 @@
 			</tr>
             <tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/organization.html">Organization</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/organization.html">Organization</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#id">_id</a>
@@ -162,10 +162,10 @@
 			</tr>
             <tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#id">_id</a>
@@ -177,10 +177,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/search.html#lastUpdated">_lastUpdated</a>
@@ -192,10 +192,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/patient.html#search">identifier</a>
@@ -207,10 +207,10 @@
 			</tr>
 			<tr>
 				<td>
-					<strong>SHALL</strong>
+					§<strong>SHALL</strong>
 				</td>
                 <td>
-					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>
+					<strong><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></strong>§
 				</td>
 				<td>
 					<a href="http://hl7.org/fhir/R4/patient.html#search">name</a>

@@ -1,47 +1,15 @@
 == Suppressed Messages ==
-# Insurance cards do not require gender in the United States. See US Core ticket FHIR-34240.
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# Suppress Information warning that pattern applies to repeats in slice. The IG needs to support multiple repeats with this pattern for the slice.
-# This applies to multiple identifier slices (NPI, CLIA, NAIC, payerid) in Organization profile
-%C4DIC-Organization%The repeating element has a pattern. The pattern will apply to all the repeats%
+# Organization identifier slices intentionally use patterns that apply to all repeats
+%The repeating element has a pattern. The pattern will apply to all the repeats%
 
 # The elementdefinition-maxValueSet extension is deprecated in R5+ but is automatically added by
 # the IG Publisher during snapshot expansion for extensible bindings (e.g., Attachment.contentType).
 # This comes from base FHIR R4 structures and cannot be directly controlled by this IG.
-%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%is deprecated%
-
-# ISO Color Codes can't be validated
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[0].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[0].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[1].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[1].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[2].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[2].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage-FSH: Coverage.extension[6].extension[2].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[0].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[0].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[1].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[1].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[2].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[2].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-WARNING: Coverage/Example-Coverage1: Coverage.extension[6].extension[2].value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/IECColourManagement' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/insurance-card/ValueSet/ISOColorVS|1.1.0' because the code system http://terminology.hl7.org/CodeSystem/IECColourManagement was not found
-
-WARNING: ValueSet.where(id = 'ISOColorVS'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/IECColourManagement
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
 
 # References to draft CodeSystems in THO - these are maintained externally and version numbers change
-# Using wildcards to cover any version of these draft CodeSystems
-%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class%
-%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-copay-type%
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type%
-
-# Variance requested from Cross-Products Group. Upgrade to US Core 6.1.0 or later to be considered for next Update. FHIR-43300 - US Core Coverage variance, FHIR-43303 - US Core Coverage variance.
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
 # Unresolvable CapabilityStatement Version-Specific Link - This CapabilityStatement has not been published yet.
 %is a canonical link and is therefore unsafe with regard to versions%
@@ -69,10 +37,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/
 %No definition could be found for URL value 'https://www.xxxhealthplan.com%
 %No definition could be found for URL value 'https://www.acmeinsurance.com%
 
-# Multiple THO terminology version matches - different dependencies pull in different versions
-# The IG Publisher will select the most appropriate version; this warning is expected
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/%
-
 # R5 discriminator type deprecation - This IG targets R4 where #pattern is valid
 # Will be addressed when migrating to R5
 %The discriminator type 'pattern' is deprecated in R5+%
@@ -80,10 +44,12 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/insurance-card/
 # Intentional dependency version choices for FHIR R4 compatibility
 # US Core 6.1.0 (USCDI v3) is the primary target with documented 7.0.0 (USCDI v4) support
 # Upgrading to US Core 8.x would require significant changes and is planned for a future release
-WARNING: ImplementationGuide.dependsOn[0]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0%This reference is getting old and the more recent version should be considered
-# hl7.terminology.r4 6.2.0 chosen for stability; 7.0.1 may have breaking changes
-WARNING: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.terminology.r4#6.2.0%This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/hl7.fhir.us.insurance-card: ImplementationGuide.dependsOn[0]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
 
-# Ignore Conformance language in structured content and change history files.
-%The html source contains the word 'SHALL'%
-%The html source contains the word 'SHOULD'%
+# hl7.terminology.r4 6.2.0 chosen for stability; 7.0.1 may have breaking changes
+WARNING: ImplementationGuide/hl7.fhir.us.insurance-card: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.terminology.r4#6.2.0 released on 2025-01-22, but the most recent appropriate version is 7.1.0. This reference is getting old and the more recent version should be considered
+
+# Ignore narrative Conformance language flagged in Strucure definitions
+%The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The C4DIC Server SHALL:%
+%The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause:%
+%The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause:%

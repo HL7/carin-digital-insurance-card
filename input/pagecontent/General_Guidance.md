@@ -9,7 +9,7 @@ The following actors are part of the CARIN IG for Digital Insurance Card:
 <a name="conformance-verbs"></a>
 ### Conformance Verbs
 
-<p>The conformance verbs - <strong>SHALL, SHOULD, MAY</strong> - used in this guide are defined in <a style="font-size: 14px;" href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a></p>
+<p>§The conformance verbs - <strong>SHALL, SHOULD, MAY</strong> - used in this guide are defined in <a style="font-size: 14px;" href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules. §</a></p>
 
 <a name="must-support"></a>
 ### Must Support
