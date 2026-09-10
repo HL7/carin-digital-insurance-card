@@ -71,7 +71,7 @@ Note: The ONC HTI-1 rule set January 1, 2026 as the date on which US Core 6.1.0 
 
 The Digital Insurance Card can also be made available to the member in a verifiable, tamper-proof package that the subscriber can store, manage, and share with healthcare providers as they see fit. In this model, the payer provides the member with a QR code or URL representing their digital insurance card, likely using the same modalities used to share digital cards today (e.g. payer mobile application, website, email). The member is able to present the QR code to be scanned during in-person visits or provide the QR code or URL to mobile or web forms during online registration or check-in flows. The provider then uses the QR code or URL to retrieve the Digital Insurance Card and verify its authenticity.
 
-[SMART Healt hCards]({{site.data.fhir.ver.shcl}}) are a FHIR-based verifiable credential technical framework that has been made available to hundreds of millions of people around the world for proof of vaccination and infectious disease laboratory testing results. 
+[SMART Health Cards]({{site.data.fhir.ver.shcl}}) are a FHIR-based verifiable credential technical framework that has been made available to hundreds of millions of people around the world for proof of vaccination and infectious disease laboratory testing results. 
 
 [SMART Health Links]({{site.data.fhir.ver.shcl}}) are a derivation of SMART Health Cards that enable larger and dynamic data payloads as well as other methods of interaction.
 
